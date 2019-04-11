@@ -169,7 +169,7 @@ BattleIdleAnimation:
 
 		if (MainHero.Get_controlAviable() == true) {															//Если управление с клавиатуры доступно
 
-			if (MainHero.Get_battleMode() == true) goto CivilIdleAnimation;											//Кадр-затычка
+			if (MainHero.Get_battleMode() == true) goto CivilIdleAnimation;										//Кадр-затычка
 
 			if (Keyboard::isKeyPressed(Keyboard::Z) && MainHero.Get_onlyOneAnimation() == true)					//Команда переключения в боевой мод
 			{
