@@ -1,11 +1,9 @@
-﻿  Platformer.cpp
-c:\users\thisb\source\repos\platformer 0.1.1\platformer\platformer.cpp(23): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+﻿  FunctionControlsСHero.cpp
+c:\users\thisb\source\repos\platformer 0.1.1\platformer\functioncontrolsсhero.cpp(1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\source\repos\platformer 0.1.1\platformer\controlschero.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 c:\users\thisb\source\repos\platformer 0.1.1\platformer\classhero.h(71): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\thisb\source\repos\platformer 0.1.1\platformer\platformer.cpp(24): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformer\controlschero.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformer\platformer.cpp(41): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
   Platformer.vcxproj -> C:\Users\thisb\source\repos\Platformer 0.1.1\x64\Debug\Platformer.exe
