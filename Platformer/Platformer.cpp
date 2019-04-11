@@ -16,6 +16,7 @@ Platformer.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчива
 
 	GL HF
 */
+#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")			//Отключение консоли
 
 #include <conio.h>
 #include <SFML/Graphics.hpp>
@@ -25,7 +26,7 @@ Platformer.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчива
 using namespace sf;
 
 int main() {
-	RenderWindow window(sf::VideoMode(1600, 900), "Test");		//Рендер окна
+	RenderWindow window(sf::VideoMode(1280, 720), "Test");		//Рендер окна
 	window.setVerticalSyncEnabled(true);						//Ограничение FPS
 
 	Hero MainHero("HeroSpritesBig.png",750,376,100,74,100);		//Создаем героя
