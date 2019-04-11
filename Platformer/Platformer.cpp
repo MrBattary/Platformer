@@ -26,10 +26,12 @@ Platformer.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчива
 using namespace sf;
 
 int main() {
-	RenderWindow window(sf::VideoMode(1280, 720), "Test");		//Рендер окна
+	RenderWindow window(sf::VideoMode(1600, 900), "Test");		//Рендер окна
+	//RenderWindow window(sf::VideoMode(1280, 720), "Test");	//Рендер окна
 	window.setVerticalSyncEnabled(true);						//Ограничение FPS
 
-	Hero MainHero("HeroSpritesBig.png",750,376,100,74,100);		//Создаем героя
+	//Hero MainHero("HeroSpritesBig.png", 590, 286, 100, 74, 100);	//Создаем героя
+	Hero MainHero("HeroSpritesBig.png", 750, 376, 100, 74, 100);//Создаем героя
 
 	Clock clock;												//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
 	
