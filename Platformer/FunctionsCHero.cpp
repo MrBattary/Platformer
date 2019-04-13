@@ -30,6 +30,7 @@ void Hero::Draw(float time)												//Физика на отрисовку п
 	sprite.setPosition(xH, yH);											//Установть точку отрисовки на позиции хН,уН
 }
 
+
 void Hero::HeroSlideChoise(float time)									//Выбор направления скольжения
 {
 
@@ -84,7 +85,7 @@ int Hero::HeroIdleRight(float time)										//Безделие взгляд в�
 int Hero::HeroIdleCrouchRight(float time)								//Безделие сидя взгляд вправо
 {
 	dirH = 0;
-	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 0, 148, 100, 74);
 	return 0;
 }
@@ -101,7 +102,7 @@ int Hero::HeroIdleLeft(float time)										//Безделие взгляд вл
 int Hero::HeroIdleCrouchLeft(float time)								//Безделие сидя взгляд влево
 {
 	dirH = 0;
-	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 100, 148, -100, 74);
 	return 0;
 }
@@ -350,145 +351,211 @@ int Hero::HeroMoveLeftCrouchDown(float time)							//Присед влево/в�
 
 int Hero::HeroSlideRight(float time)									//Скольжение вправо
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 1, speedHX, speedHY, sprite, 0, 100, 0.1, 0, 0.08, 1, 0.0005, 0, 0.11, 0.3, -0.3, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 1, speedHX, speedHY, sprite, 0, 100, 0.1, 0, 0.08, 1, 0.002, 0, 0.11, 0.3, -0.3, 0.3);
 	return 0;
 }
 
 int Hero::HeroSlideRightUp(float time)									//Скольжение вправо вверх
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 8, speedHX, speedHY, sprite, 0, 100, 0.1, -0.1, 0.08, 0.08, 0.0005, -0.0005, 0.11, 0.3, -0.3, -0.11);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 8, speedHX, speedHY, sprite, 0, 100, 0.1, -0.1, 0.11, 0.11, 0.002, -0.002, 0.11, 0.3, -0.3, -0.11);
 	return 0;
 }
 
 int Hero::HeroSlideRightDown(float time)								//Скольжение вправо вниз
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 5, speedHX, speedHY, sprite, 0, 100, 0.1, 0.1, 0.08, 0.08, 0.0005, 0.0005, 0.11, 0.3, 0.11, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 5, speedHX, speedHY, sprite, 0, 100, 0.1, 0.1, 0.11, 0.11, 0.002, 0.002, 0.11, 0.3, 0.11, 0.3);
 	return 0;
 }
 
 int Hero::HeroSlideLeft(float time)										//Скольжение влево
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 3, speedHX, speedHY, sprite, 100, -100, -0.1, 0, 0.08, 1, -0.0005, 0,-0.3,-0.11,-0.3, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 3, speedHX, speedHY, sprite, 100, -100, -0.1, 0, 0.11, 1, -0.002, 0,-0.3,-0.11,-0.3, 0.3);
 	return 0;
 }
 
 int Hero::HeroSlideLeftUp(float time)									//Скольжение влево вверх
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 7, speedHX, speedHY, sprite, 100, -100, -0.1, -0.1, 0.08, 0.08, -0.0005, -0.0005,-0.3,-0.11,-0.3,-0.11);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 7, speedHX, speedHY, sprite, 100, -100, -0.1, -0.1, 0.11, 0.11, -0.002, -0.002,-0.3,-0.11,-0.3,-0.11);
 	return 0;
 }
 
 int Hero::HeroSlideLeftDown(float time)									//Скольжение влево вниз
 {	
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 6, speedHX, speedHY, sprite, 100, -100, -0.1, 0.1, 0.08, 0.08, -0.0005, 0.0005,-0.3,-0.11,0.11,0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 6, speedHX, speedHY, sprite, 100, -100, -0.1, 0.1, 0.11, 0.11, -0.002, 0.002,-0.3,-0.11,0.11,0.3);
 	return 0;
 }
 
 int Hero::HeroJumpRight(float time)										//Прыжок вправо
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 1, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.1, 0, 0.1, 1, 0.005, 0, 0.11, 0.2, -0.2, 0.2);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 1, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.15, 0, 0.1, 1, 0.005, 0, 0.1, 0.2, -0.2, 0.2);
 	return 0;
 }
 
 int Hero::HeroJumpRightUp(float time)									//Прыжок вправо вверх
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 8, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.1, -0.1, 0.1, 0.1, 0.005, -0.005, 0.11, 0.2, -0.2, -0.11);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 8, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.1, -0.1, 0.1, 0.1, 0.005, -0.005, 0.1, 0.2, -0.2, -0.1);
 	return 0;
 }
 
 int Hero::HeroJumpRightDown(float time)									//Прыжок вправо вниз
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 5, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.1, 0.1, 0.1, 0.1, 0.005, 0.005, 0.11, 0.2, 0.11, 0.2);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 5, 0.007, speedHX, speedHY, sprite, 0, 518, 100, 5, 0.1, 0.1, 0.1, 0.1, 0.005, 0.005, 0.1, 0.2, 0.1, 0.2);
 	return 0;
 }
 
 int Hero::HeroJumpLeft(float time)										//Прыжок влево
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 3, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.1, 0, 0.1, 1, -0.005, 0, -0.2, -0.11, -0.2, 0.2);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 3, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.15, 0, 0.1, 1, -0.005, 0, -0.2, -0.1, -0.2, 0.2);
 	return 0;
 }
 
 int Hero::HeroJumpLeftUp(float time)									//Прыжок влево вверх
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 7, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.1, -0.1, 0.1, 0.1, -0.005, -0.005, -0.2, -0.11, -0.2, -0.11);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 7, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.1, -0.1, 0.1, 0.1, -0.005, -0.005, -0.2, -0.1, -0.2, -0.1);
 	return 0;
 }
 
 int Hero::HeroJumpLeftDown(float time)									//Прыжок влево вниз
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpAviable, dirH, 6, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.1, 0.1, 0.1, 0.1, -0.005, 0.005, -0.2, -0.11, 0.11, 0.2);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1.5, jumpAviable, dirH, 6, 0.007, speedHX, speedHY, sprite, 100, 518, -100, 5, -0.1, 0.1, 0.1, 0.1, -0.005, 0.005, -0.2, -0.1, 0.1, 0.2);
 	return 0;
 }
 
 int Hero::HeroJumpLargeRight(float time)								//Мощный прыжок вправо
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 1, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.17, 0, 0.1, 1, 0.0005, 0, 0, 0.3, -0.3, 0.3);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 1, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.27, 0, 0.1, 1, 0.0005, 0, 0, 0.3, -0.3, 0.3);
 	return 0;
 }
 
 int Hero::HeroJumpLargeRightUp(float time)								//Мощный прыжок вправо вверх
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 8, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.17, -0.17, 0.1, 0.1, 0.0005, -0.0005, 0, 0.3, -0.3, 0);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 8, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.2, -0.2, 0.1, 0.1, 0.0005, -0.0005, 0, 0.3, -0.3, 0);
 	return 0;
 }
 
 int Hero::HeroJumpLargeRightDown(float time)							//Мощный прыжок вправо вниз
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 5, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.17, 0.17, 0.1, 0.1, 0.0005, 0.0005, 0, 0.3, 0, 0.3);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 5, 0.01, speedHX, speedHY, sprite, 0, 444, 100, 10, 0.2, 0.2, 0.1, 0.1, 0.0005, 0.0005, 0, 0.3, 0, 0.3);
 	return 0;
 }
 
 int Hero::HeroJumpLargeLeft(float time)									//Мощный прыжок влево
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 3, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.17, 0, 0.1, 1, -0.0005, 0, -0.3, 0, -0.3, 0.3);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 3, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.27, 0, 0.1, 1, -0.0005, 0, -0.3, 0, -0.3, 0.3);
 	return 0;
 }
 
 int Hero::HeroJumpLargeLeftUp(float time)								//Мощный прыжок влево вверх
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 7, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.17, -0.17, 0.1, 0.1, -0.0005, -0.0005, -0.3, 0, -0.3, 0);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 7, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.2, -0.2, 0.1, 0.1, -0.0005, -0.0005, -0.3, 0, -0.3, 0);
 	return 0;
 }
 
 int Hero::HeroJumpLargeLeftDown(float time)								//Мощный прыжок влево вниз
 {
-	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 0.5, jumpLargeAviable, dirH, 6, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.17, 0.17, 0.1, 0.1, -0.0005, 0.0005, -0.3, 0, 0, 0.3);
+	OnlyJumpsAnimation(currentUncycleFrame, time, cooldownAnimationJump, 1, jumpLargeAviable, dirH, 6, 0.01, speedHX, speedHY, sprite, 100, 444, -100, 10, -0.2, 0.2, 0.1, 0.1, -0.0005, 0.0005, -0.3, 0, 0, 0.3);
 	return 0;
 }
 
-int Hero::HeroChangeModToBattleLeft(float time)							//Взгяд влево достает меч
+int Hero::HeroChangeModToBattleLeft(float time)							//Взгляд влево достает меч
 {
-	dirH = 0;
 	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
-	UncycleAnimation(currentUncycleFrame, time,battleModeAvaible, dirH, 3, 0.01, sprite, 100, 1998, -100, 4);
+	UncycleAnimation(currentUncycleFrame, time, battleModeAvaible, dirH, 3, 0.01, sprite, 100, 1998, -100, 4);
 	if (battleModeAvaible == false) battleMode = true;
 	return 0;
 }
 
-int Hero::HeroChangeModToCivilLeft(float time)							//Взглд влево убирает меч
+int Hero::HeroChangeModToCivilLeft(float time)							//Взгляд влево убирает меч
 {
-	dirH = 0;
 	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
 	UncycleAnimation(currentUncycleFrame, time, battleModeAvaible, dirH, 3, 0.01, sprite, 100, 2072, -100, 4);
 	if (battleModeAvaible == false) battleMode = false;
 	return 0;
 }
 
-int Hero::HeroChangeModToBattleRight(float time)						//Взгяд вправо достает меч
+int Hero::HeroChangeModToBattleRight(float time)						//Взгляд вправо достает меч
 {
-	dirH = 0;
 	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
 	UncycleAnimation(currentUncycleFrame, time, battleModeAvaible, dirH, 1, 0.01, sprite, 0, 1998, 100, 4);
 	if (battleModeAvaible == false) battleMode = true;
 	return 0;
 }
 
-int Hero::HeroChangeModToCivilRight(float time)							//Взглд вправо убирает меч
+int Hero::HeroChangeModToCivilRight(float time)							//Взгляд вправо убирает меч
 {
-	dirH = 0;
 	Physics(speedHX, speedHY, 0, 0, 1, 1, 0, 0);
 	UncycleAnimation(currentUncycleFrame, time, battleModeAvaible, dirH, 1, 0.01, sprite, 0, 2072, 100, 4);
 	if (battleModeAvaible == false) battleMode = false;
+	return 0;
+}
+
+int Hero::LightBlowRight(float time)									//Легкий удар вправо
+{
+	comboTimer += time;														//Увеличиваем комбо таймер
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);							//Физика
+	if (comboHitH == 1 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 0, 1628, 100, 4);
+	}
+	if (comboHitH == 2 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 0, 1702, 100, 3);
+	}
+	if (comboHitH == 3 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 0, 1850, 100, 3);
+	}
+	if (comboHitH == 2 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 0, 1480, 100, 3);
+	}
+	return 0;
+}
+
+int Hero::LightBlowLeft(float time)										//Легкий удар влево
+{
+	comboTimer += time;														//Увеличиваем комбо таймер
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);							//Физика
+	if (comboHitH == 1 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 100, 1628, -100, 4);
+	}
+	if (comboHitH == 2 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 100, 1702, -100, 3);
+	}
+	if (comboHitH == 3 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 100, 1850, -100, 3);
+	}
+	if (comboHitH == 2 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableLight, dirH, 1, 0.01, sprite, 100, 1480, -100, 3);
+	}
+	return 0;
+}
+
+int Hero::HeavyBlowRight(float time)									//Тяжелый удар вправо
+{
+	comboTimer += time;													//Увеличиваем комбо таймер
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);						//Физика
+	if (comboHitH == 3 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1776, 100, 5);
+	}
+	if (comboHitH == 1 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1332, 100, 3);
+	}
+	if (comboHitH == 3 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1554, 100, 3);
+	}
+	return 0;
+}
+
+int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влево
+{
+	comboTimer += time;													//Увеличиваем комбо таймер
+	Physics(speedHX, speedHY, 0, 0, 2, 2, 0, 0);						//Физика
+	if (comboHitH == 3 && comboH == 2) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1776, -100, 5);
+	}
+	if (comboHitH == 1 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1332, -100, 3);
+	}
+	if (comboHitH == 3 && comboH == 1) {
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1554, -100, 3);
+	}
 	return 0;
 }
 

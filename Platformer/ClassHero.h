@@ -27,8 +27,6 @@ protected:
 											// ↙↓↘
 											//6 2 5
 
-	int healthH;						//Здоровье Героя 0-100
-
 	String File;						//Файл с расширением
 	Image image;						//Изображение
 	Texture texture;					//Текстура
@@ -49,12 +47,19 @@ protected:
 	bool controlAviable = true;			//Контроль управления с клавиатуры
 	bool onlyOneAnimation = true;		//Воспроизведение только одной анимации по всем направлениям
 	bool onlyOneAnimationOneDir = true;	//Воспроизведение только одной анимации в одном направлении
+	bool hitAviableLight = false;		//Наносим легкий удар?
+	bool hitAviableHeavy = false;		//Наносим тяжелый удар?
 
 	float currentFrame = 0;				//Номер текущего кадра циклической анимации
 	float currentUncycleFrame = 0;		//Номер текущего кадра не циклической анимации
 
 	float cooldownAnimationJump = 0;	//Кулдаун на анимацию прыжков
 	float cooldownAnimationSlide = 0;	//Кулдаун на анимацию скольжения
+	float comboTimer = 0;				//Время до следующего удара в комбо
+
+	int healthH;						//Здоровье Героя 0-100
+	int comboH = 0;						//Текущее комбо
+	int comboHitH = 0;					//Текущий удар в комбо
 public:
 	Hero(String F, float X, float Y, float W, float H, int Health)		//Конструктор 
 	{
@@ -70,18 +75,23 @@ public:
 		healthH = Health;									//Здоровье
 		sprite.setTextureRect(IntRect(0, 0, wH, hH));		//Вырезаем персонажа
 	}
-	//Функции-CHANGE помощники могут изменять значения
+	//Функции-CHANGE помощники, могут изменять значения
 	void Change_speedHX(float value) { speedHX += value; }
 	void Change_speedHY(float value) { speedHY += value; }
 	void Change_cooldownAnimationJump(float value) { cooldownAnimationJump += value; }
 	void Change_cooldownAnimationSlide(float value) { cooldownAnimationSlide += value; }
+	void Change_comboTimer(float value) { comboTimer += value; }
+	void Change_comboHitH(float value) { comboHitH += value; }
 
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
-	float Get_speedXH() { return speedHX; }										//speedHX
-	float Get_speedXY() { return speedHY; }										//speedHY
-	float Get_cooldownAnimationJump() { return cooldownAnimationJump; }			//cooldownAnimationJump
-	float Get_cooldownAnimationSlide() { return cooldownAnimationSlide; }		//cooldownAnimationSlide
+	float Get_speedXH() { return speedHX; }										//Получить speedHX
+	float Get_speedXY() { return speedHY; }										//Получить speedHY
+	float Get_cooldownAnimationJump() { return cooldownAnimationJump; }			//Получить cooldownAnimationJump
+	float Get_cooldownAnimationSlide() { return cooldownAnimationSlide; }		//Получить cooldownAnimationSlide
+	float Get_comboTimer() { return comboTimer; }								//Получить comboTimer
+	float Get_comboHitH() { return comboHitH; }									//Получить comboHitH
+	float Get_comboH() { return comboH; }										//Получить comboH
 	bool Get_moveLeft() { return moveLeft; }									//Можно ли двигаться влево
 	bool Get_moveOnlyLeft() { return moveOnlyLeft; }							//Можно ли двигаться только прямо влево
 	bool Get_moveRight() { return moveRight; }									//Можно ли двигаться вправо
@@ -96,8 +106,9 @@ public:
 	bool Get_onlyOneAnimation() { return onlyOneAnimation; }					//Возможно ли воспроизведение только одной анимации
 	bool Get_onlyOneAnimationOneDir() { return onlyOneAnimationOneDir; }		//Возможно ли воспроизведение только одной анимации в одном направлении
 	bool Get_battleMode() { return battleMode; }								//Какая стойка
-	bool Get_battleModeAvaible() { return battleModeAvaible; }					//Какая стойка возможна
-
+	bool Get_battleModeAvaible() { return battleModeAvaible; }					//Возможно ли переключение в другую стойку
+	bool Get_hitAviableLight() { return hitAviableLight; }						//Наносим ли легкий удар
+	bool Get_hitAviableHeavy() { return hitAviableHeavy; }						//Наносим ли тяжелый удар
 
 	//Функции-SET помощники
 	void Set_moveLeft(bool value) { moveLeft=value; }							//Установить движение влево
@@ -115,6 +126,10 @@ public:
 	void Set_onlyOneAnimationOneDir(bool value){onlyOneAnimationOneDir = value;}//Установить воспроизведение только одной анимации в одном направлении
 	void Set_battleMode(bool value) { battleMode = value; }						//Установить стойку
 	void Set_battleModeAvaible(bool value) { battleModeAvaible = value; }		//Установить возможность смены стойки
+	void Set_hitAviableLight(bool value) { hitAviableLight = value; }			//Установить нанесение легкого удара
+	void Set_hitAviableHeavy(bool value) { hitAviableHeavy = value; }			//Установить нанесение тяжелого удара
+	void Set_comboH(float value) { comboH = value; }							//Установить текущее комбо
+	void Set_comboHitH(float value) { comboHitH = value; }						//Установить текущий удар в комбо
 
 
 	void Draw(float);															//Отрисовка персонажа, связь физики и анимации
@@ -194,6 +209,10 @@ public:
 	int HeroChangeModToCivilLeft(float);
 	int HeroChangeModToBattleRight(float);
 	int HeroChangeModToCivilRight(float);
+	int LightBlowRight(float);
+	int HeavyBlowRight(float);
+	int LightBlowLeft(float);
+	int HeavyBlowLeft(float);
 
 
 	//Через эту функцию происходит получение урона героем
