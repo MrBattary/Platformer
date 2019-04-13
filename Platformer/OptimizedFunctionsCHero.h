@@ -16,11 +16,11 @@ void Physics(float &speedX,float &speedY,float msX,float msY,float clutchX,float
 	
 	if (speedX > msX)speedX -= 0.02* clutchX;
 	if (speedX < msX)speedX += 0.02* clutchX;
-	if (speedX < msX + 0.02 && speedX > msX-0.02) speedX = msX;
+	if (speedX < (msX + 0.04) && speedX > (msX - 0.04)) speedX = msX;
 	
 	if (speedY > msY)speedY -= 0.02* clutchY;
 	if (speedY < msY)speedY += 0.02* clutchY;
-	if (speedY < msY + 0.02 && speedY > msY - 0.02) speedY = msY;
+	if (speedY < (msY + 0.04) && speedY > (msY - 0.04)) speedY = msY;
 }
 
 /*
@@ -56,24 +56,29 @@ sprite			-спрайт
 y2				-положение нижней точки по Y	
 x11				-нужен для отражения
 aviable			-возвращает значение, выполняется ли еще эта анимация
+fHX,sHX,fHY,SHY -ограничения скорости
+msX,msY,clutchX,clutchY,addX,addY - нужны для движка физики
 */
 
 void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, float cooldownValue, bool & avaible, int & direction, int directionValue, float & speedHX, float & speedHY, Sprite & sprite, int x11, int x2, float msX, float msY, float clutchX, float clutchY, float addX, float addY, double fHX, double sHX, double fHY, double sHY) {
 	cooldown += cooldownValue*time;
 	direction = directionValue;
-	currentFrameUN += 0.007 * time;
+	currentFrameUN += 0.007 * time; 
+	bool minusFrames = false;
 	if (currentFrameUN <= 2.01) {
 		sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+ x11, 592, x2, 74));
+		speedHX += addX;
+		speedHY += addY;
 	}
-	if (currentFrameUN <= 4.01 && currentFrameUN > 2 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
+	if (currentFrameUN > 2 && currentFrameUN < 4.2 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
 		if (Keyboard::isKeyPressed(Keyboard::C)) {
-			Physics(speedHX, speedHY, msX, msY, clutchX, clutchY, addX, addY);
-			if (currentFrameUN > 4) currentFrameUN -= 2;
+			Physics(speedHX, speedHY, msX, msY, clutchX, clutchY, 0, 0);
+			if (currentFrameUN > 4) { currentFrameUN -= 2.000001; }
 			sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
 		}
-		else currentFrameUN = 4.1;
+		else currentFrameUN = 4.2;
 	}
-	if (currentFrameUN > 4) {
+	if (currentFrameUN > 4.1) {
 		sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+ x11, 592, x2, 74));
 	}
 	if (currentFrameUN > 8)

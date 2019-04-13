@@ -1,91 +1,108 @@
-﻿  FunctionControlsСHero.cpp
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functioncontrolsсhero.cpp(1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\controlschero.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\classhero.h(71): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+﻿  ControlsСHero.cpp
+c:\users\thisb\documents\github\platformer\platformer\controlsсhero.cpp(1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\mainfunctions.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(76): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(84): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(93): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(94): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(131): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(132): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedcontrolschero.h(7): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
   FunctionsCHero.cpp
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(6): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\classhero.h(71): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(6): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(76): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(17): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(18): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(21): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(22): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(64): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(74): warning C4305: =: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(107): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\optimizedfunctionschero.h(136): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(117): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(120): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(123): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(126): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(137): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(140): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(143): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(146): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(157): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(167): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(175): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(183): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(190): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(199): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(207): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(215): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(222): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(231): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(239): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(247): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(255): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(264): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(272): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(280): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(288): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(297): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(305): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(313): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(321): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(330): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(338): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(346): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(353): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(359): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(365): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(371): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(377): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(383): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(389): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(395): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(401): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(407): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(413): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(419): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(425): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(431): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(437): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(443): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(449): warning C4305: аргумент: усечение из "double" в "float"
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\functionschero.cpp(455): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(84): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(93): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(94): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(131): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(132): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(17): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(18): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(21): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(22): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(66): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(76): warning C4305: -=: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(79): warning C4305: =: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(112): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\optimizedfunctionschero.h(141): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(118): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(121): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(124): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(127): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(138): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(141): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(144): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(147): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(158): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(168): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(176): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(184): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(191): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(200): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(208): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(216): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(223): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(232): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(240): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(248): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(256): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(265): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(273): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(281): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(289): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(298): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(306): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(314): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(322): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(331): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(339): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(347): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(354): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(360): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(366): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(372): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(378): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(384): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(390): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(396): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(402): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(408): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(414): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(420): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(426): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(432): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(438): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(444): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(450): warning C4305: аргумент: усечение из "double" в "float"
+c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(456): warning C4305: аргумент: усечение из "double" в "float"
   Maps.cpp
-  Platformer.cpp
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\platformer.cpp(22): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\classhero.h(71): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+  Main.cpp
+c:\users\thisb\documents\github\platformer\platformer\main.cpp(23): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(76): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
           with
           [
               T=int
           ]
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\platformer.cpp(23): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\controlschero.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\source\repos\platformer 0.1.1\platformerver1\platformer\platformer\platformer.cpp(40): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(84): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(93): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(94): warning C4244: return: преобразование "int" в "float", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(131): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\classhero.h(132): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+c:\users\thisb\documents\github\platformer\platformer\main.cpp(24): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\mainfunctions.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\thisb\documents\github\platformer\platformer\main.cpp(41): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
   Создание кода
-  125 of 125 functions (100.0%) were compiled.
-    13 functions were new in current compilation
+  141 of 141 functions (100.0%) were compiled.
+    0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
-  Platformer.vcxproj -> C:\Users\thisb\source\repos\Platformer 0.1.1\PlatformerVer1\Platformer\x64\Release\Platformer.exe
+  Platformer.vcxproj -> C:\Users\thisb\Documents\GitHub\Platformer\x64\Release\Platformer.exe

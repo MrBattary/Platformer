@@ -129,14 +129,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FunctionControlsСHero.cpp" />
+    <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
     <ClCompile Include="Maps.cpp" />
-    <ClCompile Include="Platformer.cpp" />
+    <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassHero.h" />
-    <ClInclude Include="ControlsCHero.h" />
+    <ClInclude Include="OptimizedControlsCHero.h" />
+    <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="OptimizedFunctionsCHero.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
