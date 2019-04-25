@@ -233,23 +233,14 @@ BattleIdleAnimation:
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(false);
 				MainHero.Set_onlyOneAnimation(false);
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_moveRight(false);
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.HeroMoveRightFastDown(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_moveRight(false);
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.HeroMoveRightSlowDown(time);
-				}
+
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11 && MainHero.Get_speedXY() >= 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)//ÎØÈÁÊÀ: ÍÅ ÂÛÏÎËÍßÅÒÑß ÏÐÎÂÅÐÊÀ
 				{
 					MainHero.Set_moveRight(false);
 					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
 				}
 				else {
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
@@ -271,6 +262,19 @@ BattleIdleAnimation:
 					}
 					else MainHero.Set_moveRight(true);
 				}
+
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_moveRight(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.HeroMoveRightFastDown(time);
+				}
+				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_moveRight(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.HeroMoveRightSlowDown(time);
+				}
 				if (MainHero.Get_moveRight() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
 					MainHero.HeroMoveRightDown(time);
@@ -286,6 +290,35 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(false);
 				MainHero.Set_onlyOneAnimation(false);
 
+				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11  && MainHero.Get_speedXY() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
+				{
+					MainHero.Set_moveRight(false);
+					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
+				}
+				else {
+					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
+					{
+						MainHero.Set_moveRight(false);
+						MainHero.Set_crouchAviable(false);
+						MainHero.Set_onlyOneAnimationOneDir(false);
+						MainHero.HeroMoveRightCrouchUp(time);
+					}
+				}
+				if (Keyboard::isKeyPressed(Keyboard::Space))
+				{
+					if (MainHero.Get_speedXH() >= 0.1 && MainHero.Get_speedXY() <= -0.1 && MainHero.Get_cooldownAnimationJump() <= 0)
+					{
+						if (MainHero.Get_speedXH() >= 0.1 && MainHero.Get_speedXH() < 0.15 && MainHero.Get_speedXY() <= -0.1 && MainHero.Get_speedXY() > -0.15) {
+							MainHero.Set_jumpAviable(true);
+						}
+						if (MainHero.Get_speedXH() > 0.15 && MainHero.Get_speedXY() < -0.15) MainHero.Set_jumpLargeAviable(true);
+					}
+					else MainHero.Set_moveRight(true);
+				}
+
 				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
 					MainHero.Set_onlyOneAnimationOneDir(false);
@@ -297,33 +330,6 @@ BattleIdleAnimation:
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_moveRight(false);
 					MainHero.HeroMoveRightSlowUp(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11  && MainHero.Get_speedXY() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
-				{
-					MainHero.Set_moveRight(false);
-					MainHero.Set_crouchAviable(false);
-					MainHero.Set_slideAviable(true);
-				}
-				else {
-					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
-					{
-						MainHero.Set_moveRight(false);
-						MainHero.Set_crouchAviable(false);
-						MainHero.Set_onlyOneAnimationOneDir(false);
-						MainHero.HeroMoveRightCrouchUp(time);
-					}
-				}
-
-				if (Keyboard::isKeyPressed(Keyboard::Space))
-				{
-					if (MainHero.Get_speedXH() >= 0.1 && MainHero.Get_speedXY() <= -0.1 && MainHero.Get_cooldownAnimationJump() <= 0)
-					{
-						if (MainHero.Get_speedXH() >= 0.1 && MainHero.Get_speedXH() < 0.15 && MainHero.Get_speedXY() <= -0.1 && MainHero.Get_speedXY() > -0.15) {
-							MainHero.Set_jumpAviable(true);
-						}
-						if (MainHero.Get_speedXH() > 0.15 && MainHero.Get_speedXY() < -0.15) MainHero.Set_jumpLargeAviable(true);
-					}
-					else MainHero.Set_moveRight(true);
 				}
 				if (MainHero.Get_moveRight() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
@@ -338,23 +344,13 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(false);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveRight(false);
-					MainHero.HeroMoveRightFast(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveRight(false);
-					MainHero.HeroMoveRightSlow(time);
-				}
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() > 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveRight(false);
 					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
 				}
 				else {
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
@@ -376,6 +372,19 @@ BattleIdleAnimation:
 					}
 					else MainHero.Set_moveRight(true);
 				}
+
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveRight(false);
+					MainHero.HeroMoveRightFast(time);
+				}
+				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveRight(false);
+					MainHero.HeroMoveRightSlow(time);
+				}
 				if (MainHero.Get_moveRight() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
 					MainHero.HeroMoveRight(time);
@@ -390,23 +399,13 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(true);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftFastDown(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftSlowDown(time);
-				}
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11  && MainHero.Get_speedXY() >= 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
 					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
 				}
 				else {
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
@@ -428,6 +427,19 @@ BattleIdleAnimation:
 					}
 					else MainHero.Set_moveLeft(true);
 				}
+
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftFastDown(time);
+				}
+				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftSlowDown(time);
+				}
 				if (MainHero.Get_moveLeft() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
 					MainHero.HeroMoveLeftDown(time);
@@ -442,23 +454,13 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(true);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftFastUp(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftSlowUp(time);
-				}
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11  && MainHero.Get_speedXY() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
 					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
 				}
 				else {
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
@@ -480,6 +482,19 @@ BattleIdleAnimation:
 					}
 					else MainHero.Set_moveLeft(true);
 				}
+
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftFastUp(time);
+				}
+				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftSlowUp(time);
+				}
 				if (MainHero.Get_moveLeft() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{
 					MainHero.HeroMoveLeftUp(time);
@@ -493,23 +508,13 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(true);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftFast(time);
-				}
-				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
-				{
-					MainHero.Set_onlyOneAnimationOneDir(false);
-					MainHero.Set_moveLeft(false);
-					MainHero.HeroMoveLeftSlow(time);
-				}
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
 					MainHero.Set_crouchAviable(false);
+					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
+					MainHero.HeroSlideChoise(time);
 				}
 				else {
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
@@ -530,6 +535,19 @@ BattleIdleAnimation:
 						if (MainHero.Get_speedXH() < -0.15) MainHero.Set_jumpLargeAviable(true);
 					}
 					else MainHero.Set_moveLeft(true);
+				}
+
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftFast(time);
+				}
+				if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true)
+				{
+					MainHero.Set_onlyOneAnimationOneDir(false);
+					MainHero.Set_moveLeft(false);
+					MainHero.HeroMoveLeftSlow(time);
 				}
 				if (MainHero.Get_moveLeft() == true && MainHero.Get_onlyOneAnimationOneDir() == true)
 				{

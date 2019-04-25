@@ -535,10 +535,10 @@ int Hero::HeavyBlowRight(float time)									//Тяжелый удар впра�
 		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1776, 100, 5);
 	}
 	if (comboHitH == 1 && comboH == 1) {
-		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1332, 100, 3);
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.007, sprite, 0, 1332, 100, 3);
 	}
 	if (comboHitH == 3 && comboH == 1) {
-		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 0, 1554, 100, 3);
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.007, sprite, 0, 1554, 100, 3);
 	}
 	return 0;
 }
@@ -551,10 +551,10 @@ int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влев�
 		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1776, -100, 5);
 	}
 	if (comboHitH == 1 && comboH == 1) {
-		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1332, -100, 3);
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.007, sprite, 100, 1332, -100, 3);
 	}
 	if (comboHitH == 3 && comboH == 1) {
-		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.01, sprite, 100, 1554, -100, 3);
+		UncycleAnimation(currentUncycleFrame, time, hitAviableHeavy, dirH, 1, 0.007, sprite, 100, 1554, -100, 3);
 	}
 	return 0;
 }
