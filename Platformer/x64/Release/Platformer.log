@@ -84,24 +84,8 @@ c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(438): w
 c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(444): warning C4305: аргумент: усечение из "double" в "float"
 c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(450): warning C4305: аргумент: усечение из "double" в "float"
 c:\users\thisb\documents\github\platformer\platformer\functionschero.cpp(456): warning C4305: аргумент: усечение из "double" в "float"
-  Maps.cpp
-  Main.cpp
-c:\users\thisb\documents\github\platformer\platformer\main.cpp(23): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(76): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-          with
-          [
-              T=int
-          ]
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(84): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(93): warning C4244: return: преобразование "int" в "float", возможна потеря данных
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(94): warning C4244: return: преобразование "int" в "float", возможна потеря данных
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(131): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-c:\users\thisb\documents\github\platformer\platformer\classhero.h(132): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-c:\users\thisb\documents\github\platformer\platformer\main.cpp(24): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\documents\github\platformer\platformer\mainfunctions.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-c:\users\thisb\documents\github\platformer\platformer\main.cpp(41): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
   Создание кода
-  141 of 141 functions (100.0%) were compiled.
+  4 of 141 functions ( 2.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
