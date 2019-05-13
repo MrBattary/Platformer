@@ -22,6 +22,7 @@ Platformer.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчива
 #include <SFML/Graphics.hpp>
 #include "ClassHero.h";
 #include "MainFunctions.h";
+#include "MainMap.h";
 
 using namespace sf;
 
@@ -29,7 +30,9 @@ int main() {
 	RenderWindow window(sf::VideoMode(1280, 720), "Test");		//Рендер окна
 	window.setFramerateLimit(60);								//Ограничение FPS
 
+	Map MainMap("art.png", 0, 0, 1800, 1200);
 	Hero MainHero("HeroSpritesBig.png", 590, 286, 100, 74, 100);//Создаем героя
+
 
 	Clock clock;												//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
 	
@@ -53,10 +56,14 @@ int main() {
 
 		ControlsMainCharacter(MainHero,time);																//Управление главным персонажем
 		
+		MainMap.Draw(time);
 		MainHero.Draw(time);																				//Отрисовка персонажа
+		
 
-		window.clear();																						//Очистка окна от предыдущего спрайта
+		window.clear();		
+		window.draw(MainMap.Get_Sprite());																		//Очистка окна от предыдущего спрайта
 		window.draw(MainHero.Get_Sprite());																	//Отрисовка на экране спрайта
+		
 		window.display();																					//Отображение
 	}
 	return 0;

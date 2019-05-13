@@ -1,1 +1,11 @@
-﻿  Platformer.vcxproj -> C:\Users\thisb\Documents\GitHub\Platformer\x64\Debug\Platformer.exe
+﻿  ControlsСHero.cpp
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\controlsсhero.cpp(1): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\mainfunctions.h(3): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\classhero.h(7): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  FunctionsCHero.cpp
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\functionschero.cpp(6): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\classhero.h(7): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Maps.cpp
+  Main.cpp
+c:\users\анна\downloads\platformer-master\platformer-master\platformer\main.cpp(22): fatal error C1083: Не удается открыть файл включение: SFML/Graphics.hpp: No such file or directory,
+  Создание кода...
