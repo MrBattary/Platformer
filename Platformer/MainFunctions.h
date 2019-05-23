@@ -1,7 +1,10 @@
 #pragma once
 #include <iostream>	//ТЕХН
-#include "ClassHero.h";
+#include "ClassHero.h"
+#include "ClassObject.h"
 
 void ControlsMainCharacter(Hero &, float);							//Управление персонажем с клавиатуры
 
-void ConsoleCheck(Hero, float, bool, bool, bool, bool, bool, bool);	//ТЕХН, вывод значений в консоль
+void DrawEnvironment(View, Object *, const unsigned short int);						//Расположение объектов в пространстве
+void SetLayers(Object *, const unsigned short int);									//Функция отвечает за присваивание каждому объекту своего слоя
+void IntersectionHeroWithEnvironment(Hero &, Object *, const unsigned short int);	//Функция определяющая пересечение физических моделей объектов
