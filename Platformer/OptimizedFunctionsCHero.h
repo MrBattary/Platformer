@@ -1,25 +1,26 @@
-﻿//Вспомогательные функции для функций персонажа
+﻿#pragma once
+//Вспомогательные функции для функций персонажа
 /*
 Функция Physics: физика, отвечает за правильную физику в игре
 speedX					-ускорение по оси Х
 speedY					-ускорение по оси Y
+clutchObj				-показатель сцепления с объектом, чем он меньше, тем сильнее "заносит" персонажа, больше- обратная ситуация
 msX(movementspeedX=ms)	-значение по Х, к которому стремится speedX
 msY						-значение по Y, к которому стремится speedY
-clutchX/clutchY			-показатель сцепления с грунтом, чем он меньше, тем сильнее "заносит" персонажа, больше- обратная ситуация
-						 поможет сильно, когда будет ландшафт и разница в грунтах.
+clutchX/clutchY			-показатель сцепления анимации
 addX/addY				-доп ускорение (для прыжков,рывков, итд), если не нужно:ставим 0.
 */
 
-void Physics(float &speedX,float &speedY,float msX,float msY,float clutchX,float clutchY,float addX, float addY) {
+void Physics(float &speedX, float &speedY, float clutchObj, float msX, float msY, float clutchX, float clutchY, float addX, float addY) {
 	speedX += addX;
 	speedY += addY;
 	
-	if (speedX > msX)speedX -= 0.02* clutchX;
-	if (speedX < msX)speedX += 0.02* clutchX;
+	if (speedX > msX)speedX -= 0.02* clutchX * clutchObj;
+	if (speedX < msX)speedX += 0.02* clutchX * clutchObj;
 	if (speedX < (msX + 0.04) && speedX > (msX - 0.04)) speedX = msX;
 	
-	if (speedY > msY)speedY -= 0.02* clutchY;
-	if (speedY < msY)speedY += 0.02* clutchY;
+	if (speedY > msY)speedY -= 0.02* clutchY * clutchObj;
+	if (speedY < msY)speedY += 0.02* clutchY * clutchObj;
 	if (speedY < (msY + 0.04) && speedY > (msY - 0.04)) speedY = msY;
 }
 
@@ -57,10 +58,10 @@ y2				-положение нижней точки по Y
 x11				-нужен для отражения
 aviable			-возвращает значение, выполняется ли еще эта анимация
 fHX,sHX,fHY,SHY -ограничения скорости
-msX,msY,clutchX,clutchY,addX,addY - нужны для движка физики
+msX,msY,clutchX,clutchY,clutchObj,addX,addY - нужны для движка физики
 */
 
-void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, float cooldownValue, bool & avaible, int & direction, int directionValue, float & speedHX, float & speedHY, Sprite & sprite, int x11, int x2, float msX, float msY, float clutchX, float clutchY, float addX, float addY, double fHX, double sHX, double fHY, double sHY) {
+void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, float cooldownValue, bool & avaible, int & direction, int directionValue, float & speedHX, float & speedHY, Sprite & sprite, int x11, int x2, float msX, float msY, float clutchX, float clutchY, float clutchObj, float addX, float addY, double fHX, double sHX, double fHY, double sHY) {
 	cooldown += cooldownValue*time;
 	direction = directionValue;
 	currentFrameUN += 0.007 * time; 
@@ -72,7 +73,7 @@ void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, flo
 	}
 	if (currentFrameUN > 2 && currentFrameUN < 4.2 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
 		if (Keyboard::isKeyPressed(Keyboard::C)) {
-			Physics(speedHX, speedHY, msX, msY, clutchX, clutchY, 0, 0);
+			Physics(speedHX, speedHY, clutchObj, msX, msY, clutchX, clutchY, 0, 0);
 			if (currentFrameUN > 4) { currentFrameUN -= 2.000001; }
 			sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
 		}
@@ -103,15 +104,15 @@ y2				-положение нижней точки по Y
 x11				-нужен для отражения
 aviable			-возвращает значение, выполняется ли еще эта анимация
 fHX,sHX,fHY,SHY -ограничения скорости
-msX,msY,clutchX,clutchY,addX,addY - нужны для движка физики
+msX,msY,clutchX,clutchY,clutchObj,addX,addY - нужны для движка физики
 */
 
-void OnlyJumpsAnimation(float & currentFrameUN, float time, float& cooldown, float cooldownValue, bool & avaible, int & direction, int directionValue, double animationSpeed, float & speedHX, float & speedHY, Sprite & sprite, int x11, int y1,int x2,int frames, float msX, float msY, float clutchX, float clutchY, float addX, float addY,double fHX, double sHX, double fHY, double sHY) {
+void OnlyJumpsAnimation(float & currentFrameUN, float time, float& cooldown, float cooldownValue, bool & avaible, int & direction, int directionValue, double animationSpeed, float & speedHX, float & speedHY, Sprite & sprite, int x11, int y1,int x2,int frames, float msX, float msY, float clutchX, float clutchY, float clutchObj, float addX, float addY,double fHX, double sHX, double fHY, double sHY) {
 	cooldown += cooldownValue*time;
 	direction = directionValue;
 	currentFrameUN += animationSpeed * time;
 	if (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY) {
-		Physics(speedHX, speedHY, msX, msY, clutchX, clutchY, addX, addY);
+		Physics(speedHX, speedHY, /*clutchObj*/ 1, msX, msY, clutchX, clutchY, addX, addY);
 	}
 	sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+x11, y1, x2, 74));
 	if (currentFrameUN > frames)

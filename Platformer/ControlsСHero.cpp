@@ -1,31 +1,30 @@
-#include "MainFunctions.h";
-#include "ClassHero.h"
+ï»¿#include "MainFunctions.h";
 #include "OptimizedControlsCHero.h"
 
 /*
-Òóò ïðîèñõîäèò îïèñàíèå óïðàâëåíèÿ ïåðñîíàæåì
-Âñå óñëîâèÿ ïîñòðîåíû ïî îäíîìó ïðèíöèïó
-(Êàêèå îñíîâûíå êëàâèøè íàæàòû: W/A/S/D)
+Ð¢ÑƒÑ‚ Ð¿Ñ€Ð¾Ð¸ÑÑ…Ð¾Ð´Ð¸Ñ‚ Ð¾Ð¿Ð¸ÑÐ°Ð½Ð¸Ðµ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¼
+Ð’ÑÐµ ÑƒÑÐ»Ð¾Ð²Ð¸Ñ Ð¿Ð¾ÑÑ‚Ñ€Ð¾ÐµÐ½Ñ‹ Ð¿Ð¾ Ð¾Ð´Ð½Ð¾Ð¼Ñƒ Ð¿Ñ€Ð¸Ð½Ñ†Ð¸Ð¿Ñƒ
+(ÐšÐ°ÐºÐ¸Ðµ Ð¾ÑÐ½Ð¾Ð²Ñ‹Ð½Ðµ ÐºÐ»Ð°Ð²Ð¸ÑˆÐ¸ Ð½Ð°Ð¶Ð°Ñ‚Ñ‹: W/A/S/D)
 {
-	Áóëåâñêèå ïåðåìåííûå äëÿ êîððåêòíîãî óïðàâëåíèÿ
-	if(Óñêîðåíèå Shift)
-	if(Øàã LAlt)
-	if(Ïðèñåä Ñ)
-	if(Ïðûæîê Space)
-	else Íè÷åãî èç âåðõíåãî (Ïðîñòî áåã)
+	Ð‘ÑƒÐ»ÐµÐ²ÑÐºÐ¸Ðµ Ð¿ÐµÑ€ÐµÐ¼ÐµÐ½Ð½Ñ‹Ðµ Ð´Ð»Ñ ÐºÐ¾Ñ€Ñ€ÐµÐºÑ‚Ð½Ð¾Ð³Ð¾ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ
+	if(Ð£ÑÐºÐ¾Ñ€ÐµÐ½Ð¸Ðµ Shift)
+	if(Ð¨Ð°Ð³ LAlt)
+	if(ÐŸÑ€Ð¸ÑÐµÐ´ Ð¡)
+	if(ÐŸÑ€Ñ‹Ð¶Ð¾Ðº Space)
+	else ÐÐ¸Ñ‡ÐµÐ³Ð¾ Ð¸Ð· Ð²ÐµÑ€Ñ…Ð½ÐµÐ³Ð¾ (ÐŸÑ€Ð¾ÑÑ‚Ð¾ Ð±ÐµÐ³)
 */
 
 
 void ControlsMainCharacter(Hero & MainHero, float time) {
 
-	if (MainHero.Get_battleMode() == true) {																	//Áîåâîé ìîä
+	if (MainHero.Get_battleMode() == true) {																	//Ð‘Ð¾ÐµÐ²Ð¾Ð¹ Ð¼Ð¾Ð´
 		MainHero.Set_buttonIsPressed(false);
 		MainHero.Set_moveOnlyRight(true);
 		MainHero.Set_moveOnlyLeft(true);
 		MainHero.Set_onlyOneAnimation(true);
 		MainHero.Set_onlyOneAnimationOneDir(true);
 
-		if (MainHero.Get_battleModeAvaible() == true) {															//Ïåðåêëþ÷åíèå íà ìèðíûé ìîä
+		if (MainHero.Get_battleModeAvaible() == true) {															//ÐŸÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ð½Ð° Ð¼Ð¸Ñ€Ð½Ñ‹Ð¹ Ð¼Ð¾Ð´
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeroChangeModToCivilRight(time);
 			}
@@ -34,7 +33,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 			}
 		}
 
-		if (MainHero.Get_hitAviableHeavy() == true) {															//Åñëè ìîæíî íàíåñòè òÿæåëûé óäàð
+		if (MainHero.Get_hitAviableHeavy() == true) {															//Ð•ÑÐ»Ð¸ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ Ñ‚ÑÐ¶ÐµÐ»Ñ‹Ð¹ ÑƒÐ´Ð°Ñ€
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeavyBlowRight(time);
 			}
@@ -42,7 +41,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeavyBlowLeft(time);
 			}
 		}
-		if (MainHero.Get_hitAviableLight() == true) {															//Åñëè ìîæíî íàíåñòè ëåãêèé óäàð
+		if (MainHero.Get_hitAviableLight() == true) {															//Ð•ÑÐ»Ð¸ Ð¼Ð¾Ð¶Ð½Ð¾ Ð½Ð°Ð½ÐµÑÑ‚Ð¸ Ð»ÐµÐ³ÐºÐ¸Ð¹ ÑƒÐ´Ð°Ñ€
 			if (MainHero.Get_previousDirectionMove() == false) {		
 				MainHero.LightBlowRight(time);
 			}
@@ -54,20 +53,20 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 		if (MainHero.Get_battleModeAvaible() == true || MainHero.Get_hitAviableHeavy() == true || MainHero.Get_hitAviableLight() == true) MainHero.Set_controlAviable(false);
 		else MainHero.Set_controlAviable(true);
 
-		if (MainHero.Get_controlAviable() == true) 																//Åñëè óïðàâëåíèå ñ êëàâèàòóðû äîñòóïíî
+		if (MainHero.Get_controlAviable() == true) 																//Ð•ÑÐ»Ð¸ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾
 		{														
 			if (MainHero.Get_battleMode() == false) goto BattleIdleAnimation;
 
-			if (Keyboard::isKeyPressed(Keyboard::Z) && MainHero.Get_onlyOneAnimation() == true)					//Êîìàíäà ïåðåêëþ÷åíèÿ â ìèðíûé ìîä
+			if (Keyboard::isKeyPressed(Keyboard::Z) && MainHero.Get_onlyOneAnimation() == true)					//ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ð² Ð¼Ð¸Ñ€Ð½Ñ‹Ð¹ Ð¼Ð¾Ð´
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_onlyOneAnimation(false);
 				MainHero.Set_battleModeAvaible(true);
 			}
 
-			if (MainHero.Get_comboTimer() > 0)MainHero.Change_comboTimer(-time);								//Åñëè íå áüåì,òî comboTimer óìåíüøàåòñÿ
+			if (MainHero.Get_comboTimer() > 0)MainHero.Change_comboTimer(-time);								//Ð•ÑÐ»Ð¸ Ð½Ðµ Ð±ÑŒÐµÐ¼,Ñ‚Ð¾ comboTimer ÑƒÐ¼ÐµÐ½ÑŒÑˆÐ°ÐµÑ‚ÑÑ
 
-			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true)				//Ìîùíàÿ àòàêà, ïðàâàÿ êíîïêà ìûøè
+			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true)				//ÐœÐ¾Ñ‰Ð½Ð°Ñ Ð°Ñ‚Ð°ÐºÐ°, Ð¿Ñ€Ð°Ð²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ° Ð¼Ñ‹ÑˆÐ¸
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_onlyOneAnimation(false);
@@ -78,7 +77,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				if (ComboCaller(MainHero, true) == true) MainHero.Set_hitAviableHeavy(true);
 			}
 
-			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true)					//Ëåãêàÿ àòàêà, ëåâàÿ êíîïêà ìûøè
+			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true)					//Ð›ÐµÐ³ÐºÐ°Ñ Ð°Ñ‚Ð°ÐºÐ°, Ð»ÐµÐ²Ð°Ñ ÐºÐ½Ð¾Ð¿ÐºÐ° Ð¼Ñ‹ÑˆÐ¸
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_onlyOneAnimation(false);
@@ -90,7 +89,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 			}
 
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî/âíèç
+			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾/Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_moveOnlyRight(false);
 				MainHero.Set_buttonIsPressed(true);
@@ -100,7 +99,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveRightDown(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî/ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾/Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_moveOnlyRight(false);
 				MainHero.Set_buttonIsPressed(true);
@@ -110,7 +109,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveRightUp(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî
+			if (Keyboard::isKeyPressed(Keyboard::D) && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(false);
@@ -119,7 +118,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveRight(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî/âíèç
+			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾/Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_moveOnlyLeft(false);
 				MainHero.Set_buttonIsPressed(true);
@@ -129,7 +128,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveLeftDown(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî/ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾/Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_moveOnlyLeft(false);
 				MainHero.Set_buttonIsPressed(true);
@@ -139,7 +138,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveLeftUp(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî
+			if (Keyboard::isKeyPressed(Keyboard::A) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(true);
@@ -148,7 +147,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveLeft(time);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Äâèæåíèå ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(false);
@@ -157,7 +156,7 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.HeroMoveTop(time, false, false, false);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Äâèæåíèå âíèç
+			if (Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(true);
@@ -176,28 +175,29 @@ BattleIdleAnimation:
 	}
 
 
-	if (MainHero.Get_battleMode() == false) {																	//Ìèðíûé ìîä
+	if (MainHero.Get_battleMode() == false) {																	//ÐœÐ¸Ñ€Ð½Ñ‹Ð¹ Ð¼Ð¾Ð´
 
 		MainHero.Set_buttonIsPressed(false);
 		MainHero.Set_moveOnlyRight(true);
 		MainHero.Set_moveOnlyLeft(true);
-		MainHero.Set_crouchAviable(true);
+		MainHero.Set_crouchCheck(true);
+		MainHero.Set_crouchAviable(false);
 		MainHero.Set_onlyOneAnimation(true);
 		MainHero.Set_onlyOneAnimationOneDir(true);
 
-		if (MainHero.Get_slideAviable() == true)																//Ñêîëüæåíèå
+		if (MainHero.Get_slideAviable() == true)																//Ð¡ÐºÐ¾Ð»ÑŒÐ¶ÐµÐ½Ð¸Ðµ
 		{
 			MainHero.HeroSlideChoise(time);
 		}
-		if (MainHero.Get_jumpAviable() == true)																	//Ïðûæîê
+		if (MainHero.Get_jumpAviable() == true)																	//ÐŸÑ€Ñ‹Ð¶Ð¾Ðº
 		{
 			MainHero.HeroJumpChoise(time);
 		}
-		if (MainHero.Get_jumpLargeAviable() == true)															//Äëèííûé Ïðûæîê
+		if (MainHero.Get_jumpLargeAviable() == true)															//Ð”Ð»Ð¸Ð½Ð½Ñ‹Ð¹ ÐŸÑ€Ñ‹Ð¶Ð¾Ðº
 		{
 			MainHero.HeroJumpLargeChoise(time);
 		}
-		if (MainHero.Get_battleModeAvaible() == true) {															//Ïåðåêëþ÷åíèå íà áîåâîé ìîä
+		if (MainHero.Get_battleModeAvaible() == true) {															//ÐŸÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ðµ Ð½Ð° Ð±Ð¾ÐµÐ²Ð¾Ð¹ Ð¼Ð¾Ð´
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeroChangeModToBattleRight(time);
 			}
@@ -206,27 +206,27 @@ BattleIdleAnimation:
 			}
 		}
 
-		//Ïðîâåðêà, âûïîëíÿåòñÿ ëè ñïåöèàëüíîå äåéñòâèå, ïðè êîòîðîì îòêëþ÷àåòñÿ óïðàâëåíèå ñ êëàâèàòóðû
+		//ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ°, Ð²Ñ‹Ð¿Ð¾Ð»Ð½ÑÐµÑ‚ÑÑ Ð»Ð¸ ÑÐ¿ÐµÑ†Ð¸Ð°Ð»ÑŒÐ½Ð¾Ðµ Ð´ÐµÐ¹ÑÑ‚Ð²Ð¸Ðµ, Ð¿Ñ€Ð¸ ÐºÐ¾Ñ‚Ð¾Ñ€Ð¾Ð¼ Ð¾Ñ‚ÐºÐ»ÑŽÑ‡Ð°ÐµÑ‚ÑÑ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹
 		if (MainHero.Get_slideAviable() == true || MainHero.Get_jumpAviable() == true || MainHero.Get_jumpLargeAviable() == true || MainHero.Get_battleModeAvaible()==true) MainHero.Set_controlAviable(false);
 		else MainHero.Set_controlAviable(true);
 		
-		if (MainHero.Get_controlAviable() == true) {															//Åñëè óïðàâëåíèå ñ êëàâèàòóðû äîñòóïíî
+		if (MainHero.Get_controlAviable() == true) {															//Ð•ÑÐ»Ð¸ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ðµ Ñ ÐºÐ»Ð°Ð²Ð¸Ð°Ñ‚ÑƒÑ€Ñ‹ Ð´Ð¾ÑÑ‚ÑƒÐ¿Ð½Ð¾
 
-			if (MainHero.Get_battleMode() == true) goto CivilIdleAnimation;										//Êàäð-çàòû÷êà
+			if (MainHero.Get_battleMode() == true) goto CivilIdleAnimation;										//ÐšÐ°Ð´Ñ€-Ð·Ð°Ñ‚Ñ‹Ñ‡ÐºÐ°
 
-			if (Keyboard::isKeyPressed(Keyboard::Z) && MainHero.Get_onlyOneAnimation() == true)					//Êîìàíäà ïåðåêëþ÷åíèÿ â áîåâîé ìîä
+			if (Keyboard::isKeyPressed(Keyboard::Z) && MainHero.Get_onlyOneAnimation() == true)					//ÐšÐ¾Ð¼Ð°Ð½Ð´Ð° Ð¿ÐµÑ€ÐµÐºÐ»ÑŽÑ‡ÐµÐ½Ð¸Ñ Ð² Ð±Ð¾ÐµÐ²Ð¾Ð¹ Ð¼Ð¾Ð´
 			{
 				MainHero.Set_onlyOneAnimation(false);
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_battleModeAvaible(true);
 			}
 
-			if (MainHero.Get_cooldownAnimationJump() > 0)MainHero.Change_cooldownAnimationJump(-time);			//Åñëè óïðàâëÿåì ïåðñîíàæåì, îòêàòûâàåòñÿ âîçìîæíîñòü ïðûãàòü
-			if (MainHero.Get_cooldownAnimationSlide() > 0)MainHero.Change_cooldownAnimationSlide(-time);		//Åñëè óïðàâëÿåì ïåðñîíàæåì, îòêàòûâàåòñÿ âîçìîæíîñòü ñêîëüçèòü
+			if (MainHero.Get_cooldownAnimationJump() > 0)MainHero.Change_cooldownAnimationJump(-time);			//Ð•ÑÐ»Ð¸ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÑÐµÐ¼ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¼, Ð¾Ñ‚ÐºÐ°Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ Ð¿Ñ€Ñ‹Ð³Ð°Ñ‚ÑŒ
+			if (MainHero.Get_cooldownAnimationSlide() > 0)MainHero.Change_cooldownAnimationSlide(-time);		//Ð•ÑÐ»Ð¸ ÑƒÐ¿Ñ€Ð°Ð²Ð»ÑÐµÐ¼ Ð¿ÐµÑ€ÑÐ¾Ð½Ð°Ð¶ÐµÐ¼, Ð¾Ñ‚ÐºÐ°Ñ‚Ñ‹Ð²Ð°ÐµÑ‚ÑÑ Ð²Ð¾Ð·Ð¼Ð¾Ð¶Ð½Ð¾ÑÑ‚ÑŒ ÑÐºÐ¾Ð»ÑŒÐ·Ð¸Ñ‚ÑŒ
 
 
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî/âíèç
+			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾/Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_moveRight(true);
 				MainHero.Set_moveOnlyRight(false);
@@ -234,10 +234,10 @@ BattleIdleAnimation:
 				MainHero.Set_previousDirectionMove(false);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11 && MainHero.Get_speedXY() >= 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)//ÎØÈÁÊÀ: ÍÅ ÂÛÏÎËÍßÅÒÑß ÏÐÎÂÅÐÊÀ
+				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11 && MainHero.Get_speedXY() >= 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)//ÐžÐ¨Ð˜Ð‘ÐšÐ: ÐÐ• Ð’Ð«ÐŸÐžÐ›ÐÐ¯Ð•Ð¢Ð¡Ð¯ ÐŸÐ ÐžÐ’Ð•Ð ÐšÐ
 				{
 					MainHero.Set_moveRight(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -246,7 +246,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveRight(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveRightCrouchDown(time);
 					}
@@ -282,7 +283,7 @@ BattleIdleAnimation:
 			}
 
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî/ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾/Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_moveRight(true);
 				MainHero.Set_moveOnlyRight(false);
@@ -293,7 +294,7 @@ BattleIdleAnimation:
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() >= 0.11  && MainHero.Get_speedXY() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveRight(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -302,7 +303,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveRight(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveRightCrouchUp(time);
 					}
@@ -337,7 +339,7 @@ BattleIdleAnimation:
 				}
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::D) && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âïðàâî
+			if (Keyboard::isKeyPressed(Keyboard::D) && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð¿Ñ€Ð°Ð²Ð¾
 			{
 				MainHero.Set_moveRight(true);
 				MainHero.Set_buttonIsPressed(true);
@@ -347,7 +349,7 @@ BattleIdleAnimation:
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() > 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveRight(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -356,7 +358,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveRight(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveRightCrouch(time);
 					}
@@ -391,7 +394,7 @@ BattleIdleAnimation:
 				}
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî/âíèç
+			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾/Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_moveLeft(true);
 				MainHero.Set_moveOnlyLeft(false);
@@ -402,7 +405,7 @@ BattleIdleAnimation:
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11  && MainHero.Get_speedXY() >= 0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -411,7 +414,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveLeft(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveLeftCrouchDown(time);
 					}
@@ -446,7 +450,7 @@ BattleIdleAnimation:
 				}
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî/ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::A) && Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾/Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_moveLeft(true);
 				MainHero.Set_moveOnlyLeft(false);
@@ -457,7 +461,7 @@ BattleIdleAnimation:
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11  && MainHero.Get_speedXY() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -466,7 +470,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveLeft(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveLeftCrouchUp(time);
 					}
@@ -501,7 +506,7 @@ BattleIdleAnimation:
 				}
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::A) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_onlyOneAnimation() == true)	//Äâèæåíèå âëåâî
+			if (Keyboard::isKeyPressed(Keyboard::A) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_onlyOneAnimation() == true)	//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð»ÐµÐ²Ð¾
 			{
 				MainHero.Set_moveLeft(true);
 				MainHero.Set_buttonIsPressed(true);
@@ -511,7 +516,7 @@ BattleIdleAnimation:
 				if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_speedXH() <= -0.11 && MainHero.Get_cooldownAnimationSlide() <= 0)
 				{
 					MainHero.Set_moveLeft(false);
-					MainHero.Set_crouchAviable(false);
+					MainHero.Set_crouchCheck(false);
 					MainHero.Set_onlyOneAnimationOneDir(false);
 					MainHero.Set_slideAviable(true);
 					MainHero.HeroSlideChoise(time);
@@ -520,7 +525,8 @@ BattleIdleAnimation:
 					if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true)
 					{
 						MainHero.Set_moveLeft(false);
-						MainHero.Set_crouchAviable(false);
+						MainHero.Set_crouchCheck(false);
+						MainHero.Set_crouchAviable(true);
 						MainHero.Set_onlyOneAnimationOneDir(false);
 						MainHero.HeroMoveLeftCrouch(time);
 					}
@@ -555,46 +561,47 @@ BattleIdleAnimation:
 				}
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Äâèæåíèå ââåðõ
+			if (Keyboard::isKeyPressed(Keyboard::W) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð²ÐµÑ€Ñ…
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(false);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, true, false, false); MainHero.Set_crouchAviable(false); }
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, true, false, false); MainHero.Set_crouchCheck(false); }
 				else
-					if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, false, true, false); MainHero.Set_crouchAviable(false); }
+					if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, false, true, false); MainHero.Set_crouchCheck(false); }
 					else
-						if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, false, false, true); MainHero.Set_crouchAviable(false); }
+						if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveTop(time, false, false, true); MainHero.Set_crouchCheck(false); MainHero.Set_crouchAviable(true);}
 						else
 							MainHero.HeroMoveTop(time, false, false, false);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Äâèæåíèå âíèç
+			if (Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_moveOnlyLeft() == true && MainHero.Get_moveOnlyRight() == true && MainHero.Get_onlyOneAnimation() == true)			//Ð”Ð²Ð¸Ð¶ÐµÐ½Ð¸Ðµ Ð²Ð½Ð¸Ð·
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_previousDirectionMove(true);
 				MainHero.Set_onlyOneAnimation(false);
 
-				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, true, false, false); MainHero.Set_crouchAviable(false); }
+				if (Keyboard::isKeyPressed(Keyboard::LShift) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, true, false, false); MainHero.Set_crouchCheck(false); }
 				else
-					if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, false, true, false); MainHero.Set_crouchAviable(false); }
+					if (Keyboard::isKeyPressed(Keyboard::LAlt) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, false, true, false); MainHero.Set_crouchCheck(false); }
 					else
-						if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, false, false, true); MainHero.Set_crouchAviable(false); }
+						if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_onlyOneAnimationOneDir() == true) { MainHero.Set_onlyOneAnimationOneDir(false); MainHero.HeroMoveDown(time, false, false, true); MainHero.Set_crouchCheck(false); MainHero.Set_crouchAviable(true);}
 						else
 							MainHero.HeroMoveDown(time, false, false, false);
 			}
 
-			if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_crouchAviable() == true && MainHero.Get_onlyOneAnimation() == true && MainHero.Get_onlyOneAnimationOneDir() == true)//Ïðèñåñòü		
+			if (Keyboard::isKeyPressed(Keyboard::C) && MainHero.Get_crouchCheck() == true && MainHero.Get_onlyOneAnimation() == true && MainHero.Get_onlyOneAnimationOneDir() == true)//ÐŸÑ€Ð¸ÑÐµÑÑ‚ÑŒ		
 			{
 				MainHero.Set_onlyOneAnimationOneDir(false);
 				MainHero.Set_onlyOneAnimation(false);
 				MainHero.Set_buttonIsPressed(true);
-				if (MainHero.Get_previousDirectionMove() == false) MainHero.HeroIdleCrouchRight(time);									//Ïðèñåñòü ïðè ìàëîé ñêîðîñòè
+				MainHero.Set_crouchAviable(true);
+				if (MainHero.Get_previousDirectionMove() == false) MainHero.HeroIdleCrouchRight(time);									//ÐŸÑ€Ð¸ÑÐµÑÑ‚ÑŒ Ð¿Ñ€Ð¸ Ð¼Ð°Ð»Ð¾Ð¹ ÑÐºÐ¾Ñ€Ð¾ÑÑ‚Ð¸
 				else MainHero.HeroIdleCrouchLeft(time);
 			}
 
-		CivilIdleAnimation:																														//Ìåòêà-çàòû÷êà êàäðà
+		CivilIdleAnimation:																												//ÐœÐµÑ‚ÐºÐ°-Ð·Ð°Ñ‚Ñ‹Ñ‡ÐºÐ° ÐºÐ°Ð´Ñ€Ð°
 
 			if (MainHero.Get_buttonIsPressed() == false) {																				//AFK
 				if (MainHero.Get_previousDirectionMove() == false)MainHero.HeroIdleRight(time);
@@ -603,13 +610,4 @@ BattleIdleAnimation:
 		}
 	}
 }
-void ConsoleCheck(Hero MainHero, float time,bool timecheck, bool speedXH, bool speedHY, bool cooldownJump, bool cooldownSlide, bool comboTimer)		//ÒÅÕH ôóíêöèÿ âûâîäà çíà÷åíèé èç êëàññà íà ýêðàí
-{
-	if(timecheck==true) std::cout << time << "|";												//Âûâîä âðåìåíè 
-	if(speedXH==true)std::cout << MainHero.Get_speedXH() << "|";								//Âûâîä ñêîðîñòè ïî Õ 
-	if(speedHY==true)std::cout << MainHero.Get_speedXY() << "|";								//Âûâîä ñêîðîñòè ïî Y 
-	if(cooldownJump==true)std::cout << MainHero.Get_cooldownAnimationJump() << "|";				//Âûâîä êóëäàóíà ïðûæêà
-	if(cooldownSlide==true)std::cout << MainHero.Get_cooldownAnimationSlide() << "|";			//Âûâîä êóëäàóíà ñêîëüæåíèÿ
-	if(cooldownSlide == true)std::cout << MainHero.Get_cooldownAnimationSlide() << "|";			//Âûâîä êóëäàóíà ñêîëüæåíèÿ
-	if (comboTimer == true) std::cout << MainHero.Get_comboTimer() << "|";						//Âûâîê âðåìåíè íà êîìáî
-}
+

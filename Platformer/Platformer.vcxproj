@@ -131,14 +131,18 @@
   <ItemGroup>
     <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
-    <ClCompile Include="Maps.cpp" />
+    <ClCompile Include="FunctionsCObject.cpp" />
+    <ClCompile Include="FunctionsOfMaps.cpp" />
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassHero.h" />
+    <ClInclude Include="ClassObject.h" />
+    <ClInclude Include="Maps.h" />
     <ClInclude Include="OptimizedControlsCHero.h" />
     <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="OptimizedFunctionsCHero.h" />
+    <ClInclude Include="ViewsAndWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
