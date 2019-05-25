@@ -10,7 +10,7 @@ void DrawEnvironment(View view, Object * arrObj, const unsigned short int length
 void SetLayers(Object * arrObj, const unsigned short int length_arrObj)													//Функция отвечает за присваивание каждому объекту своего слоя
 {																														//на основе которых проводится порядок отрисовки
 	for (unsigned short int i = 0; i < length_arrObj; i++) {
-		arrObj[i].Set_layer(arrObj[i].Get_yRReal()+arrObj[i].Get_hRReal());
+		arrObj[i].Set_layer(arrObj[i].Get_yRReal()+arrObj[i].Get_hRReal()/4);
 	}
 }
 
