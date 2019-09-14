@@ -6,7 +6,7 @@ using namespace sf;
 
 class Object
 {
-private:
+protected:
 	float xR;							//Положение модели на карте по Х
 	float yR;							//Положение модели на карте по Y
 	float xM;							//Точка X начала текстуры
@@ -19,7 +19,10 @@ private:
 	float hRReal;						//Высота физической модели
 	float clutch;						//Сцепление	1-нормальное <1-пониженное >1-повышенное
 	float trackingCoefficient;			//Коэффициент слежения объекта >1
-	signed int layer=0;					//Слой на котором отрисовывается объект
+	signed int layer = 0;					//Слой на котором отрисовывается объект
+	signed int frames;					//Кол-во кадров в анимации объекта =1 для статического изображения, и любое другое для динамического.
+	signed int currentFrame = 0;		//Текущий кадр =1 для статического изображения, и любое другое для динамического.
+	//int frameShift;						//Необходимый сдвиг в файле, для анимации
 
 	bool passable;						//Доступен ли объект для прохождения сквозь него вообще
 	bool passableJump;					//Доступен ли объект для прохождения сквозь него прыжком
@@ -27,14 +30,17 @@ private:
 	bool passableCrouch;				//Доступен ли объект для прохождения сквозь него вприсяди
 	bool crossable;						//Должен ли герой впринципе пересекать этот объект?
 	bool tracking;						//Следящий объект
+	bool visible;						//Видимость объекта
 
-	String filePath;						
-	Image imageObject;						
-	Texture textureObject;					
-	Sprite spriteObject;						
+	String filePath;
+	Image imageObject;
+	Texture textureObject;
+	Sprite spriteObject;
 
 public:
-	Object(bool _crossable ,String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide,bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef) {
+	Object(bool _crossable, signed int _frames, signed int _currentFrame, String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef) {
+		frames = _frames;
+		currentFrame = _currentFrame;
 		crossable = _crossable;
 
 		filePath = _filePath;
@@ -44,8 +50,8 @@ public:
 		hM = _hightModel;
 		xM = _xModel;
 		yM = _yModel;
-		xRReal = _xOnMap+_xReal;
-		yRReal = _yOnMap+_yReal;
+		xRReal = _xOnMap + _xReal;
+		yRReal = _yOnMap + _yReal;
 		wRReal = _wReal;
 		hRReal = _hReal;
 		clutch = _clutch;
@@ -60,7 +66,7 @@ public:
 
 		imageObject.loadFromFile("Environment/" + filePath);
 
-		if(mask==true) imageObject.createMaskFromColor(Color(255, 255, 255));					//Прозрачность белого
+		if (mask == true) imageObject.createMaskFromColor(Color(255, 255, 255));					//Прозрачность белого
 		textureObject.loadFromImage(imageObject);
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(_xModel, _yModel, _widthModel, _hightModel));
@@ -81,8 +87,11 @@ public:
 	float Get_hRReal() { return hRReal; }			//Получение высоты физической модели
 	float Get_clutch() { return clutch; }			//Получение сцепления
 	float Get_trackingCoefficient() { return trackingCoefficient; }			//Получение сцепления
-	signed int Get_layer() { return layer;	}								//Получение слоя на котором располагается объект
-	bool Get_passable() { return passable; }		//Получение доступности прохождения сквозь объект
+	signed int Get_layer() { return layer; }								//Получение слоя на котором располагается объект
+	signed int Get_frames() { return frames; }				//Получение количества кадров в анимации
+	//int Get_frameShift() { return frameShift; }			//Получение сдвига в файле из которого берется картинка
+	signed int Get_currentFrame() { return currentFrame; }	//Номер кадра
+	bool Get_passable() { return passable; }				//Получение доступности прохождения сквозь объект
 	bool Get_passableJump() { return passableJump; }		//Получение доступности прохождения сквозь объект прыжком
 	bool Get_passableSlide() { return passableSlide; }		//Получение доступности прохождения сквозь объект скольжением
 	bool Get_passableCrouch() { return passableCrouch; }	//Получение доступности прохождения сквозь объект присядом

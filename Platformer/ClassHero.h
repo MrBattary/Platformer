@@ -65,6 +65,7 @@ private:
 	float cooldownAnimationSlide = 0;	//Кулдаун на анимацию скольжения
 	float comboTimer = 0;				//Время до следующего удара в комбо
 
+	int currentMap = 0;					//Текущая карта
 	int healthH;						//Здоровье Героя 0-100
 	int comboH = 0;						//Текущее комбо
 	int comboHitH = 0;					//Текущий удар в комбо
@@ -99,6 +100,7 @@ public:
 
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
+	int Get_currentMap() { return currentMap; }									//Узнать на какой карте сейчас находимся
 	float Get_XH() { return xH; }												//Получить положение виртуальной модели по х
 	float Get_YH() { return yH; }												//Получить положение виртуальной модели по у
 	float Get_WH() { return wH; }												//Получить ширину модели
@@ -135,6 +137,7 @@ public:
 	bool Get_hitAviableHeavy() { return hitAviableHeavy; }						//Наносим ли тяжелый удар
 
 	//Функции-SET помощники
+	void Set_currentMap(int value) { currentMap = value; }						//Установить номер текущей карты
 	void Set_XH(float value) { xH = value; }									//Установить положение виртуальной модели по х
 	void Set_YH(float value) { yH = value; }									//Установить положение виртуальной модели по у
 	void Set_XHReal(float value) { xHReal = value; }							//Установить положение реальной модели по х

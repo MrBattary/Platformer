@@ -70,19 +70,19 @@ int main() {
 		ControlsMainCharacter(MainHero,time);																//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
 
-		SetLayers(map1, lengthMap1);																		//Распределение объектов по слоям
-		IntersectionHeroWithEnvironment(MainHero, map1, lengthMap1);										//Проверка объекта MainHero на пересечение с объектами окружения
+		SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());																				//Распределение объектов по слоям
+		IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());										//Проверка объекта MainHero на пересечение с объектами окружения
 
-		DrawEnvironment(MainView, map1, lengthMap1);														//Подготовка к отрисовке всех объектов карты до персонажа
+		DrawEnvironment(MainView, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());														//Подготовка к отрисовке всех объектов карты до персонажа
 		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
 		
 		window.setView(MainView);
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
-		SpitesOfEnvironmentUncrossable(window, map1, lengthMap1);													//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка до персонажа
-		window.draw(MainHero.Get_Sprite());																			//Отрисовка на экране спрайта персонажа
-		SpitesOfEnvironmentAfterHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка после персонажа
+		SpitesOfEnvironmentUncrossable(window, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());													//Отрисовка окружения (карта)
+		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка до персонажа
+		window.draw(MainHero.Get_Sprite());																															//Отрисовка на экране спрайта персонажа
+		SpitesOfEnvironmentAfterHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
 		
 		window.display();																					//Отображение
 	}

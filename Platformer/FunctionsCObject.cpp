@@ -1,4 +1,4 @@
-#include "ClassObject.h";
+#include "ClassObject.h"
 
 /*
 Отрисовка включает:

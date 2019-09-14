@@ -7,7 +7,9 @@
 */
 
 #include "ClassObject.h"
+#include <vector>
 
+using namespace std;
 using namespace sf;
 
 /*
@@ -15,6 +17,8 @@ using namespace sf;
 Первой всегда идет карта/карты, затем уже все объекты
 Ширина и высота физической модели не должны быть меньше 5!
 Визуальная составляющая объекта не всегда может совпадать с физической
+
+vector[Номер карты на которой находится объект][Номер объекта][Количество кадров объекта]
 
 Описание каждого объекта:
 1) Должен ли персонаж впринципе пересекать физическую модель этого объекта
@@ -40,12 +44,16 @@ using namespace sf;
 
 Примеры можно найти в массиве;
 */
-Object map1[] = {
-	Object(false, "Maps/undMap3.png", -10000, -4500, 0, 0, 3250, 1000, false, 0, 0, 0, 23000, true, false, false, false, 1, true, 1.1),
-	Object(false, "Maps/TestMap5.png", 0, 0, 0, 0, 4000, 2250, true, 0, 0, 4000, 2250, true, false, false, false, 1, false, 0),
-	Object(true, "Objects/Tree.png", 1700, 330, 0, 0, 167, 210, true, 45, 160, 35, 35, false, true, false, false, 1, false, 0),
-	Object(true, "Objects/Tree.png", 1750, 350, 0, 0, 167, 210, true, 45, 160, 35, 35, false, false, true, false, 1, false, 0),
-	Object(true, "Objects/Tree.png", 1800, 340, 0, 0, 167, 210, true, 45, 160, 35, 35, false, false, false, true, 1, false, 0),
-	Object(true, "Objects/Obstacles.png", 890, 470, 0, 0, 0, 0, true , 0, 0, 500, 20, false, false, false,false, 1, false, 0)		//Пример невидимого объекта, у которого физическая модель больше графической(Попробуй с площадки, на которой спаунится персонаж пойти наверх.)
-};
-const unsigned short int lengthMap1 = sizeof(map1) / sizeof(map1[0]);	//Функция автоматического подсчета количества элементов в массиве
+
+vector <vector <vector <Object> > > v = {
+	//Карта № 1
+	{
+		{Object(false, 1,1,"Maps/undMap3.png", -10000, -4500, 0, 0, 3250, 1000, false, 0, 0, 0, 23000, true, false, false, false, 1, true, 1.1)},	//000
+		{Object(false, 1,1, "Maps/TestMap5.png", 0, 0, 0, 0, 4000, 2250, true, 0, 0, 4000, 2250, true, false, false, false, 1, false, 0)},			//010
+		{Object(true, 1,1, "Objects/Tree.png", 1700, 330, 0, 0, 167, 210, true, 45, 160, 35, 35, false, true, false, false, 1, false, 0)},			//020
+		{Object(true, 1,1, "Objects/Tree.png", 1750, 350, 0, 0, 167, 210, true, 45, 160, 35, 35, false, false, true, false, 1, false, 0)},			//030
+		{Object(true, 1,1, "Objects/Tree.png", 1800, 340, 0, 0, 167, 210, true, 45, 160, 35, 35, false, false, false, true, 1, false, 0)},			//040
+		{Object(true, 1,1, "Objects/Obstacles.png", 890, 470, 0, 0, 0, 0, true , 0, 0, 500, 20, false, false, false,false, 1, false, 0)}				//050	//Пример невидимого объекта, у которого физическая модель больше графической(Попробуй с площадки, на которой спаунится персонаж пойти наверх.)
+	}
+	//Map 2
+}
