@@ -22,6 +22,7 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ViewsAndWindow.h"
 #include "MainFunctions.h"
 #include "Maps.h"
+//#include "ClassMobs.h"
 
 using namespace sf;
 /*
@@ -45,6 +46,10 @@ int main() {
 
 	View MainView;																		//Рендер камеры вида
 	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 100);		//Создаем героя
+	//МОБЫ
+	Mobsv1 Mobsv1("HeavyBandit_Spritesheet.png","Number1" ,2000, 500, 96, 96, 50, 50,50, 120, 100);// Создаем бота
+	Mobsv2 Mobsv2("HeavyBandit_Spritesheet.png", "Number2", 1866, 400, 96, 96, 50, 50, 50, 120, 100);
+	//**&^&*^^&*&
 	MainView.reset(FloatRect(0,0,1280,720));											//Установка камеры вида на герое
 
 	Clock clock;													//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
@@ -72,18 +77,32 @@ int main() {
 
 		SetLayers(map1, lengthMap1);																		//Распределение объектов по слоям
 		IntersectionHeroWithEnvironment(MainHero, map1, lengthMap1);										//Проверка объекта MainHero на пересечение с объектами окружения
-
+		IntersectionHeroWithEnvironmentHM(MainHero,Mobsv1,lengthMap1);
 		DrawEnvironment(MainView, map1, lengthMap1);														//Подготовка к отрисовке всех объектов карты до персонажа
+		MainHero.Kick();
 		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
-		
+		//МОБЫ
+		Mobsv1.update(time); // Подготовка к отрисовке БОТА
+		Mobsv2.update(time);
+		//&&&&&&
 		window.setView(MainView);
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
 		SpitesOfEnvironmentUncrossable(window, map1, lengthMap1);													//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка до персонажа
-		window.draw(MainHero.Get_Sprite());																			//Отрисовка на экране спрайта персонажа
+		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);//Отрисовка до персонажа
+		//МОБЫ!!_!_!_!__!_!_!_!_!
+		SpitesOfEnvironmentBeforeMobs(window, Mobsv1.Get_YMReal() + Mobsv1.Get_HMReal() + 3, map1, lengthMap1);
+		SpitesOfEnvironmentBeforeMobs(window, Mobsv2.Get_YMReal() + Mobsv2.Get_HMReal() + 3, map1, lengthMap1);
+		//&&&****&&&&&&
+		window.draw(MainHero.Get_Sprite());//Отрисовка на экране спрайта персонажа
+		window.draw(Mobsv1.Get_Sprite());
+		window.draw(Mobsv2.Get_Sprite());
+
 		SpitesOfEnvironmentAfterHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка после персонажа
-		
+		//МОБЫ
+		SpitesOfEnvironmentAfterMobs(window, Mobsv1.Get_YMReal() + Mobsv1.Get_HMReal() + 3, map1, lengthMap1); // Отрисовка после бота
+		SpitesOfEnvironmentAfterMobs(window, Mobsv2.Get_YMReal() + Mobsv2.Get_HMReal() + 3, map1, lengthMap1);
+		//&**&*^&*^&*&*^*
 		window.display();																					//Отображение
 	}
 	return 0;

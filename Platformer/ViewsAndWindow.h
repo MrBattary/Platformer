@@ -30,6 +30,19 @@ void SpitesOfEnvironmentBeforeHero(RenderWindow & window, float Yhero, Object * 
 		}
 	}
 }
+void SpitesOfEnvironmentBeforeMobs(RenderWindow & window, float YMobs, Object * arrObj, const int length_arrObj)		//Отрисовка объектов на пространство до бота
+{
+	int MobsY = roundf(YMobs);
+	for (unsigned short int j = 0; j < MobsY; j++)
+	{
+		for (int i = 0; i < length_arrObj; i++) {
+			if (arrObj[i].Get_layer() == j && arrObj[i].Get_crossable() == true)
+			{
+				window.draw(arrObj[i].Get_Sprite());
+			}
+		}
+	}
+}
 
 void SpitesOfEnvironmentAfterHero(RenderWindow & window, float Yhero, Object * arrObj, const int length_arrObj)			//Отрисовка объектов на пространство после героя
 {					
@@ -41,6 +54,20 @@ void SpitesOfEnvironmentAfterHero(RenderWindow & window, float Yhero, Object * a
 			if (arrObj[i].Get_layer() == j && arrObj[i].Get_crossable() == true) 
 			{ 
 				window.draw(arrObj[i].Get_Sprite()); 
+			}
+		}
+	}
+}
+void SpitesOfEnvironmentAfterMobs(RenderWindow & window, float YMobs, Object * arrObj, const int length_arrObj)			//Отрисовка объектов на пространство после бота
+{
+	int MobsY = roundf(YMobs);
+	for (unsigned short int j = MobsY; j < 5000; j++)
+	{
+		for (int i = 0; i < length_arrObj; i++) {
+
+			if (arrObj[i].Get_layer() == j && arrObj[i].Get_crossable() == true)
+			{
+				window.draw(arrObj[i].Get_Sprite());
 			}
 		}
 	}

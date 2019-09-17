@@ -64,7 +64,8 @@ private:
 	float cooldownAnimationJump = 0;	//Кулдаун на анимацию прыжков
 	float cooldownAnimationSlide = 0;	//Кулдаун на анимацию скольжения
 	float comboTimer = 0;				//Время до следующего удара в комбо
-
+	FloatRect rectH;
+	bool tmp = false;
 	int healthH;						//Здоровье Героя 0-100
 	int comboH = 0;						//Текущее комбо
 	int comboHitH = 0;					//Текущий удар в комбо
@@ -99,6 +100,27 @@ public:
 
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
+
+		FloatRect getRect() {
+			return rectH;
+	}
+		void Kick() {
+			if (comboHitH == 1 && comboH == 2) {
+				if (int(currentUncycleFrame) == 1){
+					if (!tmp) {
+						FloatRect s(xHReal, yHReal,92,45);
+						rectH = s;
+						tmp = true;
+					}
+					else {
+						FloatRect w(0, 0, 0, 0);
+						rectH = w;
+					}
+				}
+				else tmp = false;
+			}
+		}
+
 	float Get_XH() { return xH; }												//Получить положение виртуальной модели по х
 	float Get_YH() { return yH; }												//Получить положение виртуальной модели по у
 	float Get_WH() { return wH; }												//Получить ширину модели

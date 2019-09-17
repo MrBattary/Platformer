@@ -1,6 +1,5 @@
 ﻿#include "Math.h"
 #include "MainFunctions.h"
-
 void DrawEnvironment(View view, Object * arrObj, const unsigned short int length_arrObj) {								//Расположение объектов в пространстве
 		for (unsigned short int i = 0; i < length_arrObj; i++) {
 			arrObj[i].Draw(view);
@@ -59,6 +58,49 @@ void IntersectionHeroWithEnvironment(Hero & Hero, Object * arrObj, const unsigne
 				if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) { Hero.Set_YHReal(yHero - (yHero + hHero - yObj)); }			//Выталкивание вверх
 				if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) { Hero.Set_XHReal(xHero + (xObj + wObj - xHero)); }			//Выталкивание вправо
 				if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) { Hero.Set_YHReal(yHero + (yObj + hObj - yHero - hHero)); }	//Выталкивание вниз
+			}
+		}
+	}
+}
+void IntersectionHeroWithEnvironmentHM(Hero & Hero,  Mobs & Mobs,  const unsigned short int length_arrObj)				//Функция определяющая пересечение физических моделей объектов
+{
+	float xHero = Hero.Get_XHReal();
+	float yHero = Hero.Get_YHReal();
+	float wHero = Hero.Get_WHReal();
+	float hHero = Hero.Get_HHReal();
+	FloatRect rectH = Hero.getRect();
+	FloatRect rectM = Mobs.getRect();
+
+	if (rectH.intersects(rectM)) {
+		Mobs.MobsGetDamage(25);
+		
+	}
+
+	for (unsigned short int i = 0; i < length_arrObj; i++)
+	{
+		float xMbj = Mobs.Get_XMReal();
+		float yMbj = Mobs.Get_YMReal();
+		float wMbj = Mobs.Get_WMReal();
+		float hMbj = Mobs.Get_HMReal();
+
+		bool checkAviable = true;
+		if (Mobs.Get_passable() == true) checkAviable = false;												//Проходим ли объект
+
+
+		if ((xHero + wHero > xMbj) && (xHero < xMbj + wMbj) && (yHero + hHero > yMbj) && (yHero + hHero < yMbj + hMbj))	//Если попали в объект
+		{
+			if (checkAviable == true)
+			{
+				float dir1 = xHero + wHero - xMbj;
+				float dir2 = yHero + hHero - yMbj;
+				float dir3 = xMbj + wMbj - xHero;
+				float dir4 = yMbj + hMbj - yHero - hHero;
+				dir2 = abs(dir2);
+				dir4 = abs(dir4);
+				if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) { Hero.Set_XHReal(xHero - (xHero + wHero - xMbj)); }			//Выталкивание влево
+				if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) { Hero.Set_YHReal(yHero - (yHero + hHero - yMbj)); }			//Выталкивание вверх
+				if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) { Hero.Set_XHReal(xHero + (xMbj + wMbj - xHero)); }			//Выталкивание вправо
+				if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) { Hero.Set_YHReal(yHero + (yMbj + hMbj - yHero - hHero)); }	//Выталкивание вниз
 			}
 		}
 	}
