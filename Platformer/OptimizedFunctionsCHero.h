@@ -11,17 +11,20 @@ clutchX/clutchY			-показатель сцепления анимации
 addX/addY				-доп ускорение (для прыжков,рывков, итд), если не нужно:ставим 0.
 */
 
-void Physics(float &speedX, float &speedY, float clutchObj, float msX, float msY, float clutchX, float clutchY, float addX, float addY) {
-	speedX += addX;
-	speedY += addY;
+void Physics(float &speedX, float &speedY, float time, float clutchObj, float msX, float msY, float clutchX, float clutchY, float addX, float addY) {
+	speedX += addX * time;
+	speedY += addY * time;
 	
-	if (speedX > msX)speedX -= 0.02* clutchX * clutchObj;
-	if (speedX < msX)speedX += 0.02* clutchX * clutchObj;
-	if (speedX < (msX + 0.04) && speedX > (msX - 0.04)) speedX = msX;
-	
-	if (speedY > msY)speedY -= 0.02* clutchY * clutchObj;
-	if (speedY < msY)speedY += 0.02* clutchY * clutchObj;
-	if (speedY < (msY + 0.04) && speedY > (msY - 0.04)) speedY = msY;
+	if (speedX < (msX + 0.001*time) && speedX >(msX - 0.001*time)) speedX = msX;
+	else {
+		if (speedX > msX)speedX -= 0.001 * clutchX * clutchObj * time;
+		if (speedX < msX)speedX += 0.001 * clutchX * clutchObj * time;
+	}
+	if (speedY < (msY + 0.001*time) && speedY >(msY - 0.001*time)) speedY = msY;
+	else {
+		if (speedY > msY)speedY -= 0.001 * clutchY * clutchObj * time;
+		if (speedY < msY)speedY += 0.001 * clutchY * clutchObj * time;
+	}
 }
 
 /*
@@ -66,15 +69,15 @@ void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, flo
 	direction = directionValue;
 	currentFrameUN += 0.007 * time; 
 	bool minusFrames = false;
-	if (currentFrameUN <= 2.01) {
+	if (currentFrameUN <= 2.1) {
 		sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+ x11, 592, x2, 74));
-		speedHX += addX;
-		speedHY += addY;
+		speedHX += addX*time;
+		speedHY += addY*time;
 	}
-	if (currentFrameUN > 2 && currentFrameUN < 4.2 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
+	if (currentFrameUN > 2 && currentFrameUN < 4.1 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
 		if (Keyboard::isKeyPressed(Keyboard::C)) {
-			Physics(speedHX, speedHY, clutchObj, msX, msY, clutchX, clutchY, 0, 0);
-			if (currentFrameUN > 4) { currentFrameUN -= 2.000001; }
+			Physics(speedHX, speedHY, time, clutchObj, msX, msY, clutchX, clutchY, 0, 0);
+			if (currentFrameUN > 4) { currentFrameUN = 2.0; }
 			sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
 		}
 		else currentFrameUN = 4.2;
@@ -112,7 +115,7 @@ void OnlyJumpsAnimation(float & currentFrameUN, float time, float& cooldown, flo
 	direction = directionValue;
 	currentFrameUN += animationSpeed * time;
 	if (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY) {
-		Physics(speedHX, speedHY, /*clutchObj*/ 1, msX, msY, clutchX, clutchY, addX, addY);
+		Physics(speedHX, speedHY, time, /*clutchObj*/ 1, msX, msY, clutchX, clutchY, addX, addY);
 	}
 	sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+x11, y1, x2, 74));
 	if (currentFrameUN > frames)

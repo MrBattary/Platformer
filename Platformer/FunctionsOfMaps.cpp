@@ -1,13 +1,18 @@
-﻿#include "Math.h"
+﻿#include <vector>
+#include "Math.h"
 #include "MainFunctions.h"
-#include <vector>
 using namespace std;
 
-void DrawEnvironment(View view, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {					//Расположение объектов в пространстве
+
+//Убрать время!
+void DrawEnvironment(View view, float time, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {		//Подготовка к отрисовке
 		for (int i = 0; i < length_arrObj; i++) {
-			for (int j = 0; i < v[currentMap][i][0].Get_frames(); i++)
+			for (int j = 0; j < v[currentMap][i].size();j++)
 			{
-				v[currentMap][i][j].Draw(view);
+				if (v[currentMap][i][j].Get_rendered() == false) {
+					v[currentMap][i][j].Draw(view, time);
+					if (v[currentMap][i][j].Get_tracking() == false) { v[currentMap][i][j].Set_rendered(true); }
+				}
 			}
 		}
 }
@@ -15,9 +20,9 @@ void DrawEnvironment(View view, vector<vector<vector<Object>>>& v, int length_ar
 void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
 {																														//на основе которых проводится порядок отрисовки
 	for (int i = 0; i < length_arrObj; i++) {
-		for (int j = 0; i < v[currentMap][i][0].Get_frames(); i++)
+		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-			v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal() / 4);
+			v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal()/4);
 		}
 		
 	}
@@ -41,7 +46,7 @@ void IntersectionHeroWithEnvironment(Hero & Hero, vector<vector<vector<Object>>>
 
 	for (unsigned short int i=0; i < length_arrObj; i++)
 	{
-		for (int j = 0; i < v[currentMap][i][0].Get_frames(); i++)
+		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
 			float xObj = v[currentMap][i][j].Get_xRReal();
 			float yObj = v[currentMap][i][j].Get_yRReal();
