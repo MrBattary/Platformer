@@ -1,16 +1,30 @@
-﻿#include "Math.h"
+﻿#include <vector>
+#include "Math.h"
 #include "MainFunctions.h"
+using namespace std;
 
-void DrawEnvironment(View view, Object * arrObj, const unsigned short int length_arrObj) {								//Расположение объектов в пространстве
-		for (unsigned short int i = 0; i < length_arrObj; i++) {
-			arrObj[i].Draw(view);
+
+//Убрать время!
+void DrawEnvironment(View view, float time, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {		//Подготовка к отрисовке
+		for (int i = 0; i < length_arrObj; i++) {
+			for (int j = 0; j < v[currentMap][i].size();j++)
+			{
+				if (v[currentMap][i][j].Get_rendered() == false) {
+					v[currentMap][i][j].Draw(view, time);
+					if (v[currentMap][i][j].Get_tracking() == false) { v[currentMap][i][j].Set_rendered(true); }
+				}
+			}
 		}
 }
 
-void SetLayers(Object * arrObj, const unsigned short int length_arrObj)													//Функция отвечает за присваивание каждому объекту своего слоя
+void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
 {																														//на основе которых проводится порядок отрисовки
-	for (unsigned short int i = 0; i < length_arrObj; i++) {
-		arrObj[i].Set_layer(arrObj[i].Get_yRReal()+arrObj[i].Get_hRReal()/4);
+	for (int i = 0; i < length_arrObj; i++) {
+		for (int j = 0; j < v[currentMap][i].size(); j++)
+		{
+			v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal()/4);
+		}
+		
 	}
 }
 
@@ -22,7 +36,7 @@ void SetLayers(Object * arrObj, const unsigned short int length_arrObj)									
 	 •――――――•
 		4
 */
-void IntersectionHeroWithEnvironment(Hero & Hero, Object * arrObj, const unsigned short int length_arrObj)				//Функция определяющая пересечение физических моделей объектов
+void IntersectionHeroWithEnvironment(Hero & Hero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)	//Функция определяющая пересечение физических моделей объектов
 {
 	float xHero = Hero.Get_XHReal();
 	float yHero = Hero.Get_YHReal();
@@ -32,33 +46,36 @@ void IntersectionHeroWithEnvironment(Hero & Hero, Object * arrObj, const unsigne
 
 	for (unsigned short int i=0; i < length_arrObj; i++)
 	{
-		float xObj = arrObj[i].Get_xRReal();
-		float yObj = arrObj[i].Get_yRReal();
-		float wObj = arrObj[i].Get_wRReal();
-		float hObj = arrObj[i].Get_hRReal();
-
-		bool checkAviable = true;
-		if (arrObj[i].Get_passable() == true) checkAviable = false;												//Проходим ли объект
-		if (Hero.Get_jumpAviable() == true && arrObj[i].Get_passableJump() == true) checkAviable = false;		//Проходим ли объект прыжком
-		if (Hero.Get_jumpLargeAviable() == true && arrObj[i].Get_passableJump() == true) checkAviable = false;	//Проходим ли объект мощным прыжком
-		if (Hero.Get_slideAviable() == true && arrObj[i].Get_passableSlide() == true) checkAviable = false;		//Проходим ли объект скольжением
-		if (Hero.Get_crouchAviable() == true && arrObj[i].Get_passableCrouch() == true) checkAviable = false;	//Проходим ли объект вприсяди
-
-		if ((xHero + wHero > xObj) && (xHero < xObj + wObj) && (yHero + hHero > yObj) && (yHero + hHero < yObj + hObj))	//Если попали в объект
+		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-			Hero.Set_clutchObj(arrObj[i].Get_clutch());															//Сцепление с объектом
-			if (checkAviable == true)
-			 {
-				float dir1 = xHero + wHero - xObj;
-				float dir2 = yHero + hHero - yObj;
-				float dir3 = xObj + wObj - xHero;
-				float dir4 = yObj + hObj - yHero - hHero;
-				dir2 = abs(dir2);
-				dir4 = abs(dir4);
-				if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) { Hero.Set_XHReal(xHero - (xHero + wHero - xObj)); }			//Выталкивание влево
-				if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) { Hero.Set_YHReal(yHero - (yHero + hHero - yObj)); }			//Выталкивание вверх
-				if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) { Hero.Set_XHReal(xHero + (xObj + wObj - xHero)); }			//Выталкивание вправо
-				if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) { Hero.Set_YHReal(yHero + (yObj + hObj - yHero - hHero)); }	//Выталкивание вниз
+			float xObj = v[currentMap][i][j].Get_xRReal();
+			float yObj = v[currentMap][i][j].Get_yRReal();
+			float wObj = v[currentMap][i][j].Get_wRReal();
+			float hObj = v[currentMap][i][j].Get_hRReal();
+
+			bool checkAviable = true;
+			if (v[currentMap][i][j].Get_passable() == true) checkAviable = false;												//Проходим ли объект
+			if (Hero.Get_jumpAviable() == true && v[currentMap][i][j].Get_passableJump() == true) checkAviable = false;			//Проходим ли объект прыжком
+			if (Hero.Get_jumpLargeAviable() == true && v[currentMap][i][j].Get_passableJump() == true) checkAviable = false;	//Проходим ли объект мощным прыжком
+			if (Hero.Get_slideAviable() == true && v[currentMap][i][j].Get_passableSlide() == true) checkAviable = false;		//Проходим ли объект скольжением
+			if (Hero.Get_crouchAviable() == true && v[currentMap][i][j].Get_passableCrouch() == true) checkAviable = false;		//Проходим ли объект вприсяди
+
+			if ((xHero + wHero > xObj) && (xHero < xObj + wObj) && (yHero + hHero > yObj) && (yHero + hHero < yObj + hObj))		//Если попали в объект
+			{
+				Hero.Set_clutchObj(v[currentMap][i][j].Get_clutch());															//Сцепление с объектом
+				if (checkAviable == true)
+				{
+					float dir1 = xHero + wHero - xObj;
+					float dir2 = yHero + hHero - yObj;
+					float dir3 = xObj + wObj - xHero;
+					float dir4 = yObj + hObj - yHero - hHero;
+					dir2 = abs(dir2);
+					dir4 = abs(dir4);
+					if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) { Hero.Set_XHReal(xHero - (xHero + wHero - xObj)); }			//Выталкивание влево
+					if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) { Hero.Set_YHReal(yHero - (yHero + hHero - yObj)); }			//Выталкивание вверх
+					if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) { Hero.Set_XHReal(xHero + (xObj + wObj - xHero)); }			//Выталкивание вправо
+					if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) { Hero.Set_YHReal(yHero + (yObj + hObj - yHero - hHero)); }	//Выталкивание вниз
+				}
 			}
 		}
 	}
