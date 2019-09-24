@@ -41,69 +41,70 @@ void ConsoleCheck(Hero MainHero, float time, bool timecheck, bool speedXH, bool 
 */
 int main() {
 
-	RenderWindow window(VideoMode(1280, 720), "Test");									//Рендер окна
-	window.setFramerateLimit(60);														//Ограничение FPS
+	RenderWindow window(VideoMode(1280, 720), "Test");																//Рендер окна
+	window.setFramerateLimit(60);																					//Ограничение FPS
 
-	View MainView;																		//Рендер камеры вида
-	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 100);		//Создаем героя
+	View MainView;																									//Рендер камеры вида
+	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 100);									//Создаем героя
 	//МОБЫ
-	Mobsv1 Mobsv1("HeavyBandit_Spritesheet.png","Number1" ,2000, 500, 96, 96, 50, 50,50, 120, 100);// Создаем бота
-	Mobsv2 Mobsv2("HeavyBandit_Spritesheet.png", "Number2", 1866, 400, 96, 96, 50, 50, 50, 120, 100);
+	Mobsv1 Mobsv1(2000, 500, 100, 74, 50, 50,50, 120, 150);// Создаем бота
+	Mobsv2 Mobsv2(1866, 400, 100, 74, 50, 50, 50, 120, 150);
 	//**&^&*^^&*&
-	MainView.reset(FloatRect(0,0,1280,720));											//Установка камеры вида на герое
+	MainView.reset(FloatRect(0,0,1280,720));																		//Установка камеры вида на герое
 
-	Clock clock;													//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
+	Clock clock;																									//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
 	
 	float time;
 
-	while (window.isOpen())											//Выполняем пока окно открыто
+	while (window.isOpen())																							//Выполняем пока окно открыто
 	{
-		time = clock.getElapsedTime().asMicroseconds();				//Получаем прошедшее время в микросекундах
-		clock.restart();											//Перезагружаем часы
-		time = time / 800;											//Скорость игры
+		time = clock.getElapsedTime().asMicroseconds();																//Получаем прошедшее время в микросекундах
+		clock.restart();																							//Перезагружаем часы
+		time = time / 800;																							//Скорость игры
 		
 		//ConsoleCheck(MainHero,time,true,false,false,false,false,false);//ТЕХН, вывод значений из класса в консоль !!!КОММЕНТИРОВАТЬ,ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ, ТК ЗАМЕДЛЯЕТ ВРЕМЯ!!!
 
 		Event event;
-		while (window.pollEvent(event))																		//Событие закрытия окна
+		while (window.pollEvent(event))																				//Событие закрытия окна
 		{
 			if (event.type == Event::Closed)
 				window.close();
 		}
 
 		
-		ControlsMainCharacter(MainHero,time);																//Управление главным персонажем
-		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
+		ControlsMainCharacter(MainHero,time);																		//Управление главным персонажем
+		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());										//Поддержание центра вида на персонаже
 
-		SetLayers(map1, lengthMap1);																		//Распределение объектов по слоям
-		IntersectionHeroWithEnvironment(MainHero, map1, lengthMap1);										//Проверка объекта MainHero на пересечение с объектами окружения
+		SetLayers(map1, lengthMap1);																				//Распределение объектов по слоям
+		IntersectionHeroWithEnvironment(MainHero, map1, lengthMap1);												//Проверка объекта MainHero на пересечение с объектами окружения
 		IntersectionHeroWithEnvironmentHM(MainHero,Mobsv1,lengthMap1);
-		DrawEnvironment(MainView, map1, lengthMap1);														//Подготовка к отрисовке всех объектов карты до персонажа
+		IntersectionHeroWithEnvironmentHM(MainHero, Mobsv2, lengthMap1);
+		DrawEnvironment(MainView, map1, lengthMap1);																//Подготовка к отрисовке всех объектов карты до персонажа
 		MainHero.Kick();
-		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
+		MainHero.Draw(time);																						//Подготовка к отрисовке персонажа
 		//МОБЫ
-		Mobsv1.update(time); // Подготовка к отрисовке БОТА
+		Mobsv1.update(time);																						// Подготовка к отрисовке БОТА
 		Mobsv2.update(time);
 		//&&&&&&
 		window.setView(MainView);
-		window.clear();																						//Очистка окна от предыдущего спрайта
+		window.clear();																								//Очистка окна от предыдущего спрайта
 		
 		SpitesOfEnvironmentUncrossable(window, map1, lengthMap1);													//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);//Отрисовка до персонажа
+		SpitesOfEnvironmentBeforeHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка до персонажа
 		//МОБЫ!!_!_!_!__!_!_!_!_!
 		SpitesOfEnvironmentBeforeMobs(window, Mobsv1.Get_YMReal() + Mobsv1.Get_HMReal() + 3, map1, lengthMap1);
 		SpitesOfEnvironmentBeforeMobs(window, Mobsv2.Get_YMReal() + Mobsv2.Get_HMReal() + 3, map1, lengthMap1);
 		//&&&****&&&&&&
-		window.draw(MainHero.Get_Sprite());//Отрисовка на экране спрайта персонажа
+		window.draw(MainHero.Get_Sprite());																			//Отрисовка на экране спрайта персонажа
 		window.draw(Mobsv1.Get_Sprite());
 		window.draw(Mobsv2.Get_Sprite());
 
 		SpitesOfEnvironmentAfterHero(window, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, map1, lengthMap1);	//Отрисовка после персонажа
 		//МОБЫ
-		SpitesOfEnvironmentAfterMobs(window, Mobsv1.Get_YMReal() + Mobsv1.Get_HMReal() + 3, map1, lengthMap1); // Отрисовка после бота
+		SpitesOfEnvironmentAfterMobs(window, Mobsv1.Get_YMReal() + Mobsv1.Get_HMReal() + 3, map1, lengthMap1);		// Отрисовка после бота
 		SpitesOfEnvironmentAfterMobs(window, Mobsv2.Get_YMReal() + Mobsv2.Get_HMReal() + 3, map1, lengthMap1);
 		//&**&*^&*^&*&*^*
-		window.display();																					//Отображение
+		window.display();																							//Отображение
 	}
 	return 0;
 }
