@@ -138,9 +138,12 @@
     <ClCompile Include="Main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bar.h" />
     <ClInclude Include="ClassAnimObject.h" />
     <ClInclude Include="ClassHero.h" />
     <ClInclude Include="ClassObject.h" />
+    <ClInclude Include="HeroHealthBar.h" />
+    <ClInclude Include="HeroStaminaBar.h" />
     <ClInclude Include="Maps.h" />
     <ClInclude Include="OptimizedControlsCHero.h" />
     <ClInclude Include="MainFunctions.h" />

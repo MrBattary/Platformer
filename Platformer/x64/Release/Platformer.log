@@ -1,4 +1,43 @@
-﻿  Main.cpp
+﻿  ControlsСHero.cpp
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ControlsСHero.cpp(1,10): warning C4067:  непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(95,19): warning C4244:  =: преобразование "double" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(107,37): warning C4244:  +=: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(130,33): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(131,30): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(182,42): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(183,48): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         ]
+  Main.cpp
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedControlsCHero.h(7,10): warning C4067:  непредвиденные лексемы за директивой препроцессора, требуется newline
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         with
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         [
@@ -21,21 +60,22 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39)
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         ]
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ViewsAndWindow.h(37,12): warning C4244:  инициализация: преобразование "float" в "int", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ViewsAndWindow.h(54,12): warning C4244:  инициализация: преобразование "float" в "int", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,43): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,43): warning C4244:         with
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,43): warning C4244:         [
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,43): warning C4244:             T=int
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,43): warning C4244:         ]
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,39): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,39): warning C4244:         with
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,39): warning C4244:         [
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,39): warning C4244:             T=int
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(91,39): warning C4244:         ]
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,37): warning C4244:  +=: преобразование "float" в "int", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(118,33): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(119,30): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(166,42): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(167,48): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(95,19): warning C4244:  =: преобразование "double" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,39): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(107,37): warning C4244:  +=: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(130,33): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(131,30): warning C4244:  return: преобразование "int" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(182,42): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(183,48): warning C4244:  =: преобразование "float" в "int", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(52,141): warning C4305:  аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(53,134): warning C4305:  аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(54,134): warning C4305:  аргумент: усечение из "double" в "float"
@@ -78,16 +118,37 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(90,126): warn
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(91,126): warning C4305:  аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(92,126): warning C4305:  аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(93,126): warning C4305:  аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(58,47): warning C4244:  =: преобразование "sf::Int64" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(75,78): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(76,110): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(78,100): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(84,113): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(85,161): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(87,160): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:  аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(62,47): warning C4244:  =: преобразование "sf::Int64" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(81,78): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(82,110): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(84,100): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(90,113): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(91,161): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(93,160): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(101,57): warning C4244:  аргумент: преобразование "float" в "int", возможна потеря данных
   Создание кода
-  12 of 340 functions ( 3.5%) were compiled, the rest were copied from previous compilation.
+  3 of 355 functions ( 0.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    12 functions had inline decision re-evaluated but remain unchanged
+    0 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Platformer.vcxproj -> C:\Users\thisb\Source\Repos\MrBattary\Platformer\x64\Release\Platformer.exe

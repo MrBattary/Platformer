@@ -22,6 +22,8 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ViewsAndWindow.h"
 #include "MainFunctions.h"
 #include "Maps.h"
+#include "HeroHealthBar.h"
+#include "HeroStaminaBar.h"
 
 using namespace sf;
 
@@ -46,7 +48,9 @@ int main() {
 	window.setVerticalSyncEnabled(true);
 
 	View MainView;																		//Рендер камеры вида
-	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 100);		//Создаем героя
+	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 200, 100);	//Создаем героя
+	HeroHealthBar healthBar;															//Создаем бар здоровья
+	HeroStaminaBar staminaBar;															//Создаем бар выносливости
 	MainView.reset(FloatRect(0,0,1280,720));											//Установка камеры вида на герое
 
 	Clock clock;													//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
@@ -68,6 +72,8 @@ int main() {
 				window.close();
 		}
 
+		healthBar.updateBar(MainHero.Get_healthH(), MainHero.Get_healthMaxH(),10);							//ИНТЕРФЕЙС Бар здоровья
+		staminaBar.updateBar(MainHero.Get_staminaH(), MainHero.Get_staminaMaxH(), 10);						//ИНТЕРФЕЙС Бар выносливости
 		
 		ControlsMainCharacter(MainHero,time);																//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
@@ -85,8 +91,12 @@ int main() {
 		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
 		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
-		
+
+		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
+		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
 		window.display();																					//Отображение
+
+
 	}
 	return 0;
 }

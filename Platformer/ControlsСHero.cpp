@@ -17,6 +17,11 @@
 
 void ControlsMainCharacter(Hero & MainHero, float time) {
 
+	if (MainHero.Get_staminaH() < MainHero.Get_staminaMaxH()) {													//Восстановление запаса выносливости
+		if (time < 1) { MainHero.Set_staminaH(MainHero.Get_staminaH() + 1); }
+		else { MainHero.Set_staminaH(MainHero.Get_staminaH() + time); }
+	}
+
 	if (MainHero.Get_battleMode() == true) {																	//Боевой мод
 		MainHero.Set_buttonIsPressed(false);
 		MainHero.Set_moveOnlyRight(true);
@@ -33,9 +38,11 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 			}
 		}
 
-		if (MainHero.Get_hitAviableHeavy() == true) {															//Если можно нанести тяжелый удар
+		if (MainHero.Get_hitAviableHeavy() == true && MainHero.Get_staminaH()>80) {								//Если можно нанести тяжелый удар
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeavyBlowRight(time);
+				MainHero.Set_staminaH(MainHero.Get_staminaH() - 80);											//Тратим выносливость
+				
 			}
 			if (MainHero.Get_previousDirectionMove() == true) {
 				MainHero.HeavyBlowLeft(time);
