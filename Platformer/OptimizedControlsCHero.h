@@ -39,3 +39,13 @@ bool ComboCaller(Hero & MainHero, bool hitType)
 	if (correctExecution == true) return true;
 	else return false;
 }
+	
+void StaminaRest(Hero& MainHero, float& time, float limiter) {																	//¬осстановление запаса выносливости
+	if (time > limiter) {
+		if (MainHero.Get_staminaH() < MainHero.Get_staminaMaxH()) 
+		{
+			MainHero.Set_staminaH(MainHero.Get_staminaH() + 1);
+			time = 0;
+		}
+	}
+}

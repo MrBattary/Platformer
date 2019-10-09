@@ -6,7 +6,7 @@
 
 using namespace std;
 
-void ControlsMainCharacter(Hero &, float);												//Управление персонажем с клавиатуры
+void ControlsMainCharacter(Hero &, float,float &);										//Управление персонажем с клавиатуры
 
 void DrawEnvironment(View, float, vector<vector<vector<Object>>>&, int, int);			//Расположение объектов в пространстве
 void SetLayers(vector<vector<vector<Object>>>&, int, int);								//Функция отвечает за присваивание каждому объекту своего слоя

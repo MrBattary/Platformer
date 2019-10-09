@@ -15,12 +15,9 @@
 */
 
 
-void ControlsMainCharacter(Hero & MainHero, float time) {
+void ControlsMainCharacter(Hero & MainHero, float time,float &stime) {
 
-	if (MainHero.Get_staminaH() < MainHero.Get_staminaMaxH()) {													//Восстановление запаса выносливости
-		if (time < 1) { MainHero.Set_staminaH(MainHero.Get_staminaH() + 1); }
-		else { MainHero.Set_staminaH(MainHero.Get_staminaH() + time); }
-	}
+	StaminaRest(MainHero, stime, 30);
 
 	if (MainHero.Get_battleMode() == true) {																	//Боевой мод
 		MainHero.Set_buttonIsPressed(false);
@@ -38,10 +35,9 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 			}
 		}
 
-		if (MainHero.Get_hitAviableHeavy() == true && MainHero.Get_staminaH()>80) {								//Если можно нанести тяжелый удар
+		if (MainHero.Get_hitAviableHeavy() == true) {								//Если можно нанести тяжелый удар
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeavyBlowRight(time);
-				MainHero.Set_staminaH(MainHero.Get_staminaH() - 80);											//Тратим выносливость
 				
 			}
 			if (MainHero.Get_previousDirectionMove() == true) {
@@ -73,22 +69,22 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 
 			if (MainHero.Get_comboTimer() > 0)MainHero.Change_comboTimer(-time);								//Если не бьем,то comboTimer уменьшается
 
-			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true)				//Мощная атака, правая кнопка мыши
+			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true && MainHero.Get_staminaH() > 50)				//Мощная атака, правая кнопка мыши
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_onlyOneAnimation(false);
-
+				MainHero.Set_staminaH(MainHero.Get_staminaH() - 50);											//Тратим выносливость
 				MainHero.Change_comboHitH(1);
 
 				if (ComboCaller(MainHero, true) == true) MainHero.Set_hitAviableHeavy(true);
 				if (ComboCaller(MainHero, true) == true) MainHero.Set_hitAviableHeavy(true);
 			}
 
-			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true)					//Легкая атака, левая кнопка мыши
+			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true && MainHero.Get_staminaH() > 20)					//Легкая атака, левая кнопка мыши
 			{
 				MainHero.Set_buttonIsPressed(true);
 				MainHero.Set_onlyOneAnimation(false);
-
+				MainHero.Set_staminaH(MainHero.Get_staminaH() - 20);											//Тратим выносливость
 				MainHero.Change_comboHitH(1);
 				
 				if (ComboCaller(MainHero, false) == true) MainHero.Set_hitAviableLight(true);

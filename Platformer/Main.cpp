@@ -56,12 +56,14 @@ int main() {
 	Clock clock;													//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
 	
 	float time;
+	float stime = 0;																		
 						
 	while (window.isOpen())											//Выполняем пока окно открыто
 	{
 		time = clock.getElapsedTime().asMicroseconds();				//Получаем прошедшее время в микросекундах
 		clock.restart();											//Перезагружаем часы
 		time = time / 800;											//Скорость игры
+		stime += time;												//Второй таймер
 		
 		//ConsoleCheck(MainHero,time, false, true,false,false,false,false);//ТЕХН, вывод значений из класса в консоль !!!КОММЕНТИРОВАТЬ,ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ, ТК ЗАМЕДЛЯЕТ ВРЕМЯ!!!
 
@@ -72,10 +74,11 @@ int main() {
 				window.close();
 		}
 
+
 		healthBar.updateBar(MainHero.Get_healthH(), MainHero.Get_healthMaxH(),10);							//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.updateBar(MainHero.Get_staminaH(), MainHero.Get_staminaMaxH(), 10);						//ИНТЕРФЕЙС Бар выносливости
 		
-		ControlsMainCharacter(MainHero,time);																//Управление главным персонажем
+		ControlsMainCharacter(MainHero,time,stime);																//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
 
 		SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Распределение объектов по слоям

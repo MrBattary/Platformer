@@ -36,9 +36,8 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39)
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         [
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:             T=int
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         ]
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedControlsCHero.h(7,10): warning C4067:  непредвиденные лексемы за директивой препроцессора, требуется newline
   FunctionsCHero.cpp
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ControlsСHero.cpp(22,56): warning C4244:  аргумент: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedControlsCHero.h(7,10): warning C4067:  непредвиденные лексемы за директивой препроцессора, требуется newline
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(6,10): warning C4067:  непредвиденные лексемы за директивой препроцессора, требуется newline
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(95,19): warning C4244:  =: преобразование "double" в "int", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:  аргумент: преобразование "float" в "T", возможна потеря данных
@@ -254,14 +253,14 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warnin
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         [
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:             T=float
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         ]
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(62,47): warning C4244:  =: преобразование "sf::Int64" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(81,78): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(82,110): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(84,100): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(90,113): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(91,161): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(63,47): warning C4244:  =: преобразование "sf::Int64" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(84,78): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(85,110): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(87,100): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(93,113): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(94,161): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
   Создание кода...
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(93,160): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(96,160): warning C4267:  аргумент: преобразование из "size_t" в "int"; возможна потеря данных
 LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/PROFILE"
 ControlsСHero.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/OPT:REF"
   Platformer.vcxproj -> C:\Users\thisb\Source\Repos\MrBattary\Platformer\x64\Debug\Platformer.exe
