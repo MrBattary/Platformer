@@ -92,7 +92,7 @@ public:
 		yHReal = yH + yHRealInside;
 		wHReal = WReal;
 		hHReal = HReal;
-		healthH = Health*0.78;								//Здоровье текущее
+		healthH = Health;									//Здоровье текущее
 		healthMaxH = Health;								//Здоровье максимальное
 		staminaH = Stamina;									//Выносливость текущая
 		staminaMaxH = Stamina;								//Выносливость максимальная
