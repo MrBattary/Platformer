@@ -39,6 +39,8 @@ private:
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
 
+	int currentMap = 0;					//Текущая карта
+
 	bool battleMode = false;			//Боевая стойка
 	bool battleModeAvaible = false;		//Проверка на боевую стойку
 	bool moveLeft = true;				//Нужна для проверки на стандартное движение влево
@@ -65,12 +67,15 @@ private:
 	float cooldownAnimationSlide = 0;	//Кулдаун на анимацию скольжения
 	float comboTimer = 0;				//Время до следующего удара в комбо
 
-	int currentMap = 0;					//Текущая карта
-	int healthH;						//Здоровье Героя 0-100
+	int staminaH;						//Выносливость героя
+	int staminaMaxH;					//Максимальная выносливость героя
+	int healthH;						//Здоровье героя
+	int healthMaxH;						//Максимальное здоровье героя
 	int comboH = 0;						//Текущее комбо
 	int comboHitH = 0;					//Текущий удар в комбо
+
 public:
-	Hero(String F, float X, float Y, float W, float H, float XReal, float YReal, float WReal, float HReal,int Health)		//Конструктор 
+	Hero(String F, float X, float Y, float W, float H, float XReal, float YReal, float WReal, float HReal,int Health, int Stamina)		//Конструктор 
 	{
 		File = F;
 		wH = W;
@@ -87,7 +92,10 @@ public:
 		yHReal = yH + yHRealInside;
 		wHReal = WReal;
 		hHReal = HReal;
-		healthH = Health;									//Здоровье
+		healthH = Health*0.78;								//Здоровье текущее
+		healthMaxH = Health;								//Здоровье максимальное
+		staminaH = Stamina;									//Выносливость текущая
+		staminaMaxH = Stamina;								//Выносливость максимальная
 		sprite.setTextureRect(IntRect(0, 0, wH, hH));		//Вырезаем персонажа
 	}
 	//Функции-CHANGE помощники, могут изменять значения
@@ -101,6 +109,10 @@ public:
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
 	int Get_currentMap() { return currentMap; }									//Узнать на какой карте сейчас находимся
+	int Get_healthH() { return healthH; }										//Узнать значение здоровья персонажа
+	int Get_healthMaxH() { return healthMaxH; }									//Узнать максимальное здоровье персонажа
+	int Get_staminaH() { return staminaH; }										//Узнать значение выносливости персонажа
+	int Get_staminaMaxH() { return staminaMaxH; }								//Узнать максимальную выносливость персонажа
 	float Get_XH() { return xH; }												//Получить положение виртуальной модели по х
 	float Get_YH() { return yH; }												//Получить положение виртуальной модели по у
 	float Get_WH() { return wH; }												//Получить ширину модели
@@ -138,6 +150,10 @@ public:
 
 	//Функции-SET помощники
 	void Set_currentMap(int value) { currentMap = value; }						//Установить номер текущей карты
+	void Set_healthH(int value) { healthH = value; }							//Установить текущее здоровье героя
+	void Set_healthMaxH(int value) { healthMaxH = value; }						//Установить максимальное здоровье героя
+	void Set_staminaH(int value) { staminaH = value; }							//Установить текущую выносливость героя
+	void Set_staminaMaxH(int value) { staminaMaxH = value; }					//Установить максимальную выносливость героя
 	void Set_XH(float value) { xH = value; }									//Установить положение виртуальной модели по х
 	void Set_YH(float value) { yH = value; }									//Установить положение виртуальной модели по у
 	void Set_XHReal(float value) { xHReal = value; }							//Установить положение реальной модели по х

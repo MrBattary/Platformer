@@ -15,7 +15,7 @@
 */
 
 
-void ControlsMainCharacter(Hero & MainHero, float time) {
+void ControlsMainCharacter(Hero & MainHero, float time,float &stime) {
 
 	if (MainHero.Get_battleMode() == true) {																	//Боевой мод
 		MainHero.Set_buttonIsPressed(false);
@@ -33,9 +33,10 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 			}
 		}
 
-		if (MainHero.Get_hitAviableHeavy() == true) {															//Если можно нанести тяжелый удар
+		if (MainHero.Get_hitAviableHeavy() == true) {								//Если можно нанести тяжелый удар
 			if (MainHero.Get_previousDirectionMove() == false) {
 				MainHero.HeavyBlowRight(time);
+				
 			}
 			if (MainHero.Get_previousDirectionMove() == true) {
 				MainHero.HeavyBlowLeft(time);
@@ -64,28 +65,41 @@ void ControlsMainCharacter(Hero & MainHero, float time) {
 				MainHero.Set_battleModeAvaible(true);
 			}
 
-			if (MainHero.Get_comboTimer() > 0)MainHero.Change_comboTimer(-time);								//Если не бьем,то comboTimer уменьшается
+			StaminaRest(MainHero, stime, 30);															//Восстановление выносливости
+			if (MainHero.Get_comboTimer() > 0)MainHero.Change_comboTimer(-time);						//Если не бьем,то comboTimer уменьшается
 
-			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true)				//Мощная атака, правая кнопка мыши
+			if (Mouse::isButtonPressed(Mouse::Right) && MainHero.Get_onlyOneAnimation() == true)		//Мощная атака, правая кнопка мыши
 			{
 				MainHero.Set_buttonIsPressed(true);
-				MainHero.Set_onlyOneAnimation(false);
+				MainHero.Set_onlyOneAnimation(false);	
 
 				MainHero.Change_comboHitH(1);
-
 				if (ComboCaller(MainHero, true) == true) MainHero.Set_hitAviableHeavy(true);
 				if (ComboCaller(MainHero, true) == true) MainHero.Set_hitAviableHeavy(true);
+				if (ComboStaminaChecker(MainHero, true) == false) { 
+					//MainHero.Change_comboHitH(-1);
+					MainHero.Set_hitAviableHeavy(false); 
+				}
+				else {
+					ComboStamina(MainHero,true);														//Тратим выносливость
+				}
 			}
 
-			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true)					//Легкая атака, левая кнопка мыши
+			if (Mouse::isButtonPressed(Mouse::Left) && MainHero.Get_onlyOneAnimation() == true)			//Легкая атака, левая кнопка мыши
 			{
 				MainHero.Set_buttonIsPressed(true);
-				MainHero.Set_onlyOneAnimation(false);
+				MainHero.Set_onlyOneAnimation(false);	
 
 				MainHero.Change_comboHitH(1);
-				
 				if (ComboCaller(MainHero, false) == true) MainHero.Set_hitAviableLight(true);
 				if (ComboCaller(MainHero, false) == true) MainHero.Set_hitAviableLight(true);
+				if (ComboStaminaChecker(MainHero, false) == false) {
+					//MainHero.Change_comboHitH(-1);
+					MainHero.Set_hitAviableLight(false);
+				}
+				else {
+					ComboStamina(MainHero,false);														//Тратим выносливость
+				}
 			}
 
 
@@ -224,7 +238,7 @@ BattleIdleAnimation:
 			if (MainHero.Get_cooldownAnimationJump() > 0)MainHero.Change_cooldownAnimationJump(-time);			//Если управляем персонажем, откатывается возможность прыгать
 			if (MainHero.Get_cooldownAnimationSlide() > 0)MainHero.Change_cooldownAnimationSlide(-time);		//Если управляем персонажем, откатывается возможность скользить
 
-
+			StaminaRest(MainHero, stime, 30);															//Восстановление выносливости
 
 			if (Keyboard::isKeyPressed(Keyboard::D) && Keyboard::isKeyPressed(Keyboard::S) && MainHero.Get_onlyOneAnimation() == true)	//Движение вправо/вниз
 			{
