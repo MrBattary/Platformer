@@ -31,7 +31,7 @@ protected:
 	bool crossable;						//Должен ли герой впринципе пересекать этот объект?
 	bool tracking;						//Следящий объект
 	bool visible;						//Видимость объекта
-	//bool animated;					//Анимированный полностью, если необходимо каждый раз изменять положение в пространстве. Для оптимизации.
+	bool animated;						//Анимированный полностью, если необходимо каждый раз изменять положение в пространстве. Для оптимизации.
 	bool rendered = false;				//Отрисован ли объект?
 
 	String filePath;
@@ -40,11 +40,11 @@ protected:
 	Sprite spriteObject;
 
 public:
-	Object(bool _crossable, float _animSpeed, String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef, float _startFrame) {
+	Object(bool _crossable, bool _animated, float _animSpeed, String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef, float _startFrame) {
 		animSpeed = _animSpeed;
 		currentFrame = _startFrame;
 		crossable = _crossable;
-		//animated = _animated;
+		animated = _animated;
 
 		filePath = _filePath;
 		xR = _xOnMap;
@@ -101,6 +101,7 @@ public:
 	bool Get_crossable() { return crossable; }				//На одном пространстве с героем рисуется?
 	bool Get_rendered() { return rendered; }				//Отриован уже объект?
 	bool Get_tracking() { return tracking; }				//Следящий ли объект?
+	bool Get_animated() { return animated; }				//Анимирован ли полностью объект?
 
 	void Set_layer(signed int value) { layer = value; }		//Установка слоя
 	void Set_crossable(bool value) { crossable = value; }	//Установка возможности пересечения

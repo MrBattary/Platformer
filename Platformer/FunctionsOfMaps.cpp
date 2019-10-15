@@ -18,15 +18,39 @@ void DrawEnvironment(View view, float time, vector<vector<vector<Object>>>& v, i
 }
 
 void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
-{																														//на основе которых проводится порядок отрисовки
+{																														//на основе которых проводится порядок отрисовки,работает в самом начале
 	for (int i = 0; i < length_arrObj; i++) {
 		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-			v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal()/4);
+			if (v[currentMap][i][j].Get_crossable() == false) {
+				v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal());
+			}
+			else {
+				v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() /*+ v[currentMap][i][j].Get_hRReal()/4*/);
+			}
 		}
 		
 	}
 }
+
+void SetLayersAnim(vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)								//Функция отвечает за присваивание каждому движущемуся объекту своего слоя
+{																														//на основе которых проводится порядок отрисовки, работает всегда
+	for (int i = 0; i < length_arrObj; i++) {
+		for (int j = 0; j < v[currentMap][i].size(); j++)
+		{
+			if (v[currentMap][i][j].Get_animated() == true) {
+				if (v[currentMap][i][j].Get_crossable() == false) {
+					v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal());
+				}
+				else {
+					v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() /*+ v[currentMap][i][j].Get_hRReal()/4*/);
+				}
+			}
+		}
+
+	}
+}
+
 
 /*
 Функция взаимодействия персонажа с окружением
@@ -38,10 +62,11 @@ void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int current
 */
 void IntersectionHeroWithEnvironment(Hero & Hero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)	//Функция определяющая пересечение физических моделей объектов
 {
-	float xHero = Hero.Get_XHReal();
-	float yHero = Hero.Get_YHReal();
-	float wHero = Hero.Get_WHReal();
-	float hHero = Hero.Get_HHReal();
+	//+2 тут нужны, чтобы не было наслоения персонажа в момент упора в физическую модель другого объекта
+	float xHero = Hero.Get_XHReal()+2;
+	float yHero = Hero.Get_YHReal()+2;
+	float wHero = Hero.Get_WHReal()+2;
+	float hHero = Hero.Get_HHReal()+2;
 
 
 	for (unsigned short int i=0; i < length_arrObj; i++)

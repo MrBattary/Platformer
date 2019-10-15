@@ -8,10 +8,9 @@ using namespace sf;
 
 void DisplayEnvironment(RenderWindow& window, float time, int I, int L, vector<vector<vector<Object>>>& v, int currentMap)					//Функция отвечающая за рисование на экран объектов, втч анимированных
 {
-	//Заменить 0.0005 на anim speed
 	v[currentMap][I][0].Set_currentFrame(v[currentMap][I][0].Get_currentFrame() + v[currentMap][I][L].Get_animSpeed() * time);
 	//if (v[currentMap][I][0].Get_currentFrame() >= v[currentMap][I].size()) { v[currentMap][I][0].Set_currentFrame(v[currentMap][I][0].Get_currentFrame() - v[currentMap][I].size()); }
-	if (v[currentMap][I][0].Get_currentFrame() >= v[currentMap][I].size()) { v[currentMap][I][0].Set_currentFrame(0); }
+	if (v[currentMap][I][0].Get_currentFrame()+0.1>= v[currentMap][I].size()) { v[currentMap][I][0].Set_currentFrame(0); }	//0.1, чтобы дать время процессору среагировать.
 	if (L == (int)v[currentMap][I][0].Get_currentFrame()) {
 		window.draw(v[currentMap][I][L].Get_Sprite());				//Вывод на экран с помощью SFML
 	}

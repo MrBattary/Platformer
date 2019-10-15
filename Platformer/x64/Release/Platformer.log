@@ -1,5 +1,26 @@
-﻿  FunctionsCHero.cpp
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(6,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+﻿  Main.cpp
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,57): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,48): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ViewsAndWindow.h(36,12): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ViewsAndWindow.h(53,12): warning C4244: инициализация: преобразование "float" в "int", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         with
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         [
@@ -15,67 +36,81 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(130,33):
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(131,30): warning C4244: return: преобразование "int" в "float", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(182,42): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(183,48): warning C4244: =: преобразование "float" в "int", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(20,64): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(21,64): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(25,64): warning C4244: -=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(26,64): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(45,39): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(70,32): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(86,29): warning C4305: =: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(122,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(151,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(123,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(126,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(129,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(132,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(143,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(146,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(149,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(152,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(163,63): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(173,63): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(181,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(189,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(196,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(205,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(213,68): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(221,68): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(228,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(237,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(245,67): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(253,67): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(261,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(270,64): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(278,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(286,65): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(294,67): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(303,67): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(311,69): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(319,69): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(327,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(336,66): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(344,68): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(352,68): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(359,193): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(365,209): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(371,205): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(377,200): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(383,212): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(389,208): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(395,205): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(401,216): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(407,212): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(413,212): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(419,223): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(425,219): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(431,206): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(437,214): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(443,211): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(449,212): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(455,220): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(461,217): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(52,145): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(58,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(59,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(60,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(61,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(62,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(63,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(64,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(65,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(66,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(67,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(68,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(69,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(70,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(71,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(72,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(73,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(74,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(75,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(76,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(77,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(78,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(79,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(80,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(81,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(82,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(83,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(84,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(85,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(86,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(87,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(88,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(89,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(90,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(91,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(92,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(93,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(94,140): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(95,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(96,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(97,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(98,140): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(99,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(100,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(101,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,25): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,44): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:             T=float
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(20,26): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(62,77): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(65,47): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(86,82): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(87,110): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(89,100): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(95,113): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(96,159): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(98,158): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
   Создание кода
-  7 of 381 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
+  2 of 372 functions ( 0.5%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
