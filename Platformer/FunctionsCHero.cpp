@@ -356,37 +356,37 @@ int Hero::HeroMoveLeftCrouchDown(float time)							//Присед влево/в�
 
 int Hero::HeroSlideRight(float time)									//Скольжение вправо
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 1, speedHX, speedHY, sprite, 0, 100, 0.1, 0, 0.08, 1, clutchObj, 0.0006, 0, 0.11, 0.3, -0.3, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 1, speedHX, speedHY, sprite, 0, 100, 0.1, 0, 0.08, 2, clutchObj, 0.0003, 0, 0.11, 0.4, -0.3, 0.3);
 	return 0;
 }
 
 int Hero::HeroSlideRightUp(float time)									//Скольжение вправо вверх
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 8, speedHX, speedHY, sprite, 0, 100, 0.08, -0.08, 0.11, 0.11, clutchObj, 0.0006, -0.0006, 0.11, 0.3, -0.3, -0.11);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 8, speedHX, speedHY, sprite, 0, 100, 0.08, -0.08, 0.11, 0.11, clutchObj, 0.0003, -0.0003, 0.11, 0.4, -0.4, -0.11);
 	return 0;
 }
 
 int Hero::HeroSlideRightDown(float time)								//Скольжение вправо вниз
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 5, speedHX, speedHY, sprite, 0, 100, 0.08, 0.08, 0.11, 0.11, clutchObj, 0.0006, 0.0006, 0.11, 0.3, 0.11, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 5, speedHX, speedHY, sprite, 0, 100, 0.08, 0.08, 0.11, 0.11, clutchObj, 0.0003, 0.0003, 0.11, 0.4, 0.11, 0.4);
 	return 0;
 }
 
 int Hero::HeroSlideLeft(float time)										//Скольжение влево
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 3, speedHX, speedHY, sprite, 100, -100, -0.1, 0, 0.11, 1, clutchObj, -0.0006, 0, -0.3, -0.11, -0.3, 0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 3, speedHX, speedHY, sprite, 100, -100, -0.1, 0, 0.11, 2, clutchObj, -0.0003, 0, -0.4, -0.11, -0.4, 0.4);
 	return 0;
 }
 
 int Hero::HeroSlideLeftUp(float time)									//Скольжение влево вверх
 {
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 7, speedHX, speedHY, sprite, 100, -100, -0.08, -0.08, 0.11, 0.11, clutchObj, -0.0006, -0.0006,-0.3,-0.11,-0.3,-0.11);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 7, speedHX, speedHY, sprite, 100, -100, -0.08, -0.08, 0.11, 0.11, clutchObj, -0.0003, -0.0003,-0.4,-0.11,-0.4,-0.11);
 	return 0;
 }
 
 int Hero::HeroSlideLeftDown(float time)									//Скольжение влево вниз
 {	
-	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 6, speedHX, speedHY, sprite, 100, -100, -0.08, 0.08, 0.11, 0.11, clutchObj, -0.0006, 0.0006,-0.3,-0.11,0.11,0.3);
+	OnlySlideAnimation(currentUncycleFrame, time, cooldownAnimationSlide, 0.5, slideAviable, dirH, 6, speedHX, speedHY, sprite, 100, -100, -0.08, 0.08, 0.11, 0.11, clutchObj, -0.0003, 0.0003,-0.4,-0.11,0.11,0.4);
 	return 0;
 }
 

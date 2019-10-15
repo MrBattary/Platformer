@@ -69,26 +69,32 @@ void OnlySlideAnimation(float & currentFrameUN, float time, float& cooldown, flo
 	direction = directionValue;
 	currentFrameUN += 0.007 * time; 
 	bool minusFrames = false;
-	if (currentFrameUN <= 2.1) {
+	if (currentFrameUN < 2) {
 		sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+ x11, 592, x2, 74));
-		speedHX += addX*time;
-		speedHY += addY*time;
+		//if (speedHX < (sHX + addX * time)) speedHX += addX * time;
+		//if (speedHY < (sHY + addY * time)) speedHY += addY * time;
+		speedHX += addX * time;
+		speedHY += addY * time;
 	}
-	if (currentFrameUN > 2 && currentFrameUN < 4.1 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
-		if (Keyboard::isKeyPressed(Keyboard::C)) {
-			Physics(speedHX, speedHY, time, clutchObj, msX, msY, clutchX, clutchY, 0, 0);
-			if (currentFrameUN > 4) { currentFrameUN = 2.0; }
-			sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
+	else {
+		Physics(speedHX, speedHY, time, clutchObj, msX, msY, clutchX, clutchY, 0, 0);
+		if (currentFrameUN > 2 && currentFrameUN < 4.1 && (speedHX > fHX && speedHX< sHX && speedHY> fHY && speedHY < sHY)) {
+			if (Keyboard::isKeyPressed(Keyboard::C)) {
+				if (currentFrameUN > 4) { currentFrameUN = 2.0; }
+				sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
+			}
+			else currentFrameUN = 4.2;
 		}
-		else currentFrameUN = 4.2;
-	}
-	if (currentFrameUN > 4.1) {
-		sprite.setTextureRect(IntRect(100 * int(currentFrameUN)+ x11, 592, x2, 74));
-	}
-	if (currentFrameUN > 8)
-	{
-		avaible = false;
-		currentFrameUN = 0;
+		else {
+			if (currentFrameUN > 4.1) {
+				sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, 592, x2, 74));
+			}
+			if (currentFrameUN > 8)
+			{
+				avaible = false;
+				currentFrameUN = 0;
+			}
+		}
 	}
 }
 

@@ -21,9 +21,9 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCH
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(26,64): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(45,39): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(70,32): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(83,28): warning C4305: =: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(116,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(145,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(86,29): warning C4305: =: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(122,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedFunctionsCHero.h(151,41): warning C4244: +=: преобразование "double" в "float", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(123,65): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(126,66): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(129,66): warning C4305: аргумент: усечение из "double" в "float"
@@ -75,8 +75,8 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(4
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(455,220): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\FunctionsCHero.cpp(461,217): warning C4305: аргумент: усечение из "double" в "float"
   Создание кода
-  56 of 370 functions (15.1%) were compiled, the rest were copied from previous compilation.
+  7 of 381 functions ( 1.8%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    7 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Platformer.vcxproj -> C:\Users\thisb\source\repos\MrBattary\Platformer\x64\Release\Platformer.exe

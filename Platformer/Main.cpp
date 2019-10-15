@@ -16,7 +16,7 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 
 	GL HF
 */
-#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")			//Отключение консоли
+//#pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")			//Отключение консоли
 
 #include <conio.h>
 #include "ViewsAndWindow.h"
@@ -30,7 +30,7 @@ using namespace sf;
 
 //ТЕХH функция вывода значений из класса на экран
 //Чтобы ей воспользоваться необходимо в main поставить комментарий на #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")
-/*void ConsoleCheck(Hero MainHero, float time, bool timecheck, bool speedXH, bool speedHY, bool cooldownJump, bool cooldownSlide, bool comboTimer)		
+void ConsoleCheck(Hero MainHero, float time, bool timecheck, bool speedXH, bool speedHY, bool cooldownJump, bool cooldownSlide, bool comboTimer)		
 {
 	if (timecheck == true) std::cout << time << "|";												//Вывод времени
 	if (speedXH == true)std::cout << MainHero.Get_speedXH() << "|";									//Вывод скорости по Х
@@ -39,7 +39,7 @@ using namespace sf;
 	if (cooldownSlide == true)std::cout << MainHero.Get_cooldownAnimationSlide() << "|";			//Вывод кулдауна скольжения
 	if (cooldownSlide == true)std::cout << MainHero.Get_cooldownAnimationSlide() << "|";			//Вывод кулдауна скольжения
 	if (comboTimer == true) std::cout << MainHero.Get_comboTimer() << "|";							//Вывок времени на комбо
-}*/
+}
 
 int main() {
 
@@ -65,7 +65,7 @@ int main() {
 		time = time / 800;											//Скорость игры
 		stime += time;												//Второй таймер
 		
-		//ConsoleCheck(MainHero,time, false, true,false,false,false,false);//ТЕХН, вывод значений из класса в консоль !!!КОММЕНТИРОВАТЬ,ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ, ТК ЗАМЕДЛЯЕТ ВРЕМЯ!!!
+		ConsoleCheck(MainHero,time, false, true,false,false,false,false);//ТЕХН, вывод значений из класса в консоль !!!КОММЕНТИРОВАТЬ,ЕСЛИ НЕ ИСПОЛЬЗУЕТСЯ, ТК ЗАМЕДЛЯЕТ ВРЕМЯ!!!
 
 		Event event;
 		while (window.pollEvent(event))																		//Событие закрытия окна
