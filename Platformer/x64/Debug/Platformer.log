@@ -73,10 +73,14 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(90,142): warn
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(91,144): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(92,144): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(93,144): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(94,142): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(95,144): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(96,144): warning C4305: аргумент: усечение из "double" в "float"
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(97,144): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(94,140): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(95,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(96,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(97,142): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(98,140): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(99,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(100,141): warning C4305: аргумент: усечение из "double" в "float"
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Maps.h(101,142): warning C4305: аргумент: усечение из "double" в "float"
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244: аргумент: преобразование "int" в "T", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         with
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Bar.h(19,30): warning C4244:         [
