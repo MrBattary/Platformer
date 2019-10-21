@@ -4,7 +4,8 @@
 
 
 #include "ClassHero.h";
-#include "OptimizedFunctionsCHero.h"
+#include "OptimizedFunctionsAnimationCHero.h"
+#include "OptimizedFunctionsAnimation.h"
 
 /*
 Функции передвижения героя.
@@ -564,9 +565,11 @@ int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влев�
 	return 0;
 }
 
-void Hero::SetRealSize(float xRealIns, float yRealIns, float wReal, float hReal) {
-	wHReal = wReal;
-	hHReal = hReal;
+void Hero::SetRealSize(float xRealIns, float yRealIns, float wReal, float hReal) {			//Установить новые размеры физической модели персонажа
+	xHRealInside = xRealIns;
+	yHRealInside = yRealIns;
+	wHRealInside = wReal;
+	hHRealInside = hReal;
 }
 /*
 Функция получения урона персонажем.

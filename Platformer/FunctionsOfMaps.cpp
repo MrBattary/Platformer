@@ -62,11 +62,12 @@ void SetLayersAnim(vector<vector<vector<Object>>>& v, int length_arrObj, int cur
 */
 void IntersectionHeroWithEnvironment(Hero & Hero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)	//Функция определяющая пересечение физических моделей объектов
 {
-	//+2 тут нужны, чтобы не было наслоения персонажа в момент упора в физическую модель другого объекта
-	float xHero = Hero.Get_XHReal()+2;
-	float yHero = Hero.Get_YHReal()+2;
-	float wHero = Hero.Get_WHReal()+2;
-	float hHero = Hero.Get_HHReal()+2;
+	//+2 тут могут быть нужны, чтобы не было наслоения персонажа в момент упора в физическую модель другого объекта
+	//const char Ex = 2;
+	float xHero = Hero.Get_XHReal()/* + Ex*/;
+	float yHero = Hero.Get_YHReal()/* + Ex*/;
+	float wHero = Hero.Get_WHRealInside()/* + Ex*/;
+	float hHero = Hero.Get_HHRealInside()/* + Ex*/;
 
 
 	for (unsigned short int i=0; i < length_arrObj; i++)

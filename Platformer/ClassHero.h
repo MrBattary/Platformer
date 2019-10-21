@@ -21,8 +21,8 @@ private:
 	float yHReal;						//Y реальной модели внутри виртуальной модели относительной всей оси
 	float xHRealInside;					//Х реальной модели внутри виртуальной модели
 	float yHRealInside;					//Y реальной модели внутри виртуальной модели
-	float wHReal;						//Ширина реальной модели внутри виртуальной модели
-	float hHReal;						//Высота реальной модели внутри виртуальной модели
+	float wHRealInside;					//Ширина реальной модели внутри виртуальной модели
+	float hHRealInside;					//Высота реальной модели внутри виртуальной модели
 	float speedHX=0;					//Скорость персонажа по X
 	float speedHY=0;					//Скорость персонажа по Y
 	float clutchObj;					//Сцепление персонажа с поверхностью на которой он стоит
@@ -78,20 +78,20 @@ public:
 	Hero(String F, float X, float Y, float W, float H, float XReal, float YReal, float WReal, float HReal,int Health, int Stamina)		//Конструктор 
 	{
 		File = F;
-		wH = W;
-		hH = H;
 		image.loadFromFile("Sprites/"+File);				//Загружаем в него файл
 		image.createMaskFromColor(Color(255, 255, 255));	//Прозрачность
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт
 		xH = X;												//Координаты
 		yH = Y;
+		wH = W;
+		hH = H;
 		xHRealInside = XReal;
 		yHRealInside = YReal;
+		wHRealInside = WReal;
+		hHRealInside = HReal;
 		xHReal = xH + xHRealInside;
 		yHReal = yH + yHRealInside;
-		wHReal = WReal;
-		hHReal = HReal;
 		healthH = Health;									//Здоровье текущее
 		healthMaxH = Health;								//Здоровье максимальное
 		staminaH = Stamina;									//Выносливость текущая
@@ -119,8 +119,8 @@ public:
 	float Get_HH() { return hH; }												//Получить высоту модели
 	float Get_XHReal() { return xHReal; }										//Получить положение реальной модели по х
 	float Get_YHReal() { return yHReal; }										//Получить положение реальной модели по у
-	float Get_WHReal() { return wHReal; }										//Получить ширину реальной модели
-	float Get_HHReal() { return hHReal; }										//Получить высоту реальной модели
+	float Get_WHRealInside() { return wHRealInside; }							//Получить ширину физической модели
+	float Get_HHRealInside() { return hHRealInside; }							//Получить высоту физической модели
 	float Get_speedXH() { return speedHX; }										//Получить speedHX
 	float Get_speedXY() { return speedHY; }										//Получить speedHY
 	float Get_clutchObj() { return clutchObj; }									//Получить величину сцепления персонажа с поверхностью на которой он стоит
@@ -158,8 +158,8 @@ public:
 	void Set_YH(float value) { yH = value; }									//Установить положение виртуальной модели по у
 	void Set_XHReal(float value) { xHReal = value; }							//Установить положение реальной модели по х
 	void Set_YHReal(float value) { yHReal = value; }							//Установить положение реальной модели по у
-	void Set_WHReal(float value) { wHReal = value; }							//Установить ширину реaльной модели
-	void Set_HHReal(float value) { hHReal = value; }							//Установить высоту реaльной модели
+	void Set_WHRealInside(float value) { wHRealInside = value; }				//Установить ширину физической модели
+	void Set_HHRealInside(float value) { hHRealInside = value; }				//Установить высоту физической модели
 	void Set_clutchObj(float value) { clutchObj = value; }						//Установить величину сцепления персонажа с поверхностью на которой он стоит
 	void Set_moveLeft(bool value) { moveLeft=value; }							//Установить движение влево
 	void Set_moveOnlyLeft(bool value) { moveOnlyLeft=value; }					//Установить движение только прямо влево

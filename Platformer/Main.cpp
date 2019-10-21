@@ -22,8 +22,8 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ViewsAndWindow.h"
 #include "MainFunctions.h"
 #include "Maps.h"
-#include "HeroHealthBar.h"
-#include "HeroStaminaBar.h"
+#include "ClassHeroHealthBar.h"
+#include "ClassHeroStaminaBar.h"
 
 using namespace sf;
 
@@ -93,9 +93,9 @@ int main() {
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
 		SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
+		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
-		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
+		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
 
 		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
