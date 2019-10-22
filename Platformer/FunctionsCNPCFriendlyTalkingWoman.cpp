@@ -1,6 +1,6 @@
 ﻿//Определение всех функций класса "WomanTalkingFriendlyNPC"
 #include "ClassNPCFriendlyTalkingWoman.h"
-//#include "OptimizedFunctionsAnimation.h"
+#include "OptimizedFunctionsAnimation.h"
 
 
 void WomanTalkingFriendlyNPC::WomanDraw(float time)						//Физика на отрисовку NPC, связывает анимацию и физику
@@ -13,11 +13,11 @@ void WomanTalkingFriendlyNPC::WomanDraw(float time)						//Физика на о�
 void WomanTalkingFriendlyNPC::WomanIdleRight(float time)				//Бездействие вправо
 {
 	dirN = 0;
-	//CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 0, 0, 150, 200);
+	CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 0, 0, 150, 200);
 }
 
 void WomanTalkingFriendlyNPC::WomanIdleLeft(float time)					//Бездействие влево
 {
 	dirN = 0;
-	//CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 150, 0, -150, 200);
+	CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 150, 0, -150, 200);
 }

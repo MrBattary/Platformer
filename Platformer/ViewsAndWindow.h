@@ -6,6 +6,8 @@
 using namespace std;
 using namespace sf;
 
+//Возможно потребуется разделение на .срр и .h
+
 void DisplayEnvironment(RenderWindow& window, float time, int I, int L, vector<vector<vector<Object>>>& v, int currentMap)					//Функция отвечающая за рисование на экран объектов, втч анимированных
 {
 	v[currentMap][I][0].Set_currentFrame(v[currentMap][I][0].Get_currentFrame() + v[currentMap][I][L].Get_animSpeed() * time);

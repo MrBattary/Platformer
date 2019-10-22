@@ -138,6 +138,9 @@
     <ClCompile Include="FunctionsCObject.cpp" />
     <ClCompile Include="FunctionsOfMaps.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OptimizedFunctionsAnimation.cpp" />
+    <ClCompile Include="OptimizedFunctionsAnimationCHero.cpp" />
+    <ClCompile Include="PhysicsEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassBar.h" />
