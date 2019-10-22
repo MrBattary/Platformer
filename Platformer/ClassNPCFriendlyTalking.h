@@ -6,9 +6,9 @@ using namespace sf;
 //Класс включающий в себя дружественного NPC
 //Отсутствует логика агрессии на персонажа
 //Присутствет логика общения с персонажем и реакция на его появление
-class TalkingFriendlyNPC : public FriendlyNPC {
+class NPCFriendlyTalking : public NPCFriendly {
 
 	//!!Прописать сюда класс диалогов!!
 public:
-	TalkingFriendlyNPC() {};
+	NPCFriendlyTalking() {};
 };

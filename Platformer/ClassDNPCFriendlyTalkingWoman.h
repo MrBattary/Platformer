@@ -6,9 +6,9 @@ using namespace sf;
 
 //Класс включающий в себя дружественного NPC говорящую женщину
 
-class WomanTalkingFriendlyNPC : public TalkingFriendlyNPC {
+class NPCFriendlyTalkingWoman : public NPCFriendlyTalking {
 public:
-	WomanTalkingFriendlyNPC(int _Map, float _X, float _Y, int _Health) {
+	NPCFriendlyTalkingWoman(int _Map, float _X, float _Y, int _Health) {
 		//Положение на карте и в пространстве
 		currentMap = _Map;
 		xN = _X;
@@ -16,9 +16,9 @@ public:
 		wN = 150;
 		hN = 200;
 		xNRealInside = 38;
-		yNRealInside = 12;
+		yNRealInside = 180;
 		wNRealInside = 58;
-		hNRealInside = 176;
+		hNRealInside = 10;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
 

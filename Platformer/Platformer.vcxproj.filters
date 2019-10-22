@@ -33,9 +33,6 @@
     <ClCompile Include="FunctionsCNPC.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCNPCFriendlyTalkingWoman.cpp">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="OptimizedFunctionsAnimation.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
@@ -43,6 +40,12 @@
       <Filter>Исходные файлы</Filter>
     </ClCompile>
     <ClCompile Include="PhysicsEngine.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCDNPCFriendlyBunny.cpp">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCDNPCFriendlyTalkingWoman.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -80,13 +83,7 @@
     <ClInclude Include="ClassHeroStaminaBar.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ClassNPCFriendly.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="ClassNPCFriendlyTalking.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
-    <ClInclude Include="ClassNPCFriendlyTalkingWoman.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="OptimizedFunctionsAnimation.h">
@@ -96,6 +93,18 @@
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
     <ClInclude Include="PhysicsEngine.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="MapsNPCFriendly.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassDNPCFriendlyTalkingWoman.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCFriendly.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassDNPCFriendlyBunny.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

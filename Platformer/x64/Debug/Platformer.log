@@ -1,4 +1,5 @@
-﻿  ControlsСHero.cpp
+﻿  FunctionsCDNPCFriendlyBunny.cpp
+  ControlsСHero.cpp
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ControlsСHero.cpp(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassHero.h(99,43): warning C4244:         with
@@ -35,19 +36,19 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39)
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         [
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:             T=int
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,39): warning C4244:         ]
-  FunctionsCNPCFriendlyTalkingWoman.cpp
+  FunctionsCDNPCFriendlyTalkingWoman.cpp
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\OptimizedControlsCHero.h(7,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,43): warning C4244:         with
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,43): warning C4244:         [
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,43): warning C4244:             T=int
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,43): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,43): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,43): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,43): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,43): warning C4244:         ]
   FunctionsCObject.cpp
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,39): warning C4244:         with
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,39): warning C4244:         [
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,39): warning C4244:             T=int
-C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingWoman.h(35,39): warning C4244:         ]
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,39): warning C4244:         with
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,39): warning C4244:         [
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,39): warning C4244:             T=int
+C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassDNPCFriendlyTalkingWoman.h(35,39): warning C4244:         ]
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         with
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\ClassObject.h(75,70): warning C4244:         [
@@ -241,5 +242,5 @@ C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(96,165): wa
   Создание кода...
 C:\Users\thisb\source\repos\MrBattary\Platformer\Platformer\Main.cpp(98,164): warning C4267: аргумент: преобразование из "size_t" в "int"; возможна потеря данных
 LINK : warning LNK4075: не учитывается "/INCREMENTAL" из-за спецификации "/PROFILE"
-ControlsСHero.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/OPT:REF"
+FunctionsCDNPCFriendlyBunny.obj : warning LNK4075: не учитывается "/EDITANDCONTINUE" из-за спецификации "/OPT:REF"
   Platformer.vcxproj -> C:\Users\thisb\source\repos\MrBattary\Platformer\x64\Debug\Platformer.exe
