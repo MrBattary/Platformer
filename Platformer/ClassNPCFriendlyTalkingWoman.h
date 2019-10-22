@@ -40,5 +40,5 @@ public:
 	void WomanIdleRight(float time);
 	void WomanIdleLeft(float time);
 	
-	void WomanDraw(float);
+	void Draw(float);
 };

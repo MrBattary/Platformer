@@ -3,10 +3,11 @@
 #include "OptimizedFunctionsAnimation.h"
 
 
-void WomanTalkingFriendlyNPC::WomanDraw(float time)						//Физика на отрисовку NPC, связывает анимацию и физику
+void WomanTalkingFriendlyNPC::Draw(float time)							//Физика на отрисовку NPC, связывает анимацию и физику
 {
 	//xN = xNReal - xNRealInside;										//Положение виртуальной модели в пространстве не нужно, т.к. не двигается
-	//yN = yNReal - yNRealInside;										МБ ДАЖЕ ФУНКЦИЮ DRAW ПОДНЯТЬ ВЫШЕ В ИЕРАРХИИ?ДОПУСТИМ ПОСЛЕ NPC ИЛИ СДЕЛАТЬ ДРУГА
+	//yN = yNReal - yNRealInside;									
+	//МБ функцию Draw поднять выше в иерархии?Допустим после NPC или сделать как друга. Но вообще, если объект статичен, но setPosition вообще можно прописывать в конструктор ведь ничего не поменяется.
 	sprite.setPosition(xNReal, yNReal);									//Установть точку отрисовки на позиции хN,уN относительно физической модели
 }
 
