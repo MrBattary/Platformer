@@ -17,7 +17,12 @@ protected:
 	float wNRealInside;					//Ширина реальной модели внутри виртуальной модели
 	float hNRealInside;					//Высота реальной модели внутри виртуальной модели
 
-	float clutchObj;					//Сцепление персонажа с поверхностью на которой он стоит
+	float dxN;							//Ускорение по х
+	float dyN;							//Ускорение по y
+	float speedNX = 0;					//Скорость NPC по x
+	float speedNY = 0;					//Скорость NPC по y
+
+	float clutchObj;					//Сцепление NPC с поверхностью на которой он стоит
 	int dirN;							//Направление движения/взгляда
 	int currentMap = 0;					//Текущая карта
 
@@ -67,5 +72,6 @@ public:
 	void Set_HNRealInside(float value) { hNRealInside = value; }				//Установить высоту реaльной модели
 	void Set_clutchObj(float value) { clutchObj = value; }						//Установить величину сцепления персонажа с поверхностью на которой он стоит
 
+	virtual void Draw(float);													//Связь физики и анимации
 	void SetRealSizeNPC(float, float, float, float);							//Изменение размеров внутренней модели
 };
