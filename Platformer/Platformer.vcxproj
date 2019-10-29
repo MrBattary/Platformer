@@ -131,23 +131,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FunctionsCDNPCFriendlyBunny.cpp" />
     <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
+    <ClCompile Include="FunctionsCNPC.cpp" />
+    <ClCompile Include="FunctionsCDNPCFriendlyTalkingWoman.cpp" />
     <ClCompile Include="FunctionsCObject.cpp" />
     <ClCompile Include="FunctionsOfMaps.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="OptimizedFunctionsAnimation.cpp" />
+    <ClCompile Include="OptimizedFunctionsAnimationCHero.cpp" />
+    <ClCompile Include="PhysicsEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Bar.h" />
+    <ClInclude Include="ClassBar.h" />
     <ClInclude Include="ClassAnimObject.h" />
     <ClInclude Include="ClassHero.h" />
+    <ClInclude Include="ClassNPC.h" />
+    <ClInclude Include="ClassNPCFriendly.h" />
+    <ClInclude Include="ClassDNPCFriendlyBunny.h" />
+    <ClInclude Include="ClassNPCFriendlyTalking.h" />
+    <ClInclude Include="ClassDNPCFriendlyTalkingWoman.h" />
     <ClInclude Include="ClassObject.h" />
-    <ClInclude Include="HeroHealthBar.h" />
-    <ClInclude Include="HeroStaminaBar.h" />
+    <ClInclude Include="ClassHeroHealthBar.h" />
+    <ClInclude Include="ClassHeroStaminaBar.h" />
     <ClInclude Include="Maps.h" />
+    <ClInclude Include="MapsNPCFriendly.h" />
     <ClInclude Include="OptimizedControlsCHero.h" />
     <ClInclude Include="MainFunctions.h" />
-    <ClInclude Include="OptimizedFunctionsCHero.h" />
+    <ClInclude Include="OptimizedFunctionsAnimation.h" />
+    <ClInclude Include="OptimizedFunctionsAnimationCHero.h" />
+    <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="ViewsAndWindow.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

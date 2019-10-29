@@ -1,6 +1,6 @@
 #pragma once
 
-#include "Bar.h"
+#include "ClassBar.h"
 
 using namespace sf;
 

@@ -22,8 +22,8 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ViewsAndWindow.h"
 #include "MainFunctions.h"
 #include "Maps.h"
-#include "HeroHealthBar.h"
-#include "HeroStaminaBar.h"
+#include "ClassHeroHealthBar.h"
+#include "ClassHeroStaminaBar.h"
 
 using namespace sf;
 
@@ -45,7 +45,7 @@ int main() {
 
 	RenderWindow window(VideoMode(1280, 720), "Test");									//Рендер окна
 	//window.setFramerateLimit(60);														//Ограничение FPS
-	window.setVerticalSyncEnabled(true);
+	//window.setVerticalSyncEnabled(true);												//Ограничение FPS=60
 
 	View MainView;																		//Рендер камеры вида
 	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 200, 100);	//Создаем героя
@@ -57,7 +57,9 @@ int main() {
 	
 	float time;
 	float stime = 0;																		
-						
+	
+
+	SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());							//Распределение объектов по слоям
 	while (window.isOpen())											//Выполняем пока окно открыто
 	{
 		time = clock.getElapsedTime().asMicroseconds();				//Получаем прошедшее время в микросекундах
@@ -78,10 +80,10 @@ int main() {
 		healthBar.updateBar(MainHero.Get_healthH(), MainHero.Get_healthMaxH(),10);							//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.updateBar(MainHero.Get_staminaH(), MainHero.Get_staminaMaxH(), 10);						//ИНТЕРФЕЙС Бар выносливости
 		
-		ControlsMainCharacter(MainHero,time,stime);																//Управление главным персонажем
+		ControlsMainCharacter(MainHero,time,stime);															//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
 
-		SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Распределение объектов по слоям
+		SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
 		IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
 
 		DrawEnvironment(MainView, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Подготовка к отрисовке всех объектов карты до персонажа
@@ -91,9 +93,9 @@ int main() {
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
 		SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
+		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
-		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHReal()+3, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
+		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
 
 		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
