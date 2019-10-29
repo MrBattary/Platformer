@@ -42,10 +42,10 @@
     <ClCompile Include="PhysicsEngine.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCDNPCFriendlyBunny.cpp">
+    <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCDNPCFriendlyTalkingWoman.cpp">
+    <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
   </ItemGroup>
@@ -98,13 +98,13 @@
     <ClInclude Include="MapsNPCFriendly.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ClassDNPCFriendlyTalkingWoman.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="ClassNPCFriendly.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="ClassDNPCFriendlyBunny.h">
+    <ClInclude Include="ClassNPCFriendlyDBunny.h">
+      <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCFriendlyTalkingDWoman.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

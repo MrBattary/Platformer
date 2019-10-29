@@ -4,7 +4,7 @@
 
 using namespace sf;
 
-//Класс включающий в себя дружественного NPC говорящую женщину
+//Класс включающий в себя дружественного квестового NPC женщину
 
 class NPCFriendlyTalkingWoman : public NPCFriendlyTalking {
 public:
@@ -35,10 +35,12 @@ public:
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
 	};
 	
+	void Logic();											//Функция логики для женщины, определяет, какое действие будет производиться
+
 	//AFK
 
-	void WomanIdleRight(float time);
-	void WomanIdleLeft(float time);
+	int WomanIdleRight(float time);		//Бездействие вправо
+	int WomanIdleLeft(float time);		//Бездействие влево
 	
-	void Draw(float);
+	void Draw(float) override;			//Перегруженная функция связи анимации и физики
 };

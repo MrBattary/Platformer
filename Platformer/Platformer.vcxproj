@@ -131,11 +131,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="FunctionsCDNPCFriendlyBunny.cpp" />
+    <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp" />
     <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
     <ClCompile Include="FunctionsCNPC.cpp" />
-    <ClCompile Include="FunctionsCDNPCFriendlyTalkingWoman.cpp" />
+    <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp" />
     <ClCompile Include="FunctionsCObject.cpp" />
     <ClCompile Include="FunctionsOfMaps.cpp" />
     <ClCompile Include="Main.cpp" />
@@ -149,9 +149,9 @@
     <ClInclude Include="ClassHero.h" />
     <ClInclude Include="ClassNPC.h" />
     <ClInclude Include="ClassNPCFriendly.h" />
-    <ClInclude Include="ClassDNPCFriendlyBunny.h" />
+    <ClInclude Include="ClassNPCFriendlyDBunny.h" />
     <ClInclude Include="ClassNPCFriendlyTalking.h" />
-    <ClInclude Include="ClassDNPCFriendlyTalkingWoman.h" />
+    <ClInclude Include="ClassNPCFriendlyTalkingDWoman.h" />
     <ClInclude Include="ClassObject.h" />
     <ClInclude Include="ClassHeroHealthBar.h" />
     <ClInclude Include="ClassHeroStaminaBar.h" />
