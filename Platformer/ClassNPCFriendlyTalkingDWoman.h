@@ -26,6 +26,9 @@ public:
 		healthMaxN = _Health;
 		healthN = _Health;
 
+		//Логическая часть
+		logicReaction = 0.005;
+
 		//Графическая часть
 		File = "WomanSprite.png";
 		image.loadFromFile("Sprites/" + File);
@@ -35,7 +38,7 @@ public:
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
 	};
 	
-	void Logic();											//Функция логики для женщины, определяет, какое действие будет производиться
+	void Logic(float) override;								//Функция логики для женщины, определяет, какое действие будет производиться
 
 	//AFK
 

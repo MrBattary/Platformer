@@ -29,6 +29,9 @@ public:
 		healthMaxN = _Health;
 		healthN = _Health;
 
+		//Логическая часть
+		logicReaction = 0.005;
+
 		//Графическая часть
 		File = "BunnySprite.png";
 		image.loadFromFile("Sprites/" + File);

@@ -6,7 +6,8 @@
 */
 
 #include <vector>
-#include "ClassNPCFriendlyTalkingWoman.h"
+#include "ClassNPCFriendlyTalkingDWoman.h"
+#include "ClassNPCFriendlyDBunny.h"
 
 using namespace std;
 
@@ -14,6 +15,7 @@ using namespace std;
 
 vector < vector < NPCFriendly >> vFriendlyNPC = {
 	{
-		NPCFriendlyTalkingWoman(1,1400,400,100)
+		NPCFriendlyTalkingWoman(1,1400,400,100),
+		NPCFriendlyBunny(1,1700,600,10)
 	}
 }
