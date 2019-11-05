@@ -13,9 +13,9 @@ using namespace std;
 
 //vector[Номер карты на которой находится объект][Номер NPC]
 
-vector < vector < NPCFriendly >> vFriendlyNPC = {
+vector < vector < NPCFriendly*>> vFriendlyNPC = {
 	{
-		NPCFriendlyTalkingWoman(1,1400,400,100),
-		NPCFriendlyBunny(1,1700,600,10)
+		new NPCFriendlyTalkingWoman(0,1400,400,100),
+		new NPCFriendlyBunny(0,1700,600,10)
 	}
-}
+};
