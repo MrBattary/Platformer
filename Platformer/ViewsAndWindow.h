@@ -18,6 +18,7 @@ void DisplayEnvironment(RenderWindow& window, float time, int I, int L, vector<v
 	}
 }
 
+//!!!СТАРАЯ!!!
 void SpitesOfEnvironmentUncrossable(RenderWindow & window, float time, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)//Отрисовка объектов на пространство того, с чем герой не может взаимодействовать впринципе
 {					
 	for (unsigned short int j = 10000; j > 0; j--) {																						//Важный момент: отрисовка тут идет снизу вверх!
@@ -33,6 +34,17 @@ void SpitesOfEnvironmentUncrossable(RenderWindow & window, float time, vector<ve
 	}
 }
 
+void SpitesOfEnvironmentUncrossable(RenderWindow& window, Sprite sprite, signed int layer)	//Отрисовка объектов на пространство того, с чем герой не может взаимодействовать впринципе
+{
+	for (unsigned short int j = 10000; j > 0; j--) {										//Важный момент: отрисовка тут идет снизу вверх!
+		if (layer == j)
+		{
+			window.draw(sprite);															//Вывод на экран с помощью SFML
+		}
+	}
+}
+
+//!!!СТАРАЯ!!!
 void SpitesOfEnvironmentBeforeHero(RenderWindow & window, float time,  float Yhero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)//Отрисовка объектов на пространство до героя
 {					
 	int heroY = roundf(Yhero);
@@ -49,7 +61,7 @@ void SpitesOfEnvironmentBeforeHero(RenderWindow & window, float time,  float Yhe
 		}
 	}
 }
-
+//!!!СТАРАЯ!!!
 void SpitesOfEnvironmentAfterHero(RenderWindow & window, float time, float Yhero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)	//Отрисовка объектов на пространство после героя
 {					
 	int heroY = roundf(Yhero);

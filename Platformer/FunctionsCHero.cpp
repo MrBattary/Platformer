@@ -6,7 +6,7 @@
 #include "ClassHero.h";
 #include "OptimizedFunctionsAnimationCHero.h"
 #include "OptimizedFunctionsAnimation.h"
-#include "PhysicsEngine.h"
+#include "EnginePhysics.h"
 
 /*
 Функции передвижения героя.

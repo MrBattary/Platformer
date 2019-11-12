@@ -20,9 +20,6 @@ protected:
 	float clutch;						//Сцепление	1-нормальное <1-пониженное >1-повышенное
 	float trackingCoefficient;			//Коэффициент слежения объекта >1
 	signed int layer = 0;				//Слой на котором отрисовывается объект
-	float animSpeed;					//Скорость анимации >0
-	float currentFrame = 0;				//Текущий кадр
-	//int frameShift;					//Необходимый сдвиг в файле, для анимации
 
 	bool passable;						//Доступен ли объект для прохождения сквозь него вообще
 	bool passableJump;					//Доступен ли объект для прохождения сквозь него прыжком
@@ -31,8 +28,7 @@ protected:
 	bool crossable;						//Должен ли герой впринципе пересекать этот объект?
 	bool tracking;						//Следящий объект
 	bool visible;						//Видимость объекта
-	bool animated;						//Анимированный полностью, если необходимо каждый раз изменять положение в пространстве. Для оптимизации.
-	bool rendered = false;				//Отрисован ли объект?
+	//bool rendered = false;				//Отрисован ли объект?
 
 	String filePath;
 	Image imageObject;
@@ -40,11 +36,9 @@ protected:
 	Sprite spriteObject;
 
 public:
-	Object(bool _crossable, bool _animated, float _animSpeed, String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef, float _startFrame) {
-		animSpeed = _animSpeed;
-		currentFrame = _startFrame;
+	Object() {};		//Конструктор по умолчанию
+	Object(bool _crossable, String _filePath, float _xOnMap, float _yOnMap, float _xModel, float _yModel, float _widthModel, float _hightModel, bool mask, float _xReal, float _yReal, float _wReal, float _hReal, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch, bool _tracking, float _trackingCoef) {
 		crossable = _crossable;
-		animated = _animated;
 
 		filePath = _filePath;
 		xR = _xOnMap;
@@ -73,9 +67,14 @@ public:
 		textureObject.loadFromImage(imageObject);
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(_xModel, _yModel, _widthModel, _hightModel));
+		spriteObject.setPosition(xR, yR);															//Установка спрайта на позицию отрисовки
 	}
 
-	void Draw(View, float);							//Отрисовка
+	virtual void Draw(View);						//Установка спрайта в позицию на координатной сетке для отрисовки
+
+	void SetLayer();		
+
+	//Вспомогательные Get-Функции
 
 	Sprite Get_Sprite() { return spriteObject; }	//Получение спрайта
 	float Get_xR() { return xR; }					//Получение	модели на карте по Х
@@ -90,21 +89,19 @@ public:
 	float Get_hRReal() { return hRReal; }			//Получение высоты физической модели
 	float Get_clutch() { return clutch; }			//Получение сцепления
 	float Get_trackingCoefficient() { return trackingCoefficient; }			//Получение сцепления
-	float Get_currentFrame() { return currentFrame; }						//Номер кадра
-	float Get_animSpeed() { return animSpeed; }								//Получение скорости анимации
 	signed int Get_layer() { return layer; }								//Получение слоя на котором располагается объект
-	//int Get_frameShift() { return frameShift; }			//Получение сдвига в файле из которого берется картинка
 	bool Get_passable() { return passable; }				//Получение доступности прохождения сквозь объект
 	bool Get_passableJump() { return passableJump; }		//Получение доступности прохождения сквозь объект прыжком
 	bool Get_passableSlide() { return passableSlide; }		//Получение доступности прохождения сквозь объект скольжением
 	bool Get_passableCrouch() { return passableCrouch; }	//Получение доступности прохождения сквозь объект присядом
 	bool Get_crossable() { return crossable; }				//На одном пространстве с героем рисуется?
-	bool Get_rendered() { return rendered; }				//Отриован уже объект?
+	//bool Get_rendered() { return rendered; }				//Отриcован уже объект?
 	bool Get_tracking() { return tracking; }				//Следящий ли объект?
-	bool Get_animated() { return animated; }				//Анимирован ли полностью объект?
+
+
+	//Вспомогательные Set-Функции
 
 	void Set_layer(signed int value) { layer = value; }		//Установка слоя
 	void Set_crossable(bool value) { crossable = value; }	//Установка возможности пересечения
-	void Set_rendered(bool value) { rendered = value; }		//Установка рендера
-	void Set_currentFrame(float value) { currentFrame = value; }	//Установка текущего кадра
+	//void Set_rendered(bool value) { rendered = value; }		//Установка рендера
 };

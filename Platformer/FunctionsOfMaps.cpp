@@ -4,15 +4,11 @@
 using namespace std;
 
 
-//Убрать время!
-void DrawEnvironment(View view, float time, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {		//Подготовка к отрисовке
+void DrawEnvironment(View view, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {					//Подготовка к отрисовке
 		for (int i = 0; i < length_arrObj; i++) {
 			for (int j = 0; j < v[currentMap][i].size();j++)
 			{
-				if (v[currentMap][i][j].Get_rendered() == false) {
-					v[currentMap][i][j].Draw(view, time);
-					if (v[currentMap][i][j].Get_tracking() == false) { v[currentMap][i][j].Set_rendered(true); }
-				}
+					v[currentMap][i][j].Draw(view);
 			}
 		}
 }
@@ -22,14 +18,8 @@ void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int current
 	for (int i = 0; i < length_arrObj; i++) {
 		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-			if (v[currentMap][i][j].Get_crossable() == false) {
-				v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal());
-			}
-			else {
-				v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() /*+ v[currentMap][i][j].Get_hRReal()/4*/);
-			}
+				v[currentMap][i][j].SetLayer();
 		}
-		
 	}
 }
 
@@ -38,20 +28,15 @@ void SetLayersAnim(vector<vector<vector<Object>>>& v, int length_arrObj, int cur
 	for (int i = 0; i < length_arrObj; i++) {
 		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-			if (v[currentMap][i][j].Get_animated() == true) {
-				if (v[currentMap][i][j].Get_crossable() == false) {
-					v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() + v[currentMap][i][j].Get_hRReal());
-				}
-				else {
-					v[currentMap][i][j].Set_layer(v[currentMap][i][j].Get_yRReal() /*+ v[currentMap][i][j].Get_hRReal()/4*/);
-				}
+			if (v[currentMap][i][j].Get_animated() == true) {	//Отделение анимированных объектов от не анимированных
+				v[currentMap][i][j].SetLayer();
 			}
 		}
 
 	}
 }
 
-
+//!!!АДАПТИРУЕТСЯ!!!
 /*
 Функция взаимодействия персонажа с окружением
 		2
