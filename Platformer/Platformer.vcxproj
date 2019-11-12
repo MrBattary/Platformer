@@ -90,6 +90,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\SFML-2.5.1-windows-vc15-64-bit\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
     </ClCompile>
     <Link>
       <AdditionalLibraryDirectories>D:\SFML-2.5.1-windows-vc15-64-bit\SFML-2.5.1\lib</AdditionalLibraryDirectories>
@@ -122,6 +123,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
       <AdditionalIncludeDirectories>D:\SFML-2.5.1-windows-vc15-64-bit\SFML-2.5.1\include</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -138,9 +140,11 @@
     <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp" />
     <ClCompile Include="FunctionsCObject.cpp" />
     <ClCompile Include="FunctionsOfMaps.cpp" />
+    <ClCompile Include="FunctionsOfMapsNPCFriendly.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="OptimizedFunctionsAnimation.cpp" />
     <ClCompile Include="OptimizedFunctionsAnimationCHero.cpp" />
+    <ClCompile Include="OptimizedRandom.cpp" />
     <ClCompile Include="PhysicsEngine.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -161,8 +165,10 @@
     <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="OptimizedFunctionsAnimation.h" />
     <ClInclude Include="OptimizedFunctionsAnimationCHero.h" />
+    <ClInclude Include="OptimizedRandom.h" />
     <ClInclude Include="PhysicsEngine.h" />
     <ClInclude Include="ViewsAndWindow.h" />
+    <ClInclude Include="ViewsAndWindowNPC.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

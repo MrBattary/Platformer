@@ -29,9 +29,11 @@ public:
 		healthMaxN = _Health;
 		healthN = _Health;
 
+		//Логическая часть
+		logicReaction = 0.005;
+
 		//Графическая часть
-		File = "BunnySprite.png";
-		image.loadFromFile("Sprites/" + File);
+		image.loadFromFile("Sprites/BunnySprite.png");
 		image.createMaskFromColor(Color(255, 255, 255));	//Прозрачность белого
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт

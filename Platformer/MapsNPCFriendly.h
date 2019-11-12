@@ -6,14 +6,16 @@
 */
 
 #include <vector>
-#include "ClassNPCFriendlyTalkingWoman.h"
+#include "ClassNPCFriendlyTalkingDWoman.h"
+#include "ClassNPCFriendlyDBunny.h"
 
 using namespace std;
 
 //vector[Номер карты на которой находится объект][Номер NPC]
 
-vector < vector < NPCFriendly >> vFriendlyNPC = {
+vector < vector < NPCFriendly*>> vFriendlyNPC = {
 	{
-		NPCFriendlyTalkingWoman(1,1400,400,100)
+		new NPCFriendlyTalkingWoman(0,1400,400,100),
+		new NPCFriendlyBunny(0,1700,600,10)
 	}
-}
+};

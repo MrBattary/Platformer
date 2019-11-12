@@ -20,8 +20,10 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 
 #include <conio.h>
 #include "ViewsAndWindow.h"
+#include "ViewsAndWindowNPC.h"
 #include "MainFunctions.h"
 #include "Maps.h"
+#include "MapsNPCFriendly.h"
 #include "ClassHeroHealthBar.h"
 #include "ClassHeroStaminaBar.h"
 
@@ -83,10 +85,15 @@ int main() {
 		ControlsMainCharacter(MainHero,time,stime);															//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
 
+		FriendlyNPCLogic(time, vFriendlyNPC, MainHero.Get_currentMap());									//ЛОГИКА NPC
+
 		SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
 		IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
 
 		DrawEnvironment(MainView, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Подготовка к отрисовке всех объектов карты до персонажа
+
+		DrawFriendlyNPC(MainView, time, vFriendlyNPC, MainHero.Get_currentMap());							//Подготовка к отрисовке NPC
+
 		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
 		
 		window.setView(MainView);
@@ -94,6 +101,9 @@ int main() {
 		
 		SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
 		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
+
+		SpritesOfNPCFriendly(window, time, vFriendlyNPC, MainHero.Get_currentMap());																					//Отрисовка NPC
+
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
 		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
 
@@ -103,6 +113,9 @@ int main() {
 
 
 	}
+	//Очистка памяти из-за new!
+	delete vFriendlyNPC[0][0];
+	delete vFriendlyNPC[0][1];
 	return 0;
 }
 

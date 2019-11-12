@@ -1,24 +1,50 @@
 ﻿//Определение всех функций класса "NPCFriendlyTalkingWoman"
 #include "ClassNPCFriendlyTalkingDWoman.h"
 #include "OptimizedFunctionsAnimation.h"
+#include "OptimizedRandom.h"
 
-
-void NPCFriendlyTalkingWoman::Draw(float time)							//Переопределение, т.к. не двигается.
+void NPCFriendlyTalkingWoman::Logic(float time)
 {
-	//time = time;
-	sprite.setPosition(xNReal, yNReal);									//Установть точку отрисовки на позиции хN,уN относительно физической модели
+	if (currentActionTime > 0) {								//Пока есть время на выполнение анимации
+		currentActionTime -= time;								//Время на поспроизведение анимации уменьшается
+	}
+	else														//Если время вышло
+	{
+		currentAction = RandomBetweenInt(1, 2);					//Определяется, какое действие будет выполняться
+		currentActionTime = RandomBetweenDouble(5, 10);			//Определяется время, в течении которого действие будет выполняться.
+		currentActionTime = currentActionTime / logicReaction;	//А деление на logicReaction необходимо, чтобы потом не пришлось каждый раз currentActionTime -= time * logicReaction;
+	}
+
+	switch (currentAction)										//Анимация выполняется в соответствии со своим номером
+	{
+	case 1:
+		WomanIdleRight(time);					
+		break;
+	case 2:		
+		WomanIdleLeft(time);					
+		break;
+	default:
+		currentActionTime = 0;									//Номер текущего действия сбрасывается в 0 (default)
+		currentAction = 0;										//Время на текущее действие сбрасывается в 0 (default)
+		break;
+	}
 }
 
-int NPCFriendlyTalkingWoman::WomanIdleRight(float time)				//Бездействие вправо
+void NPCFriendlyTalkingWoman::Draw(float time)							//Переопределение, т.к. не двигается и не нужно изменять местоположение итд.
+{
+	return;																//Затычка, чтобы ничего не происходило
+}
+
+int NPCFriendlyTalkingWoman::WomanIdleRight(float time)					//Бездействие вправо
 {
 	dirN = 0;
-	CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 0, 0, 150, 200);
+	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 150, 0, 0, 150, 200);
 	return 0;
 }
 
 int NPCFriendlyTalkingWoman::WomanIdleLeft(float time)					//Бездействие влево
 {
 	dirN = 0;
-	CycleAnimation(currentFrame, time, 0.005, 16, sprite, 150, 150, 0, -150, 200);
+	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 150, 150, 0, -150, 200);
 	return 0;
 }

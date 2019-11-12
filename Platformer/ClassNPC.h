@@ -22,7 +22,7 @@ protected:
 	float speedNX = 0;					//Скорость NPC по x
 	float speedNY = 0;					//Скорость NPC по y
 
-	float clutchObj;					//Сцепление NPC с поверхностью на которой он стоит
+	float clutchObj = 1;				//Сцепление NPC с поверхностью на которой он стоит
 	int dirN;							//Направление движения/взгляда
 	int currentMap = 0;					//Текущая карта
 
