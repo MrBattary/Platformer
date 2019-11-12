@@ -87,10 +87,10 @@ int main() {
 
 		FriendlyNPCLogic(time, vFriendlyNPC, MainHero.Get_currentMap());									//ЛОГИКА NPC
 
-		SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
-		IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
+		//SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
+		//IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
 
-		DrawEnvironment(MainView, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Подготовка к отрисовке всех объектов карты до персонажа
+		//DrawEnvironment(MainView, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Подготовка к отрисовке всех объектов карты до персонажа
 
 		DrawFriendlyNPC(MainView, time, vFriendlyNPC, MainHero.Get_currentMap());							//Подготовка к отрисовке NPC
 
@@ -99,13 +99,13 @@ int main() {
 		window.setView(MainView);
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
-		SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
-		SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
+		//SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
+		//SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
 
 		SpritesOfNPCFriendly(window, time, vFriendlyNPC, MainHero.Get_currentMap());																					//Отрисовка NPC
 
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
-		SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
+		//SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
 
 		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
