@@ -33,6 +33,7 @@ protected:
 	Image image;						//Изображение
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
+	signed int layerN;					//Слой отрисовки
 
 	float currentFrame = 0;				//Номер текущего кадра циклической анимации
 	float currentUncycleFrame = 0;		//Номер текущего кадра не циклической анимации
@@ -45,6 +46,7 @@ public:
 	int Get_currentMap() { return currentMap; }									//Узнать на какой карте сейчас находимся
 	int Get_healthN() { return healthN; }										//Узнать значение здоровья NPC
 	int Get_healthMaxN() { return healthMaxN; }									//Узнать максимальное здоровье NPC
+	signed int Get_layerN() { return layerN; }									//Получение слоя на котором располагается NPC
 	float Get_XN() { return xN; }												//Получить положение виртуальной модели по х
 	float Get_YN() { return yN; }												//Получить положение виртуальной модели по у
 	float Get_WN() { return wN; }												//Получить ширину модели
@@ -71,6 +73,7 @@ public:
 	void Set_WNRealInside(float value) { wNRealInside = value; }				//Установить ширину реaльной модели
 	void Set_HNRealInside(float value) { hNRealInside = value; }				//Установить высоту реaльной модели
 	void Set_clutchObj(float value) { clutchObj = value; }						//Установить величину сцепления персонажа с поверхностью на которой он стоит
+	void Set_layerN(signed int value) { layerN = value; }						//Установка слоя
 
 	virtual void Draw(float);													//Связь физики и анимации
 	void SetRealSizeNPC(float, float, float, float);							//Изменение размеров внутренней модели

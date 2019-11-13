@@ -6,7 +6,7 @@
 2)Загрузку текстуры в спрайт
 */
 
-void AnimObject::Draw(View view)
+void ObjectAnim::Draw(View view)
 {
 	if (tracking == true) {
 		sf::Vector2f vector = view.getCenter();																				//Если объект "следящий"
@@ -17,4 +17,6 @@ void AnimObject::Draw(View view)
 		if(animated == true)																								//Если анимированный объект двигается
 		spriteObject.setPosition(xR, yR);																					//Надо постоянно менять точку отрисовки
 	}
+	DetermineLayer();
 }
+

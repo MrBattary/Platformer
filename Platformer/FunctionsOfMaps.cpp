@@ -13,26 +13,14 @@ void DrawEnvironment(View view, vector<vector<vector<Object>>>& v, int length_ar
 		}
 }
 
-void SetLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
+//ВПРИНЦИПЕ НЕ НУЖНА, ФУНКЦИОНАЛ ПЕРЕЕХАЛ В DRAW
+void DetermineLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
 {																														//на основе которых проводится порядок отрисовки,работает в самом начале
 	for (int i = 0; i < length_arrObj; i++) {
 		for (int j = 0; j < v[currentMap][i].size(); j++)
 		{
-				v[currentMap][i][j].SetLayer();
+				v[currentMap][i][j].DetermineLayer();
 		}
-	}
-}
-
-void SetLayersAnim(vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)								//Функция отвечает за присваивание каждому движущемуся объекту своего слоя
-{																														//на основе которых проводится порядок отрисовки, работает всегда
-	for (int i = 0; i < length_arrObj; i++) {
-		for (int j = 0; j < v[currentMap][i].size(); j++)
-		{
-			if (v[currentMap][i][j].Get_animated() == true) {	//Отделение анимированных объектов от не анимированных
-				v[currentMap][i][j].SetLayer();
-			}
-		}
-
 	}
 }
 

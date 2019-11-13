@@ -61,7 +61,7 @@ int main() {
 	float stime = 0;																		
 	
 
-	SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());							//Распределение объектов по слоям
+	//SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());							//Распределение объектов по слоям
 	while (window.isOpen())											//Выполняем пока окно открыто
 	{
 		time = clock.getElapsedTime().asMicroseconds();				//Получаем прошедшее время в микросекундах

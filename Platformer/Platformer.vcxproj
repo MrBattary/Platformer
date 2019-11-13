@@ -133,6 +133,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FunctionsCObjectAnimDGrass.cpp" />
     <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp" />
     <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
@@ -161,6 +162,8 @@
     <ClInclude Include="ClassObject.h" />
     <ClInclude Include="ClassHeroHealthBar.h" />
     <ClInclude Include="ClassHeroStaminaBar.h" />
+    <ClInclude Include="ClassObjectAnimDGrass.h" />
+    <ClInclude Include="ClassObjectDTree.h" />
     <ClInclude Include="EngineIntersection.h" />
     <ClInclude Include="Maps.h" />
     <ClInclude Include="MapsNPCFriendly.h" />
