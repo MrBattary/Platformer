@@ -18,8 +18,6 @@ public:
 
 	void Draw(View) override;												//Установка спрайта в позицию на координатной сетке для отрисовки
 
-	virtual int Animation(float) {};										//Анимация
-
 	float Get_currentFrame() { return currentFrame; }						//Номер кадра
 	float Get_animSpeed() { return animSpeed; }								//Получение скорости анимации
 	bool Get_animated() { return animated; }								//Анимирован ли полностью объект?

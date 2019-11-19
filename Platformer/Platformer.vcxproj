@@ -149,6 +149,7 @@
     <ClCompile Include="OptimizedFunctionsAnimationCHero.cpp" />
     <ClCompile Include="OptimizedRandom.cpp" />
     <ClCompile Include="EnginePhysics.cpp" />
+    <ClCompile Include="ViewsAndWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassBar.h" />
@@ -165,8 +166,11 @@
     <ClInclude Include="ClassObjectAnimDGrass.h" />
     <ClInclude Include="ClassObjectDTree.h" />
     <ClInclude Include="EngineIntersection.h" />
+    <ClInclude Include="ControlsCHero.h" />
     <ClInclude Include="Maps.h" />
+    <ClInclude Include="MapsFunctions.h" />
     <ClInclude Include="MapsNPCFriendly.h" />
+    <ClInclude Include="MapsNPCFriendlyFunctions.h" />
     <ClInclude Include="OptimizedControlsCHero.h" />
     <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="OptimizedFunctionsAnimation.h" />

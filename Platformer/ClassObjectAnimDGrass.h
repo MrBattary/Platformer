@@ -6,7 +6,7 @@
 class ObjectAnimGrass : public ObjectAnim {
 public:
 	ObjectAnimGrass(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch){
-		animated = true;
+		animated = false;
 
 		frames = 4;
 		crossable = false;
@@ -38,7 +38,7 @@ public:
 		textureObject.loadFromImage(imageObject);
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
-		spriteObject.setPosition(xR, yR);															//”становка спрайта на позицию отрисовки
+		spriteObject.setPosition(xR, yR);										//Ќачальна€ установка спрайта на позицию отрисовки
 	}
 
 	int Animation(float) override;

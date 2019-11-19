@@ -40,7 +40,9 @@ public:
 
 	virtual void Draw(View);						//Установка спрайта в позицию на координатной сетке для отрисовки
 
-	void DetermineLayer();
+	virtual int Animation(float) { return 0; };		//Анимация для ClassObjectAnim
+
+	void DetermineLayer();							//Установка слоя
 
 	//Вспомогательные Get-Функции
 

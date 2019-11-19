@@ -22,8 +22,10 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ViewsAndWindow.h"
 #include "ViewsAndWindowNPC.h"
 #include "MainFunctions.h"
+#include "ControlsCHero.h"
 #include "Maps.h"
 #include "MapsNPCFriendly.h"
+#include "MapsNPCFriendlyFunctions.h"
 #include "ClassHeroHealthBar.h"
 #include "ClassHeroStaminaBar.h"
 

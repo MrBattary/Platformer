@@ -1,7 +1,7 @@
 #pragma once
 #include <vector>
 #include <SFML/Graphics.hpp>
-#include "ClassNPCFriendly.h"
+#include "ClassNPC.h"
 
 using namespace std;
 using namespace sf;
@@ -13,3 +13,5 @@ void SpritesOfNPCFriendly(RenderWindow& window, float time, vector<vector<NPCFri
 		window.draw(v[currentMap][i]->Get_Sprite());
 	}
 }
+
+//!”ƒ¿À»“‹, ¿  “ŒÀ‹ Œ –¿«¡≈–”—‹ — »Õ“≈ÀÀ≈ “”¿À‹Õ€Ã» ——€À ¿Ã» » »«¡¿¬Àﬁ—‹ Œ“ -> . ‘”Õ ÷»ŒÕ¿À œ≈–≈≈’¿À ¬ ViewsAndWindow.h!

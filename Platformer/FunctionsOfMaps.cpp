@@ -1,30 +1,19 @@
 ﻿#include <vector>
 #include "Math.h"
-#include "MainFunctions.h"
+#include "MapsFunctions.h"
+
 using namespace std;
 
-
-void DrawEnvironment(View view, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap) {					//Подготовка к отрисовке
-		for (int i = 0; i < length_arrObj; i++) {
-			for (int j = 0; j < v[currentMap][i].size();j++)
-			{
-					v[currentMap][i][j].Draw(view);
-			}
-		}
-}
-
-//ВПРИНЦИПЕ НЕ НУЖНА, ФУНКЦИОНАЛ ПЕРЕЕХАЛ В DRAW
-void DetermineLayers(vector<vector<vector<Object>>> &v, int length_arrObj, int currentMap)									//Функция отвечает за присваивание каждому объекту своего слоя
-{																														//на основе которых проводится порядок отрисовки,работает в самом начале
-	for (int i = 0; i < length_arrObj; i++) {
-		for (int j = 0; j < v[currentMap][i].size(); j++)
-		{
-				v[currentMap][i][j].DetermineLayer();
-		}
+void DrawEnvironment(View view, float time, vector<vector<Object>>& v, int currentMap) {
+	for (int i = 0; i < v[currentMap].size(); i++)
+	{
+		v[currentMap][i].Animation(time);												//Вырезание нужных кадров для анимации
+		v[currentMap][i].Draw(view);													//Подготовка к отрисовке
 	}
 }
 
-//!!!АДАПТИРУЕТСЯ!!!
+
+//!!!АДАПТИРУЕТСЯ ВЫРЕЗАТЬ И УБРАТЬ!!!
 /*
 Функция взаимодействия персонажа с окружением
 		2

@@ -1,13 +1,14 @@
 #pragma once
 #include <vector>
 #include <SFML/Graphics.hpp>
+#include "ClassHero.h"
 #include "ClassObject.h"
+#include "ClassNPCFriendly.h"
 
 using namespace std;
 using namespace sf;
 
-//Возможно потребуется разделение на .срр и .h
-
+/*
 void DisplayEnvironment(RenderWindow& window, float time, int I, int L, vector<vector<vector<Object>>>& v, int currentMap)					//Функция отвечающая за рисование на экран объектов, втч анимированных
 {
 	v[currentMap][I][0].Set_currentFrame(v[currentMap][I][0].Get_currentFrame() + v[currentMap][I][L].Get_animSpeed() * time);
@@ -33,17 +34,11 @@ void SpitesOfEnvironmentUncrossable(RenderWindow & window, float time, vector<ve
 		}
 	}
 }
+*/
 
-void SpitesOfEnvironmentUncrossable(RenderWindow& window, Sprite sprite, signed int layer)	//Отрисовка объектов на пространство того, с чем герой не может взаимодействовать впринципе
-{
-	for (unsigned short int j = 10000; j > 0; j--) {										//Важный момент: отрисовка тут идет снизу вверх!
-		if (layer == j)
-		{
-			window.draw(sprite);															//Вывод на экран с помощью SFML
-		}
-	}
-}
+void SpritesObjectsAndNPCs(RenderWindow&, Hero, vector<vector<Object>>, vector<vector<NPCFriendly>>);
 
+/*
 //!!!СТАРАЯ!!!
 void SpitesOfEnvironmentBeforeHero(RenderWindow & window, float time,  float Yhero, vector<vector<vector<Object>>>& v, int length_arrObj, int currentMap)//Отрисовка объектов на пространство до героя
 {					
@@ -78,7 +73,7 @@ void SpitesOfEnvironmentAfterHero(RenderWindow & window, float time, float Yhero
 		}
 	}
 }
+*/
+void ViewXYfromClassHero(View&, float, float);						//Удержание центра камеры на герое
 
-void ViewXYfromClassHero(View & MainView, float x, float y) { MainView.setCenter(x + 50, y + 37); }						//Удержание центра камеры на герое
-
-//Еще миникарту сюда надо будет написать
+//Еще миникарту сюда надо будет объявить
