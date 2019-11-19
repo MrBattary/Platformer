@@ -7,16 +7,20 @@
 3)Вырезание нужного элемента из спрайта !!!НУЖНО ПЕРЕНЕСТИ!!!
 */
 void Object::Draw(View view) {	//Заглушка
-	return;
+	DetermineLayer();
 }
 
 //Установка объекта на слой для корректной последовательности отрисовки
 void Object::DetermineLayer()
 {
-	if (crossable == false) {
+	if(animated==true)
+	{
+		layer = yRReal + hRReal;
+	}
+	/*if (crossable == false) {
 		layer = yRReal + hRReal;
 	}
 	else {//Затычка для фона
-		layer = yRReal /*+ hRReal/4*/;
-	}
+		layer = yRReal + hRReal/4;
+	}*/
 }

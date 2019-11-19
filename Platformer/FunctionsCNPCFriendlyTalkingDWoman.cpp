@@ -32,7 +32,7 @@ void NPCFriendlyTalkingWoman::Logic(float time)
 
 void NPCFriendlyTalkingWoman::Draw(float time)							//Переопределение, т.к. не двигается и не нужно изменять местоположение итд.
 {
-	return;																//Затычка, чтобы ничего не происходило
+	return;																//Заглушка для movableN=false;
 }
 
 int NPCFriendlyTalkingWoman::WomanIdleRight(float time)					//Бездействие вправо

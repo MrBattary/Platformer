@@ -10,6 +10,8 @@ class NPCFriendlyBunny : public NPCFriendly
 {
 public:
 	NPCFriendlyBunny(int _Map, float _X, float _Y, int _Health) {
+		movableN = true;
+
 		//Положение на карте и в пространстве
 		currentMap = _Map;
 		xN = _X;

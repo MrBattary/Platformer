@@ -37,6 +37,8 @@ protected:
 
 	float currentFrame = 0;				//Номер текущего кадра циклической анимации
 	float currentUncycleFrame = 0;		//Номер текущего кадра не циклической анимации
+
+	bool movableN;						//Способны ли другие объекты передвигать этого NPC?
 public:
 	NPC() {}
 
@@ -47,31 +49,32 @@ public:
 	int Get_healthN() { return healthN; }										//Узнать значение здоровья NPC
 	int Get_healthMaxN() { return healthMaxN; }									//Узнать максимальное здоровье NPC
 	signed int Get_layerN() { return layerN; }									//Получение слоя на котором располагается NPC
-	float Get_XN() { return xN; }												//Получить положение виртуальной модели по х
-	float Get_YN() { return yN; }												//Получить положение виртуальной модели по у
-	float Get_WN() { return wN; }												//Получить ширину модели
-	float Get_HN() { return hN; }												//Получить высоту модели
-	float Get_XNReal() { return xNReal; }										//Получить положение реальной модели по оси х
-	float Get_YNReal() { return yNReal; }										//Получить положение реальной модели по оси у
-	float Get_XNRealInside() { return xNRealInside; }							//Получить х реальной модели
-	float Get_YNRealInside() { return yNRealInside; }							//Получить y реальной модели
-	float Get_WNRealInside() { return wNRealInside; }							//Получить ширину реальной модели
-	float Get_HNRealInside() { return hNRealInside; }							//Получить высоту реальной модели
+	float Get_xN() { return xN; }												//Получить положение виртуальной модели по х
+	float Get_yN() { return yN; }												//Получить положение виртуальной модели по у
+	float Get_wN() { return wN; }												//Получить ширину модели
+	float Get_hN() { return hN; }												//Получить высоту модели
+	float Get_xNReal() { return xNReal; }										//Получить положение реальной модели по оси х
+	float Get_yNReal() { return yNReal; }										//Получить положение реальной модели по оси у
+	float Get_xNRealInside() { return xNRealInside; }							//Получить х реальной модели
+	float Get_yNRealInside() { return yNRealInside; }							//Получить y реальной модели
+	float Get_wNRealInside() { return wNRealInside; }							//Получить ширину реальной модели
+	float Get_hNRealInside() { return hNRealInside; }							//Получить высоту реальной модели
 	float Get_clutchObj() { return clutchObj; }									//Получить величину сцепления NPC с поверхностью на которой он стоит
+	bool Get_movableN() { return movableN; }									//Движим ли NPC?
 
 	//Set-функции
 
 	void Set_currentMap(int value) { currentMap = value; }						//Установить номер текущей карты
 	void Set_healthN(int value) { healthN = value; }							//Установить текущее здоровье героя
 	void Set_healthMaxN(int value) { healthMaxN = value; }						//Установить максимальное здоровье героя
-	void Set_XN(float value) { xN = value; }									//Установить положение виртуальной модели по х
-	void Set_YN(float value) { yN = value; }									//Установить положение виртуальной модели по у
-	void Set_XNReal(float value) { xNReal = value; }							//Установить положение реальной модели по х
-	void Set_YNReal(float value) { yNReal = value; }							//Установить положение реальной модели по у
-	void Set_XNRealInside(float value) { xNRealInside = value; }				//Установить x реaльной модели
-	void Set_YNRealInside(float value) { yNRealInside = value; }				//Установить y реaльной модели
-	void Set_WNRealInside(float value) { wNRealInside = value; }				//Установить ширину реaльной модели
-	void Set_HNRealInside(float value) { hNRealInside = value; }				//Установить высоту реaльной модели
+	void Set_xN(float value) { xN = value; }									//Установить положение виртуальной модели по х
+	void Set_yN(float value) { yN = value; }									//Установить положение виртуальной модели по у
+	void Set_xNReal(float value) { xNReal = value; }							//Установить положение реальной модели по х
+	void Set_yNReal(float value) { yNReal = value; }							//Установить положение реальной модели по у
+	void Set_xNRealInside(float value) { xNRealInside = value; }				//Установить x реaльной модели
+	void Set_yNRealInside(float value) { yNRealInside = value; }				//Установить y реaльной модели
+	void Set_wNRealInside(float value) { wNRealInside = value; }				//Установить ширину реaльной модели
+	void Set_hNRealInside(float value) { hNRealInside = value; }				//Установить высоту реaльной модели
 	void Set_clutchObj(float value) { clutchObj = value; }						//Установить величину сцепления персонажа с поверхностью на которой он стоит
 	void Set_layerN(signed int value) { layerN = value; }						//Установка слоя
 

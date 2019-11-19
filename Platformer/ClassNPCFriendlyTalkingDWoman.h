@@ -9,6 +9,8 @@ using namespace sf;
 class NPCFriendlyTalkingWoman : public NPCFriendlyTalking {
 public:
 	NPCFriendlyTalkingWoman(int _Map, float _X, float _Y, int _Health) {
+		movableN = false;
+
 		//Положение на карте и в пространстве
 		currentMap = _Map;
 		xN = _X;

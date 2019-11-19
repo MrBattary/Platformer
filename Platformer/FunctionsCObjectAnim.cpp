@@ -14,7 +14,7 @@ void ObjectAnim::Draw(View view)
 	}
 	else
 	{
-		if(animated == true)																								//Если анимированный объект двигается
+		if(animated == true)																								//Если объект двигается
 		spriteObject.setPosition(xR, yR);																					//Надо постоянно менять точку отрисовки
 	}
 	DetermineLayer();

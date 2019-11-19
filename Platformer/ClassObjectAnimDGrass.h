@@ -7,6 +7,7 @@ class ObjectAnimGrass : public ObjectAnim {
 public:
 	ObjectAnimGrass(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch){
 		animated = false;
+		movableO = false;
 
 		frames = 4;
 		crossable = false;

@@ -7,6 +7,7 @@ class ObjectTree : public Object {
 public:
 	ObjectTree(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch) {
 		crossable = true;
+		movableO = false;
 
 		xR = _xOnMap;
 		yR = _yOnMap;
