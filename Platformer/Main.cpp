@@ -19,13 +19,15 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #pragma comment(linker, "/SUBSYSTEM:windows /ENTRY:mainCRTStartup")			//Отключение консоли
 
 #include <conio.h>
-#include "ViewsAndWindow.h"
-#include "ViewsAndWindowNPC.h"
-#include "MainFunctions.h"
+#include "Pillars.h"
+//Контроль персонажа
 #include "ControlsCHero.h"
+//Карты
 #include "Maps.h"
 #include "MapsNPCFriendly.h"
 #include "MapsNPCFriendlyFunctions.h"
+//Интерфейс
+#include "ViewsAndWindow.h"
 #include "ClassHeroHealthBar.h"
 #include "ClassHeroStaminaBar.h"
 
