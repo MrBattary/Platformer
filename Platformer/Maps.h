@@ -132,5 +132,5 @@ vector <vector <Object> >  v = {
 		ObjectTree(1750, 350, false, false, true, false, 1),
 		ObjectTree(1800, 340, false, false, false, true, 1),
 		ObjectAnimGrass(1800, 800, true, false, false,false, 1)
-	},
+	}
 };

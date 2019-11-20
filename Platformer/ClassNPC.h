@@ -17,8 +17,8 @@ protected:
 	float wNRealInside;					//Ширина реальной модели внутри виртуальной модели
 	float hNRealInside;					//Высота реальной модели внутри виртуальной модели
 
-	float dxN;							//Ускорение по х
-	float dyN;							//Ускорение по y
+	float dxN = 0;						//Ускорение по х
+	float dyN = 0;						//Ускорение по y
 	float speedNX = 0;					//Скорость NPC по x
 	float speedNY = 0;					//Скорость NPC по y
 
@@ -60,6 +60,8 @@ public:
 	float Get_wNRealInside() { return wNRealInside; }							//Получить ширину реальной модели
 	float Get_hNRealInside() { return hNRealInside; }							//Получить высоту реальной модели
 	float Get_clutchObj() { return clutchObj; }									//Получить величину сцепления NPC с поверхностью на которой он стоит
+	float Get_speedNX() { return speedNX; }										//Получить скорость по х
+	float Get_speedNY() { return speedNY; }										//Получить скорость по у
 	bool Get_movableN() { return movableN; }									//Движим ли NPC?
 
 	//Set-функции

@@ -14,4 +14,4 @@ void SpritesOfNPCFriendly(RenderWindow& window, float time, vector<vector<NPCFri
 	}
 }
 
-//!сдюкхрэ,йюй рнкэйн пюгаепсяэ я хмреккейрсюкэмшлх яяшкйюлх х хгаюбкчяэ нр -> . тсмйжхнмюк оепееуюк б ViewsAndWindow.h!
+//TODO: сдюкхрэ,йюй рнкэйн пюгаепсяэ я хмреккейрсюкэмшлх яяшкйюлх х хгаюбкчяэ нр -> . тсмйжхнмюк оепееуюк б ViewsAndWindow.h
