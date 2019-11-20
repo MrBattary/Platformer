@@ -2,6 +2,7 @@
 #include <vector>
 #include <SFML/Graphics.hpp>
 #include "ClassNPC.h"
+//#include "ClassNPCFriendly.h"
 
 using namespace std;
 using namespace sf;
@@ -14,4 +15,4 @@ void SpritesOfNPCFriendly(RenderWindow& window, float time, vector<vector<NPCFri
 	}
 }
 
-//TODO: УДАЛИТЬ,КАК ТОЛЬКО РАЗБЕРУСЬ С ИНТЕЛЛЕКТУАЛЬНЫМИ ССЫЛКАМИ И ИЗБАВЛЮСЬ ОТ -> . ФУНКЦИОНАЛ ПЕРЕЕХАЛ В ViewsAndWindow.h
+//TODO: Исключить этот файл как только разберусь с интеллектуальными ссылками и избавлюсь от -> . функционал переехал в ViewsAndWindow.h

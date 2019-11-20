@@ -91,6 +91,8 @@ int main() {
 
 		FriendlyNPCLogic(time, vFriendlyNPC, MainHero.Get_currentMap());									//ЛОГИКА NPC
 
+		//TODO: Сделать использование готовых функций
+
 		//SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
 		//IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
 
