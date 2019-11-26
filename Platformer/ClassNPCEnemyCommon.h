@@ -1,0 +1,20 @@
+#pragma once
+#include "ClassNPCEnemy.h"
+class NPCEnemyCommon :public NPC
+{
+protected:
+	
+	int currentAction = 0;				//Номер текущего действия в логике ЛОГИКА
+	float currentActionTime = 0;		//Время выполнения текущего действие ЛОГИКА
+
+	float logicReaction;				//Скорость реакции ЛОГИКА
+public:
+	NPCEnemyCommon() {};
+	bool Left = false;					//Двмижняк влеко
+	bool right = true;					//Движняк вправо
+	bool lifeDL = false;
+	int ch1 = 0;
+	virtual void Logic(float);													//Логика для  NPC из треша
+	void Set_currentAction(int value) { currentAction = value; };
+};
+
