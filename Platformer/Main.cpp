@@ -108,7 +108,7 @@ int main() {
 		//SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
 		//SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
 
-		SpritesOfNPCFriendly(window, time, vFriendlyNPC, MainHero.Get_currentMap());																					//Отрисовка NPC
+		//SpritesOfNPCFriendly(window, time, vFriendlyNPC, MainHero.Get_currentMap());																					//Отрисовка NPC
 
 		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
 		//SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
