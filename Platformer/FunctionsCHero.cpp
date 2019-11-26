@@ -6,7 +6,7 @@
 #include "ClassHero.h";
 #include "OptimizedFunctionsAnimationCHero.h"
 #include "OptimizedFunctionsAnimation.h"
-#include "PhysicsEngine.h"
+#include "EnginePhysics.h"
 
 /*
 Функции передвижения героя.
@@ -31,6 +31,7 @@ void Hero::Draw(float time)												//Физика на отрисовку п
 	xH = xHReal - xHRealInside;											//Положение виртуальной модели в пространстве
 	yH = yHReal - yHRealInside;
 	sprite.setPosition(xHReal, yHReal);									//Установть точку отрисовки на позиции хН,уН
+	layerH = trunc(yHReal + hHRealInside);								//Отбросили дробную часть, если нужно округлить: layerH = round(yHReal + hHRealInside);	
 }
 
 

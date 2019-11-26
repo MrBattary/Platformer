@@ -1,6 +1,6 @@
 #include <vector>
 #include "Math.h"
-#include "MainFunctions.h"
+#include "MapsNPCFriendlyFunctions.h"
 using namespace std;
 
 void DrawFriendlyNPC(View view, float time, vector<vector<NPCFriendly*>>& v, int currentMap)

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="NPC" Collapsed="true">
+    <Position X="6.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DmkiBIgIoAgAAkWAEIKYBFJjWBEkAgCAIQAgBCQTVgA=</HashCode>
+      <FileName>ClassNPC.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCFriendly" Collapsed="true">
+    <Position X="3.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAEAgAAAAAAAAAAAAAACAAAAAQCAA=</HashCode>
+      <FileName>ClassNPCFriendly.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCFriendlyTalking" Collapsed="true">
+    <Position X="3.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAA=</HashCode>
+      <FileName>ClassNPCFriendlyTalking.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCFriendlyBunny" Collapsed="true">
+    <Position X="0.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAABAAAAAAAAAQACAESAAAAQACAAAAAQAAA=</HashCode>
+      <FileName>ClassNPCFriendlyDBunny.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCFriendlyTalkingWoman" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAAAgAAAAAAAAAAAAAAAAEAACAAAIAAAAA=</HashCode>
+      <FileName>ClassNPCFriendlyTalkingDWoman.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Object" Collapsed="true">
+    <Position X="19.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>iAEkBAAEQEADayMktICQQEEAARAQAAMoqIIAHAAQGiI=</HashCode>
+      <FileName>ClassObject.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectAnim" Collapsed="true">
+    <Position X="19.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAgAAAAkAACAAAAAAAAAAAAAAAAAAoAUAEAAA=</HashCode>
+      <FileName>ClassObjectAnim.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectAnimGrass" Collapsed="true">
+    <Position X="22.25" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectAnimDGrass.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectTree" Collapsed="true">
+    <Position X="16" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ClassObjectDTree.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bar" Collapsed="true">
+    <Position X="32.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAgACgAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroHealthBar" Collapsed="true">
+    <Position X="31.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassHeroHealthBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HeroStaminaBar" Collapsed="true">
+    <Position X="34" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>ClassHeroStaminaBar.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hero" Collapsed="true">
+    <Position X="3.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>bW1RoHwksKgezmxlEzr4piEtXDoMKnWVr6fIbvW/zvI=</HashCode>
+      <FileName>ClassHero.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

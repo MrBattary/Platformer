@@ -133,23 +133,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="FunctionsCObjectAnimDGrass.cpp" />
     <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp" />
     <ClCompile Include="ControlsСHero.cpp" />
     <ClCompile Include="FunctionsCHero.cpp" />
     <ClCompile Include="FunctionsCNPC.cpp" />
     <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp" />
     <ClCompile Include="FunctionsCObject.cpp" />
+    <ClCompile Include="FunctionsCObjectAnim.cpp" />
     <ClCompile Include="FunctionsOfMaps.cpp" />
     <ClCompile Include="FunctionsOfMapsNPCFriendly.cpp" />
+    <ClCompile Include="EngineIntersection.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="OptimizedFunctionsAnimation.cpp" />
     <ClCompile Include="OptimizedFunctionsAnimationCHero.cpp" />
     <ClCompile Include="OptimizedRandom.cpp" />
-    <ClCompile Include="PhysicsEngine.cpp" />
+    <ClCompile Include="EnginePhysics.cpp" />
+    <ClCompile Include="Pillars.cpp" />
+    <ClCompile Include="ViewsAndWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ClassBar.h" />
-    <ClInclude Include="ClassAnimObject.h" />
+    <ClInclude Include="ClassObjectAnim.h" />
     <ClInclude Include="ClassHero.h" />
     <ClInclude Include="ClassNPC.h" />
     <ClInclude Include="ClassNPCFriendly.h" />
@@ -159,16 +164,25 @@
     <ClInclude Include="ClassObject.h" />
     <ClInclude Include="ClassHeroHealthBar.h" />
     <ClInclude Include="ClassHeroStaminaBar.h" />
+    <ClInclude Include="ClassObjectAnimDGrass.h" />
+    <ClInclude Include="ClassObjectDTree.h" />
+    <ClInclude Include="EngineIntersection.h" />
+    <ClInclude Include="ControlsCHero.h" />
     <ClInclude Include="Maps.h" />
+    <ClInclude Include="MapsFunctions.h" />
     <ClInclude Include="MapsNPCFriendly.h" />
+    <ClInclude Include="MapsNPCFriendlyFunctions.h" />
     <ClInclude Include="OptimizedControlsCHero.h" />
-    <ClInclude Include="MainFunctions.h" />
     <ClInclude Include="OptimizedFunctionsAnimation.h" />
     <ClInclude Include="OptimizedFunctionsAnimationCHero.h" />
     <ClInclude Include="OptimizedRandom.h" />
-    <ClInclude Include="PhysicsEngine.h" />
+    <ClInclude Include="EnginePhysics.h" />
+    <ClInclude Include="Pillars.h" />
     <ClInclude Include="ViewsAndWindow.h" />
     <ClInclude Include="ViewsAndWindowNPC.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
