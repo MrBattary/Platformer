@@ -55,7 +55,7 @@ int main() {
 	//window.setVerticalSyncEnabled(true);												//Ограничение FPS=60
 
 	View MainView;																		//Рендер камеры вида
-	Hero MainHero("HeroSpritesBig.png", 1100, 500, 100, 74, 30, 15, 45, 59, 200, 100);	//Создаем героя
+	Hero MainHero(1100, 500, 200, 100);													//Создаем героя
 	HeroHealthBar healthBar;															//Создаем бар здоровья
 	HeroStaminaBar staminaBar;															//Создаем бар выносливости
 	MainView.reset(FloatRect(0,0,1280,720));											//Установка камеры вида на герое
@@ -124,6 +124,7 @@ int main() {
 			delete vMaps[i][j];
 		}
 	}
+
 	return 0;
 }
 
