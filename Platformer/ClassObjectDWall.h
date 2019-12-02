@@ -1,5 +1,7 @@
 #pragma once
 #include "ClassObject.h"
+
+//
 class ObjectWall :public Object
 {
 public:

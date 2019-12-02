@@ -1,5 +1,8 @@
 #pragma once
 #include "ClassNPC.h"
+
+//TODO: Разрешить все предупреждения
+
 class NPCEnemy :public NPC
 {
 public:

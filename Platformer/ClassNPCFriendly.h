@@ -11,7 +11,7 @@ protected:
 	int currentAction = 0;				//Номер текущего действия в логике ЛОГИКА
 	float currentActionTime = 0;		//Время выполнения текущего действие ЛОГИКА
 
-	float logicReaction;				//Скорость реакции ЛОГИКА
+	float logicReaction = 0;				//Скорость реакции ЛОГИКА
 public:
 	NPCFriendly() {};
 	//void Logic(float) override {};		//Логика для союзного NPC

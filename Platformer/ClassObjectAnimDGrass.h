@@ -2,7 +2,7 @@
 
 #include "ClassObjectAnim.h"
 
-// ласс определ€ющий класс-траву
+//јнимированна€ трава
 class ObjectAnimGrass : public ObjectAnim {
 public:
 	ObjectAnimGrass(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch){

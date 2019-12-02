@@ -1,5 +1,8 @@
 #pragma once
 #include "ClassNPCEnemy.h"
+
+//TODO: Разрешить все предупреждения и сделать наследование от NPCEnemy
+
 class NPCEnemyCommon :public NPC
 {
 protected:

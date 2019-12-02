@@ -8,7 +8,7 @@ using namespace sf;
 //Присутствет логика общения с персонажем и реакция на его появление
 class NPCFriendlyTalking : public NPCFriendly {
 
-	//!!Прописать сюда класс диалогов!!
+	//TODO: Прописать сюда класс диалогов
 public:
 	NPCFriendlyTalking() {};
 };

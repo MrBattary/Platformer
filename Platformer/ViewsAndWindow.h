@@ -6,4 +6,4 @@ using namespace sf;
 
 void ViewXYfromClassHero(View&, float, float);						//Удержание центра камеры на герое
 
-//Еще миникарту сюда надо будет объявить
+//TODO: Написать миникарту

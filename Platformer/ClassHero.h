@@ -8,6 +8,7 @@
 
 using namespace sf;
 
+//TODO: Разрешить все предупреждения
 class Hero
 {
 private:

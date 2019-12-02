@@ -41,6 +41,7 @@ x11				- нужен для отражения										   x2
 avaible			- возвращает значение, выполняется ли еще эта анимация
 */
 
+//TODO: Сделать эту функию полностью гибкой, в setTextureRect(IntRect(100 * ,... ,74)); убрать 100 и 74, заменив на переменные, разрешить возникшие конфликты
 void UncycleAnimation(float& currentFrameUN, float time, bool& avaible, int& direction, int directionValue, double animationSpeed, Sprite& sprite, int x11, int y1, int x2, int frames) {
 	direction = directionValue;
 	currentFrameUN += animationSpeed * time;
@@ -51,6 +52,8 @@ void UncycleAnimation(float& currentFrameUN, float time, bool& avaible, int& dir
 		currentFrameUN = 0;
 	}
 }
+
+//TODO: Убрать эту функцию, использовать только UncycleAnimation
 //ФУнкции Для треша нецикл
 void UncycleAnimationMob(float& currentFrameUN, float time, bool& avaible, double animationSpeed, Sprite& sprite, int x11, int y1, int x2, int x1, int frames) {
 

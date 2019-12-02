@@ -1,5 +1,7 @@
 #pragma once
 #include "ClassObject.h"
+
+//Первая карта
 class ObjectMapFirst :public Object
 {
 public:

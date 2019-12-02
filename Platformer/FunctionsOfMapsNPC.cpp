@@ -3,7 +3,7 @@
 #include "MapsNPCFunctions.h"
 using namespace std;
 
-void DrawNPC(View view, float time, vector<vector<NPC*>>& v, int currentMap)
+void DrawNPC(View view, float time, vector<vector<NPC*>>& v, int currentMap)	//Подготовка к отрисовке NPC
 {
 	for (int i = 0; i < v[currentMap].size(); i++)
 	{
@@ -11,7 +11,7 @@ void DrawNPC(View view, float time, vector<vector<NPC*>>& v, int currentMap)
 	}
 }
 
-void NPCLogic(float time, vector<vector<NPC*>>& v, int currentMap)
+void NPCLogic(float time, vector<vector<NPC*>>& v, int currentMap)				//Исполнение механик поведения NPC	
 {
 	for (int i = 0; i < v[currentMap].size(); i++)
 	{

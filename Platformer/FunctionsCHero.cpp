@@ -567,6 +567,7 @@ int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влев�
 	return 0;
 }
 
+//TODO: В каждую функцию, где персонаж как-то изменяется в размерах необходимо добавить SetRealSize для уменьшения хитбокса
 void Hero::SetRealSize(float xRealIns, float yRealIns, float wReal, float hReal) {			//Установить новые размеры физической модели персонажа
 	xHRealInside = xRealIns;
 	yHRealInside = yRealIns;
