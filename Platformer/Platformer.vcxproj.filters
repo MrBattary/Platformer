@@ -120,6 +120,12 @@
     <ClCompile Include="ViewsAndWindow.cpp">
       <Filter>Исходные файлы\Interface</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionsCNPCEnemyCommonDLight.cpp">
+      <Filter>Исходные файлы\FunctionsNPC</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCNPCEnemyCommonDHight.cpp">
+      <Filter>Исходные файлы\FunctionsNPC</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ViewsAndWindowNPC.h">
@@ -202,6 +208,18 @@
     </ClInclude>
     <ClInclude Include="OptimizedControlsCHero.h">
       <Filter>Файлы заголовков\OptimizedFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCEnemy.h">
+      <Filter>Файлы заголовков\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCEnemyCommon.h">
+      <Filter>Файлы заголовков\NPC</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCEnemyCommonDHight.h">
+      <Filter>Файлы заголовков\NPC\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassNPCEnemyCommonDLight.h">
+      <Filter>Файлы заголовков\NPC\Determinated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

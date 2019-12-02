@@ -51,3 +51,14 @@ void UncycleAnimation(float& currentFrameUN, float time, bool& avaible, int& dir
 		currentFrameUN = 0;
 	}
 }
+//ФУнкции Для треша нецикл
+void UncycleAnimationMob(float& currentFrameUN, float time, bool& avaible, double animationSpeed, Sprite& sprite, int x11, int y1, int x2, int x1, int frames) {
+
+	currentFrameUN += animationSpeed * time;
+	sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, y1, x2, x1));
+	if (currentFrameUN > frames)
+	{
+		avaible = false;
+		currentFrameUN = 0;
+	}
+}

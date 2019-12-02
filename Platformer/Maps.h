@@ -10,6 +10,8 @@
 #include "ClassObject.h"
 #include "ClassObjectDTree.h"
 #include "ClassObjectAnimDGrass.h"
+#include "ClassObjectAnimDReed.h"
+#include "ClassObjectDMapFirst.h"
 
 using namespace std;
 using namespace sf;
@@ -128,9 +130,20 @@ vector[Номер карты на которой находится объект][Номер объекта]
 vector <vector <Object> >  v = {
 	//Карта №1
 	{
+		ObjectMapFirst(),
 		ObjectTree(1700, 330, false, true, false, false, 1),
 		ObjectTree(1750, 350, false, false, true, false, 1),
 		ObjectTree(1800, 340, false, false, false, true, 1),
-		ObjectAnimGrass(1800, 800, true, false, false,false, 1)
+		ObjectAnimGrass(1800, 800, true, false, false,false, 1),
+		ObjectAnimGrass(1900, 815, true, false, false,false, 1),
+		ObjectAnimGrass(1900, 830, true, false, false,false, 1),
+		ObjectAnimGrass(2000, 800, true, false, false,false, 1),
+		ObjectAnimGrass(2000, 815, true, false, false,false, 1),
+		ObjectAnimGrass(2000, 830, true, false, false,false, 1),
+		ObjectAnimGrass(1850, 770, true, false, false,false, 1),
+		ObjectAnimGrass(2000, 790, true, false, false,false, 1),
+		//Камыш
+		ObjectAnimReed(1500,800,true,false,false,false,1)
+
 	}
 };
