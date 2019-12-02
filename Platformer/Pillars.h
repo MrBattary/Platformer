@@ -10,6 +10,6 @@
 using namespace std;
 using namespace sf;
 
-void SpritesObjectsAndNPCs(RenderWindow&, Hero, vector<vector<Object>>, vector<vector<NPCFriendly>>);	//Все объекты поэтапно рисуются на свои слои
+void SpritesObjectsAndNPCs(RenderWindow&, Hero, vector<vector<Object*>>, vector<vector<NPC*>>);	//Все объекты поэтапно рисуются на свои слои
 
-void IntersectionObjectsAndNPCs(Hero&, vector<vector<Object>>&, vector<vector<NPCFriendly>>&);			//Все объекты проверяются на столкновения.
+void IntersectionObjectsAndNPCs(Hero&, vector<vector<Object*>>&, vector<vector<NPC*>>&);		//Все объекты проверяются на столкновения.

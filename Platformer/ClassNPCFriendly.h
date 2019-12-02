@@ -14,6 +14,6 @@ protected:
 	float logicReaction;				//Скорость реакции ЛОГИКА
 public:
 	NPCFriendly() {};
-	virtual void Logic(float) {};													//Логика для союзного NPC
+	//void Logic(float) override {};		//Логика для союзного NPC
 	void Set_currentAction(int value) { currentAction = value; };
 };

@@ -36,28 +36,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Object" Collapsed="true">
-    <Position X="19.25" Y="0.5" Width="1.5" />
+    <Position X="20.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>iAEkBAAEQEADayMktICQQEEAARAQAAMoqIIAHAAQGiI=</HashCode>
       <FileName>ClassObject.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectAnim" Collapsed="true">
-    <Position X="19.25" Y="3" Width="1.5" />
+    <Position X="23.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAgAAAAkAACAAAAAAAAAAAAAAAAAAoAUAEAAA=</HashCode>
       <FileName>ClassObjectAnim.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectAnimGrass" Collapsed="true">
-    <Position X="22.25" Y="3" Width="1.5" />
+    <Position X="27" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAgAAAAAAAAAAAAAABAAAAAAAAAAA=</HashCode>
       <FileName>ClassObjectAnimDGrass.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ObjectTree" Collapsed="true">
-    <Position X="16" Y="1.5" Width="1.5" />
+    <Position X="17.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>ClassObjectDTree.h</FileName>
@@ -117,6 +117,34 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAEAAAAgAAAAAAAACABAAAAAEIQCAgAAAAAAA=</HashCode>
       <FileName>ClassNPCEnemyCommonDHight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectAnimReed" Collapsed="true">
+    <Position X="27" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectAnimDReed.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectMapFirst" Collapsed="true">
+    <Position X="17.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectDMapFirst.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectMapUndFirst" Collapsed="true">
+    <Position X="17.25" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectDMapUndFirst.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectWall" Collapsed="true">
+    <Position X="17.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectDWall.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

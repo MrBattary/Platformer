@@ -24,8 +24,9 @@ Main.cpp : Этот файл содержит функцию "main". Здесь начинается и заканчивается в
 #include "ControlsCHero.h"
 //Карты
 #include "Maps.h"
-#include "MapsNPCFriendly.h"
-#include "MapsNPCFriendlyFunctions.h"
+#include "MapsNPC.h"
+#include "MapsNPCFunctions.h"
+#include "MapsFunctions.h"
 //Интерфейс
 #include "ViewsAndWindow.h"
 #include "ClassHeroHealthBar.h"
@@ -89,29 +90,19 @@ int main() {
 		ControlsMainCharacter(MainHero,time,stime);															//Управление главным персонажем
 		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
 
-		FriendlyNPCLogic(time, vFriendlyNPC, MainHero.Get_currentMap());									//ЛОГИКА NPC
+		NPCLogic(time, vNPC, MainHero.Get_currentMap());													//Логика NPC
 
-		//TODO: Сделать использование готовых функций
+		//TODO: В функции где-то ошибка, выход за границы массива, необходимо проверить все циклы
+		//IntersectionObjectsAndNPCs(MainHero, vMaps, vNPC);													//Пересечение с объектами окружения всех объектов, NPC, итд.
 
-		//SetLayersAnim(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());					//Распределение движущихся объектов по слоям
-		//IntersectionHeroWithEnvironment(MainHero, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());				//Проверка объекта MainHero на пересечение с объектами окружения
-
-		//DrawEnvironment(MainView, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Подготовка к отрисовке всех объектов карты до персонажа
-
-		DrawFriendlyNPC(MainView, time, vFriendlyNPC, MainHero.Get_currentMap());							//Подготовка к отрисовке NPC
-
+		DrawNPC(MainView, time, vNPC, MainHero.Get_currentMap());											//Подготовка к отрисовке NPC
+		DrawEnvironment(MainView, time, vMaps, MainHero.Get_currentMap());									//Подготовка к отрисовке объектов
 		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
 		
 		window.setView(MainView);
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
-		//SpitesOfEnvironmentUncrossable(window, time, v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());												//Отрисовка окружения (карта)
-		//SpitesOfEnvironmentBeforeHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());//Отрисовка до персонажа
-
-		//SpritesOfNPCFriendly(window, time, vFriendlyNPC, MainHero.Get_currentMap());																					//Отрисовка NPC
-
-		window.draw(MainHero.Get_Sprite());																																//Отрисовка на экране спрайта персонажа
-		//SpitesOfEnvironmentAfterHero(window, time, MainHero.Get_YHReal() + MainHero.Get_HHRealInside(), v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());	//Отрисовка после персонажа
+		SpritesObjectsAndNPCs(window, MainHero, vMaps, vNPC);												//Отрисовка на карту
 
 		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
@@ -119,9 +110,20 @@ int main() {
 
 
 	}
-	//Очистка памяти из-за new!
-	delete vFriendlyNPC[0][0];
-	delete vFriendlyNPC[0][1];
+
+	//Очистка памяти из под vNPC
+	for (auto i = 0; i < vNPC.size(); i++) {
+		for (auto j = 0; j < vNPC[i].size(); j++) {
+			delete vNPC[i][j];
+		}
+	}
+
+	//Очистка памяти из под vMaps
+	for (auto i = 0; i < vMaps.size(); i++) {
+		for (auto j = 0; j < vMaps[i].size(); j++) {
+			delete vMaps[i][j];
+		}
+	}
 	return 0;
 }
 
