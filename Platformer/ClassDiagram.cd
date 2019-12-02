@@ -91,5 +91,33 @@
       <FileName>ClassHero.h</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="NPCEnemy" Collapsed="true">
+    <Position X="9.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAiAA=</HashCode>
+      <FileName>ClassNPCEnemy.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCEnemyCommon" Collapsed="true">
+    <Position X="11.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAAEAkAAAAAAACAAAAACCAAAAAAiAA=</HashCode>
+      <FileName>ClassNPCEnemyCommon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCEnemyCommonDLight" Collapsed="true">
+    <Position X="11.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAEAAAAgAAAAAAAAAABAAAAAEIQCAgAAAAAAA=</HashCode>
+      <FileName>ClassNPCEnemyCommonDLight.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NPCEnemyCommonDHight" Collapsed="true">
+    <Position X="13.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAgAAAAAAAACABAAAAAEIQCAgAAAAAAA=</HashCode>
+      <FileName>ClassNPCEnemyCommonDHight.h</FileName>
+    </TypeIdentifier>
+  </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -126,6 +126,18 @@
     <ClCompile Include="FunctionsCNPCEnemyCommonDHight.cpp">
       <Filter>Исходные файлы\FunctionsNPC</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionsCObjectAnimDReed.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapUndFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDWall.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ViewsAndWindowNPC.h">
@@ -220,6 +232,18 @@
     </ClInclude>
     <ClInclude Include="ClassNPCEnemyCommonDLight.h">
       <Filter>Файлы заголовков\NPC\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectAnimDReed.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectDMapFirst.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectDMapUndFirst.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectDWall.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
