@@ -132,6 +132,7 @@ vector[Номер карты на которой находится объект][Номер объекта]
 vector <vector <Object*>>  vMaps = {
 	//Карта №1
 	{
+		new ObjectMapUndFirst(),
 		new ObjectMapFirst(),
 		new ObjectTree(1700, 330, false, true, false, false, 1),
 		new ObjectTree(1750, 350, false, false, true, false, 1),
