@@ -1,26 +1,27 @@
-﻿  FunctionsCObjectDMapUndFirst.cpp
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(26,1): warning C4305: =: усечение из "double" в "float"
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         ]
+﻿  FunctionsCObjectAnim.cpp
+  FunctionsCObjectDMapUndFirst.cpp
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(26,1): warning C4305: =: усечение из "double" в "float"
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         ]
   Main.cpp
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         ]
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244:         with
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244:         [
@@ -121,27 +122,27 @@ D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapFirst.h(37,38): w
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapFirst.h(37,38): warning C4244:         [
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapFirst.h(37,38): warning C4244:             T=int
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapFirst.h(37,38): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(26,1): warning C4305: =: усечение из "double" в "float"
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,51): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,47): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,43): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDMapUndFirst.h(37,39): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(26,1): warning C4305: =: усечение из "double" в "float"
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,51): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,47): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,43): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDMapUndFirstTrack.h(37,39): warning C4244:         ]
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDWall.h(36,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDWall.h(36,51): warning C4244:         with
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDWall.h(36,51): warning C4244:         [
@@ -209,7 +210,7 @@ D:\Source\repos\MrBattary\Platformer\Platformer\ClassBar.h(20,26): warning C4244
 D:\Source\repos\MrBattary\Platformer\Platformer\Main.cpp(72,47): warning C4244: =: преобразование "sf::Int64" в "float", возможна потеря данных
   Создание кода
   5 of 547 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
+    1 functions were new in current compilation
     1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Platformer.vcxproj -> D:\Source\repos\MrBattary\Platformer\x64\Release\Platformer.exe

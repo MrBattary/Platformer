@@ -233,9 +233,6 @@
     <ClInclude Include="ClassObjectDMapFirst.h">
       <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
-    <ClInclude Include="ClassObjectDMapUndFirst.h">
-      <Filter>Файлы заголовков\Object\Determinated</Filter>
-    </ClInclude>
     <ClInclude Include="ClassObjectDWall.h">
       <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
@@ -244,6 +241,9 @@
     </ClInclude>
     <ClInclude Include="MapsNPCFunctions.h">
       <Filter>Файлы заголовков\Maps\MapsFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectAnimDMapUndFirstTrack.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

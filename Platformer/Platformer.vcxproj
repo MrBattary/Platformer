@@ -179,7 +179,7 @@
     <ClInclude Include="ClassObjectAnimDGrass.h" />
     <ClInclude Include="ClassObjectAnimDReed.h" />
     <ClInclude Include="ClassObjectDMapFirst.h" />
-    <ClInclude Include="ClassObjectDMapUndFirst.h" />
+    <ClInclude Include="ClassObjectAnimDMapUndFirstTrack.h" />
     <ClInclude Include="ClassObjectDTree.h" />
     <ClInclude Include="ClassObjectDWall.h" />
     <ClInclude Include="EngineIntersection.h" />
