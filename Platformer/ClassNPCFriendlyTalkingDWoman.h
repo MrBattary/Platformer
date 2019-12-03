@@ -18,7 +18,7 @@ public:
 		wN = 50;
 		hN = 62;
 		xNRealInside = 12;
-		yNRealInside = 52;
+		yNRealInside = 56;
 		wNRealInside = 20;
 		hNRealInside = 10;
 		xNReal = xN + xNRealInside;
@@ -39,7 +39,7 @@ public:
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
 		sprite.setPosition(xN, yN);							//Устанавливаем точку отрисовки
 		//layerN = yN + hN;
-		layerN = trunc(yNReal + hNRealInside);				//Установили слой навсегда
+		layerN = trunc(yNReal + hNRealInside)-1;			//Установили слой навсегда -1 из-за double
 	};
 	
 	void Logic(float) override;								//Функция логики для женщины, определяет, какое действие будет производиться
