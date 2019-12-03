@@ -28,18 +28,18 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 	{
 		int dir = 0;
 		double value = 0;
+		bool changeAviable = true;																								//Выполняем изменение
 		//Проверка взаимодействия игрока и объекта
 		tie(dir, value) = Intersection(h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside(), vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal());
 		if (value != 0)
 		{
 			h.Set_clutchObj(vO[h.Get_currentMap()][i]->Get_clutch());																//Установили показатель сцепления
 
-			bool changeAviable = true;																								//Выполняем изменение
 			if (vO[h.Get_currentMap()][i]->Get_passable() == true) changeAviable = false;											//Не выполняем изменение если объект вприницпе проходим
-			if (h.Get_jumpAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;			//Не выполняем изменение если объект проходим прыжком
+			if (h.Get_jumpAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;		//Не выполняем изменение если объект проходим прыжком
 			if (h.Get_jumpLargeAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;	//Не выполняем изменение если объект проходим мощным прыжком
 			if (h.Get_slideAviable() == true && vO[h.Get_currentMap()][i]->Get_passableSlide() == true) changeAviable = false;		//Не выполняем изменение если объект проходим скольжением
-			if (h.Get_crouchAviable() == true && vO[h.Get_currentMap()][i]->Get_passableCrouch() == true) changeAviable = false;		//Не выполняем изменение если объект проходим вприсяди
+			if (h.Get_crouchAviable() == true && vO[h.Get_currentMap()][i]->Get_passableCrouch() == true) changeAviable = false;	//Не выполняем изменение если объект проходим вприсяди
 			if (vO[h.Get_currentMap()][i]->Get_movableO() == true) changeAviable = false;											//Не выполняем изменение если объект можно сдвинуть
 
 			if (changeAviable == true)														//Если все-таки изменяем положение игрока
@@ -53,10 +53,14 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 					h.Set_YHReal(value);
 				}
 			}
-			//ОБЪЕКТ--ИГРОК
-			if (changeAviable == false && vO[h.Get_currentMap()][i]->Get_movableO() == true)	//Если все-таки изменяем положение объекта
+		}
+		//TODO: Разобраться почему не работает правильное вхождение
+		//ОБЪЕКТ--ИГРОК
+		tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
+		if (value != 0)
+		{
+			if (vO[h.Get_currentMap()][i]->Get_movableO() == true)	//Если все-таки изменяем положение объекта
 			{
-				tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
 				//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
 				if (dir == 1 || dir == 3)
 				{

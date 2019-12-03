@@ -3,9 +3,9 @@
 #include "ClassObject.h"
 
 //Класс коробки
-class ObjectTree : public Object {
+class ObjectBox : public Object {
 public:
-	ObjectTree(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch) {
+	ObjectBox(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch) {
 		crossable = true;
 		movableO = true;
 
@@ -15,10 +15,12 @@ public:
 		yM = 0;
 		wM = 23;
 		hM = 31;
-		xRReal = _xOnMap;
-		yRReal = _yOnMap + 8;
+		xRRealInside = 0;
+		yRRealInside = 6;
+		xRReal = xR + xRRealInside;
+		yRReal = yR + yRRealInside;
 		wRReal = 23;
-		hRReal = 23;
+		hRReal = 25;
 		clutch = _clutch;
 
 		tracking = false;

@@ -8,6 +8,7 @@
 
 #include <vector>
 #include "ClassObject.h"
+#include "ClassObjectDBox.h"
 #include "ClassObjectDTree.h"
 #include "ClassObjectAnimDGrass.h"
 #include "ClassObjectAnimDReed.h"
@@ -134,9 +135,11 @@ vector <vector <Object*>>  vMaps = {
 	{
 		new ObjectTrackMapUndFirst(),
 		new ObjectMapFirst(),
+		new ObjectBox(1300, 500, false, false, false, false, 1),
 		new ObjectTree(1700, 330, false, true, false, false, 1),
 		new ObjectTree(1750, 350, false, false, true, false, 1),
 		new ObjectTree(1800, 340, false, false, false, true, 1),
+		new ObjectTree(1550, 360, false, false, false, true, 1),
 		new ObjectAnimGrass(1800, 800, true, false, false,false, 1),
 		new ObjectAnimGrass(1900, 815, true, false, false,false, 1),
 		new ObjectAnimGrass(1900, 830, true, false, false,false, 1),
