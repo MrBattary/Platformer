@@ -16,11 +16,11 @@ public:
 		xN = _X;
 		yN = _Y;
 		wN = 50;
-		hN = 63;
-		xNRealInside = -10;
-		yNRealInside = 35;
+		hN = 62;
+		xNRealInside = 12;
+		yNRealInside = 52;
 		wNRealInside = 20;
-		hNRealInside = 15;
+		hNRealInside = 10;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
 
@@ -38,6 +38,7 @@ public:
 		sprite.setTexture(texture);							//Спрайт
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
 		sprite.setPosition(xN, yN);							//Устанавливаем точку отрисовки
+		//layerN = yN + hN;
 		layerN = trunc(yNReal + hNRealInside);				//Установили слой навсегда
 	};
 	

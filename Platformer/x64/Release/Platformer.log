@@ -1,4 +1,42 @@
-﻿  Main.cpp
+﻿  FunctionsCNPCFriendlyTalkingDWoman.cpp
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(32,1): warning C4305: =: усечение из "double" в "float"
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(42,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+  FunctionsOfMapsNPC.cpp
+D:\Source\repos\MrBattary\Platformer\Platformer\FunctionsCNPCFriendlyTalkingDWoman.cpp(14,42): warning C4244: =: преобразование "double" в "float", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(35,1): warning C4305: =: усечение из "double" в "float"
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,39): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(32,1): warning C4305: =: усечение из "double" в "float"
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,43): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         ]
+  Main.cpp
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(42,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244:         with
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassHero.h(102,43): warning C4244:         [
@@ -57,27 +95,27 @@ D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDTree.h(38,39): warni
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDTree.h(38,39): warning C4244:         ]
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectDTree.h(41,27): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(14,1): warning C4305: =: усечение из "double" в "float"
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,51): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,51): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,51): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,51): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,47): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,47): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,47): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,47): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,43): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,43): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,43): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,43): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,39): warning C4244:         with
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,39): warning C4244:         [
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,39): warning C4244:             T=int
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(41,39): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,18): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,51): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,51): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,51): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,51): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,47): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,47): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,47): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,47): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,47): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,43): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,43): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,43): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,43): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,39): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,39): warning C4244:         with
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,39): warning C4244:         [
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,39): warning C4244:             T=int
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(43,39): warning C4244:         ]
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDGrass.h(46,27): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDReed.h(14,1): warning C4305: =: усечение из "double" в "float"
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDReed.h(41,51): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassObjectAnimDReed.h(41,51): warning C4244:         with
@@ -173,7 +211,7 @@ D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         [
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:             T=int
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(39,39): warning C4244:         ]
-D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(41,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
+D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyTalkingDWoman.h(42,17): warning C4244: =: преобразование "float" в "int", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(35,1): warning C4305: =: усечение из "double" в "float"
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244: аргумент: преобразование "float" в "T", возможна потеря данных
 D:\Source\repos\MrBattary\Platformer\Platformer\ClassNPCFriendlyDBunny.h(42,43): warning C4244:         with
@@ -209,6 +247,6 @@ D:\Source\repos\MrBattary\Platformer\Platformer\Main.cpp(72,47): warning C4244: 
   Создание кода
   5 of 549 functions ( 0.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    1 functions had inline decision re-evaluated but remain unchanged
+    3 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Platformer.vcxproj -> D:\Source\repos\MrBattary\Platformer\x64\Release\Platformer.exe

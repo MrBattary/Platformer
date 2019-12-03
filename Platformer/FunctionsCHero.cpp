@@ -79,7 +79,7 @@ void Hero::HeroJumpLargeChoise(float time)								//Выбор направле�
 
 int Hero::HeroIdleRight(float time)										//Безделие взгляд вправо
 {
-	SetRealSize(40, 57, 22, 15);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 1, 1, 0, 0);
 	if(battleMode==false) CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 0, 74, 100, 74);
@@ -98,7 +98,7 @@ int Hero::HeroIdleCrouchRight(float time)								//Безделие сидя в�
 
 int Hero::HeroIdleLeft(float time)										//Безделие взгляд влево
 {
-	SetRealSize(40, 57, 22, 15);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 100, 74, -100, 74);
@@ -577,10 +577,10 @@ int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влев�
 
 //TODO: В каждую функцию, где персонаж как-то изменяется в размерах необходимо добавить SetRealSize для уменьшения хитбокса
 void Hero::SetRealSize(float xRealIns, float yRealIns, float wReal, float hReal) {			//Установить новые размеры физической модели персонажа
-	xHRealInside = xRealIns;
-	yHRealInside = yRealIns;
-	wHRealInside = wReal;
-	hHRealInside = hReal;
+	if(xHRealInside != xRealIns) xHRealInside = xRealIns;
+	if(yHRealInside != yRealIns) yHRealInside = yRealIns;
+	if(wHRealInside != wReal) wHRealInside = wReal;
+	if(hHRealInside != hReal) hHRealInside = hReal;
 }
 /*
 Функция получения урона персонажем.
