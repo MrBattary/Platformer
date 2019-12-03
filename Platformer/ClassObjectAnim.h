@@ -4,7 +4,7 @@
 #include "ClassObject.h"
 
 //Класс анимированных объектов 
-
+//TODO: Разрешить все предупреждения
 class ObjectAnim : public Object
 {
 protected:

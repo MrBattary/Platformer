@@ -8,6 +8,7 @@
 
 using namespace sf;
 
+//TODO: Разрешить все предупреждения
 class Hero
 {
 private:
@@ -25,7 +26,7 @@ private:
 	float hHRealInside;					//Высота реальной модели внутри виртуальной модели
 	float speedHX=0;					//Скорость персонажа по x
 	float speedHY=0;					//Скорость персонажа по y
-	float clutchObj;					//Сцепление персонажа с поверхностью на которой он стоит
+	float clutchObj = 1;				//Сцепление персонажа с поверхностью на которой он стоит
 	int dirH;							//Направление движения	Данная "роза направлений" будет использоваться часто,советую её запомнить.
 
 											//7 4 8
@@ -33,8 +34,6 @@ private:
 											//3←0→1
 											// ↙↓↘
 											//6 2 5
-
-	String File;						//Файл с расширением
 	Image image;						//Изображение
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
@@ -76,21 +75,24 @@ private:
 	int comboHitH = 0;					//Текущий удар в комбо
 
 public:
-	Hero(String F, float X, float Y, float W, float H, float XReal, float YReal, float WReal, float HReal,int Health, int Stamina)		//Конструктор 
+	Hero(float X, float Y, int Health, int Stamina)			//Конструктор 
 	{
-		File = F;
-		image.loadFromFile("Sprites/"+File);				//Загружаем в него файл
+		image.loadFromFile("Sprites/HeroSpritesBig.png");	//Загружаем в него файл
 		image.createMaskFromColor(Color(255, 255, 255));	//Прозрачность
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт
 		xH = X;												//Координаты
 		yH = Y;
-		wH = W;
-		hH = H;
-		xHRealInside = XReal;
-		yHRealInside = YReal;
-		wHRealInside = WReal;
-		hHRealInside = HReal;
+		wH = 100;
+		hH = 74;
+		/*xHRealInside = 46;
+		yHRealInside = 57;
+		wHRealInside = 15;
+		hHRealInside = 15;*/
+		xHRealInside = 30;
+		yHRealInside = 15;
+		wHRealInside = 45;
+		hHRealInside = 59;
 		xHReal = xH + xHRealInside;
 		yHReal = yH + yHRealInside;
 		healthH = Health;									//Здоровье текущее

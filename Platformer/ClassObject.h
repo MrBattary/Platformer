@@ -4,6 +4,8 @@
 
 using namespace sf;
 
+//Класс объектов
+//TODO: Разрешить все предупреждения
 class Object
 {
 protected:

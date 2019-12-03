@@ -1,5 +1,8 @@
 #pragma once
 #include "ClassNPCEnemy.h"
+
+//TODO: Разрешить все предупреждения и сделать наследование от NPCEnemy
+
 class NPCEnemyCommon :public NPC
 {
 protected:
@@ -14,7 +17,7 @@ public:
 	bool right = true;					//Движняк вправо
 	bool lifeDL = false;
 	int ch1 = 0;
-	virtual void Logic(float);													//Логика для  NPC из треша
+	void Logic(float) override{};													//Логика для  NPC из треша
 	void Set_currentAction(int value) { currentAction = value; };
 };
 

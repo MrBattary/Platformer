@@ -64,6 +64,9 @@
     <Filter Include="Исходные файлы\FunctionsMaps">
       <UniqueIdentifier>{7c90fc2e-a347-4094-af68-2f3b922aeeac}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\FunctionsNPC\Determinated">
+      <UniqueIdentifier>{e6a803af-0428-4dec-a6ed-c83a26bc6e73}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -87,12 +90,6 @@
     <ClCompile Include="FunctionsCNPC.cpp">
       <Filter>Исходные файлы\FunctionsNPC</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp">
-      <Filter>Исходные файлы\FunctionsNPC</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp">
-      <Filter>Исходные файлы\FunctionsNPC</Filter>
-    </ClCompile>
     <ClCompile Include="FunctionsCObject.cpp">
       <Filter>Исходные файлы\FunctionsObject</Filter>
     </ClCompile>
@@ -103,9 +100,6 @@
       <Filter>Исходные файлы\FunctionsObject</Filter>
     </ClCompile>
     <ClCompile Include="FunctionsOfMaps.cpp">
-      <Filter>Исходные файлы\FunctionsMaps</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionsOfMapsNPCFriendly.cpp">
       <Filter>Исходные файлы\FunctionsMaps</Filter>
     </ClCompile>
     <ClCompile Include="OptimizedRandom.cpp">
@@ -120,17 +114,35 @@
     <ClCompile Include="ViewsAndWindow.cpp">
       <Filter>Исходные файлы\Interface</Filter>
     </ClCompile>
+    <ClCompile Include="FunctionsCObjectAnimDReed.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapUndFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDWall.cpp">
+      <Filter>Исходные файлы\FunctionsObject</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsOfMapsNPC.cpp">
+      <Filter>Исходные файлы\FunctionsMaps</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCNPCFriendlyTalkingDWoman.cpp">
+      <Filter>Исходные файлы\FunctionsNPC\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCNPCFriendlyDBunny.cpp">
+      <Filter>Исходные файлы\FunctionsNPC\Determinated</Filter>
+    </ClCompile>
     <ClCompile Include="FunctionsCNPCEnemyCommonDLight.cpp">
-      <Filter>Исходные файлы\FunctionsNPC</Filter>
+      <Filter>Исходные файлы\FunctionsNPC\Determinated</Filter>
     </ClCompile>
     <ClCompile Include="FunctionsCNPCEnemyCommonDHight.cpp">
-      <Filter>Исходные файлы\FunctionsNPC</Filter>
+      <Filter>Исходные файлы\FunctionsNPC\Determinated</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ViewsAndWindowNPC.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="Pillars.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
@@ -170,13 +182,7 @@
     <ClInclude Include="Maps.h">
       <Filter>Файлы заголовков\Maps</Filter>
     </ClInclude>
-    <ClInclude Include="MapsNPCFriendly.h">
-      <Filter>Файлы заголовков\Maps</Filter>
-    </ClInclude>
     <ClInclude Include="MapsFunctions.h">
-      <Filter>Файлы заголовков\Maps\MapsFunctions</Filter>
-    </ClInclude>
-    <ClInclude Include="MapsNPCFriendlyFunctions.h">
       <Filter>Файлы заголовков\Maps\MapsFunctions</Filter>
     </ClInclude>
     <ClInclude Include="ClassBar.h">
@@ -220,6 +226,24 @@
     </ClInclude>
     <ClInclude Include="ClassNPCEnemyCommonDLight.h">
       <Filter>Файлы заголовков\NPC\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectAnimDReed.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectDMapFirst.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectDWall.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
+    <ClInclude Include="MapsNPC.h">
+      <Filter>Файлы заголовков\Maps</Filter>
+    </ClInclude>
+    <ClInclude Include="MapsNPCFunctions.h">
+      <Filter>Файлы заголовков\Maps\MapsFunctions</Filter>
+    </ClInclude>
+    <ClInclude Include="ClassObjectAnimDMapUndFirstTrack.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

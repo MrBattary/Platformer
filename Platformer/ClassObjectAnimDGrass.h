@@ -2,7 +2,7 @@
 
 #include "ClassObjectAnim.h"
 
-//Класс определяющий класс-траву
+//Анимированная трава
 class ObjectAnimGrass : public ObjectAnim {
 public:
 	ObjectAnimGrass(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch){
@@ -40,6 +40,7 @@ public:
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Начальная установка спрайта на позицию отрисовки
+		layer = yRReal + hRReal;												//Установили слой
 	}
 
 	int Animation(float) override;

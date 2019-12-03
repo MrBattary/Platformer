@@ -1,5 +1,7 @@
 #pragma once
 #include "ClassObjectAnim.h"
+
+//Анимированный камыш
 class ObjectAnimReed :public ObjectAnim
 {
 public:
@@ -10,7 +12,7 @@ public:
 		frames = 4;
 		crossable = false;
 		animSpeed = 0.0003;
-		//НУЖНО ЗАМЕНИТЬ ЗНАЧЕНИЯ!
+		//TODO: Нужно заменить значения
 		xR = _xOnMap;
 		yR = _yOnMap;
 		xM = 0;
@@ -38,6 +40,7 @@ public:
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Начальная установка спрайта на позицию отрисовки
+		layer = yRReal + hRReal;												//Установили слой
 	}
 
 	int Animation(float) override;

@@ -15,12 +15,12 @@ public:
 		currentMap = _Map;
 		xN = _X;
 		yN = _Y;
-		wN = 150;
-		hN = 200;
-		xNRealInside = 38;
-		yNRealInside = 180;
-		wNRealInside = 58;
-		hNRealInside = 10;
+		wN = 50;
+		hN = 63;
+		xNRealInside = -10;
+		yNRealInside = 35;
+		wNRealInside = 20;
+		hNRealInside = 15;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
 
@@ -37,7 +37,7 @@ public:
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
-		sprite.setPosition(xNReal, yNReal);					//Устанавливаем точку отрисовки
+		sprite.setPosition(xN, yN);							//Устанавливаем точку отрисовки
 		layerN = trunc(yNReal + hNRealInside);				//Установили слой навсегда
 	};
 	

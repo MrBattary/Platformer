@@ -4,6 +4,7 @@
 using namespace sf;
 
 //Класс от которого наследуются все другие NPC
+//TODO: Разрешить все предупреждения
 class NPC {
 protected:
 	float xN;							//Положение виртуальной модели по х
@@ -81,5 +82,6 @@ public:
 	void Set_layerN(signed int value) { layerN = value; }						//Установка слоя
 
 	virtual void Draw(float);													//Связь физики и анимации
+	virtual void Logic(float) {};												//Логика
 	void SetRealSizeNPC(float, float, float, float);							//Изменение размеров внутренней модели
 };
