@@ -20,10 +20,11 @@ std::tuple<int,float> Intersection(float xF, float yF, float wF, float hF, float
 		float dir4 = yS + hS - yF - hF;
 		dir2 = abs(dir2);
 		dir4 = abs(dir4);
-		if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) return {1, xF - (xF + wF - xS)};			//Обозначили что пересекли слева и вычислили выталкивание
-		if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) return {2, yF - (yF + hF - yS)};			//Обозначили что пересекли вверху и вычислили выталкивание
-		if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) return {3, xF + (xS + wS - xF)};			//Обозначили что пересекли справа и вычислили выталкивание
-		if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) return {4, yF + (yS + hS - yF - hF)};	//Обозначили что пересекли внизу и вычислили выталкивание
+		if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) return {1, xF - (xF + wF - xS)-2};			//Обозначили что пересекли слева и вычислили выталкивание
+		if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) return {2, yF - (yF + hF - yS)-2};			//Обозначили что пересекли вверху и вычислили выталкивание
+		if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) return {3, xF + (xS + wS - xF)+2};			//Обозначили что пересекли справа и вычислили выталкивание
+		if (dir4 < dir1 && dir4 < dir2 && dir4 < dir3) return {4, yF + (yS + hS - yF - hF)+2};		//Обозначили что пересекли внизу и вычислили выталкивание 
+		//NOTE: +2 и -2 необходимы для более мощного выталкивания и отсутствия наслоения моделей
 	}
 	else {																		//Если не попали в объект
 		return { 0 , 0 };														//Обозначили что не пересекли и не вытолкнулись

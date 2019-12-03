@@ -85,6 +85,10 @@ public:
 		yH = Y;
 		wH = 100;
 		hH = 74;
+		/*xHRealInside = 46;
+		yHRealInside = 57;
+		wHRealInside = 15;
+		hHRealInside = 15;*/
 		xHRealInside = 30;
 		yHRealInside = 15;
 		wHRealInside = 45;

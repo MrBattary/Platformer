@@ -9,11 +9,11 @@ void SpritesObjectsAndNPCs(RenderWindow& window, Hero h, vector<vector<Object*>>
 	{
 		if (h.Get_layerH() == layer) { window.draw(h.Get_Sprite()); }														//Если нашли совпадение по слою выполняется вывод на экран с помощью SFML
 
-		for (int i = 0; i < vO.size(); i++)
+		for (int i = 0; i < vO[h.Get_currentMap()].size(); i++)
 		{
 			if (vO[h.Get_currentMap()][i]->Get_layer() == layer) { window.draw(vO[h.Get_currentMap()][i]->Get_Sprite()); }
 		}
-		for (int j = 0; j < vN.size(); j++)
+		for (int j = 0; j < vN[h.Get_currentMap()].size(); j++)
 		{
 			if (vN[h.Get_currentMap()][j]->Get_layerN() == layer) { window.draw(vN[h.Get_currentMap()][j]->Get_Sprite()); }
 		}
@@ -24,7 +24,7 @@ void SpritesObjectsAndNPCs(RenderWindow& window, Hero h, vector<vector<Object*>>
 void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vector<NPC*>> &vN)						//Проверяется пересечение всех объектов в игре
 {
 	//ИГРОК--ОБЪЕКТ
-	for (int i = 0; i < vO.size(); i++) 
+	for (int i = 0; i < vO[h.Get_currentMap()].size(); i++)
 	{
 		int dir = 0;
 		double value = 0;
@@ -69,8 +69,9 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 			}
 		}
 	}
+
 	//ИГРОК--NPC
-	for (int i = 0; i < vN.size(); i++)
+	for (int i = 0; i < vN[h.Get_currentMap()].size(); i++)
 	{
 		int dir = 0;
 		double value = 0;
@@ -103,17 +104,19 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 		}
 	}
 	//ОБЪЕКТ--ОБЪЕКТ
-	for (int i = 0; i < vO.size(); i++) 
+	
+	
+	for (int i = 0; i < vO[h.Get_currentMap()].size(); i++)
 	{
-		for (int j = 0; j < vO.size(); i++) 
+		for (int j = 0; j < vO[h.Get_currentMap()].size(); j++)
 		{
 			if (i != j) 
 			{
-				bool checkAviable = true;																								//Выполняем проверку
+				bool checkAviable = true;																									//Выполняем проверку
 				if (vO[h.Get_currentMap()][i]->Get_passable() == true) checkAviable = false;												//Не выполняем проверку если i объект вприницпе проходим
 				if (vO[h.Get_currentMap()][j]->Get_passable() == true) checkAviable = false;												//Не выполняем проверку если j объект вприницпе проходим
 
-				if (checkAviable == true) {	//Если все-таки выполняем выполняем проверку на пересечение
+		        if (checkAviable == true) {	//Если все-таки выполняем выполняем проверку на пересечение
 					int dir = 0;
 					double value = 0;
 
@@ -123,17 +126,11 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 						if (dir == 1 || dir == 3)
 						{
 							//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
-
-							/*if (dir == 1) { vO[h.Get_currentMap()][i].Set_spritePosition(vO[h.Get_currentMap()][i].Get_xR() - (vO[h.Get_currentMap()][i].Get_xRReal() - value), vO[h.Get_currentMap()][i].Get_yR()); }
-							if (dir == 3) { vO[h.Get_currentMap()][i].Set_spritePosition(vO[h.Get_currentMap()][i].Get_xR() + (value - vO[h.Get_currentMap()][i].Get_xRReal()), vO[h.Get_currentMap()][i].Get_yR()); }*/
 							vO[h.Get_currentMap()][i]->Set_xRReal(value);
 						}
 						if (dir == 2 || dir == 4)
 						{
 							//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
-
-							/*if (dir == 2) { vO[h.Get_currentMap()][i].Set_spritePosition(vO[h.Get_currentMap()][i].Get_xR(), vO[h.Get_currentMap()][i].Get_yR() - (vO[h.Get_currentMap()][i].Get_yRReal() - value)); }
-							if (dir == 4) { vO[h.Get_currentMap()][i].Set_spritePosition(vO[h.Get_currentMap()][i].Get_xR(), vO[h.Get_currentMap()][i].Get_yR() + (value - vO[h.Get_currentMap()][i].Get_xRReal())); }*/
 							vO[h.Get_currentMap()][i]->Set_yRReal(value);
 						}
 					}
@@ -142,17 +139,11 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 						if (dir == 1 || dir == 3)
 						{
 							//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
-
-							/*if (dir == 1) { vO[h.Get_currentMap()][j].Set_spritePosition(vO[h.Get_currentMap()][j].Get_xR() - (vO[h.Get_currentMap()][j].Get_xRReal() - value), vO[h.Get_currentMap()][j].Get_yR()); }
-							if (dir == 3) { vO[h.Get_currentMap()][j].Set_spritePosition(vO[h.Get_currentMap()][j].Get_xR() + (value - vO[h.Get_currentMap()][j].Get_xRReal()), vO[h.Get_currentMap()][j].Get_yR()); }*/
 							vO[h.Get_currentMap()][j]->Set_xRReal(value);
 						}
 						if (dir == 2 || dir == 4)
 						{
 							//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
-
-							/*if (dir == 2) { vO[h.Get_currentMap()][j].Set_spritePosition(vO[h.Get_currentMap()][j].Get_xR(), vO[h.Get_currentMap()][j].Get_yR() - (vO[h.Get_currentMap()][j].Get_yRReal() - value)); }
-							if (dir == 4) { vO[h.Get_currentMap()][j].Set_spritePosition(vO[h.Get_currentMap()][j].Get_xR(), vO[h.Get_currentMap()][j].Get_yR() + (value - vO[h.Get_currentMap()][j].Get_xRReal())); }*/
 							vO[h.Get_currentMap()][j]->Set_yRReal(value);
 						}
 					}
@@ -161,9 +152,10 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 		}
 	}
 	//NPC--ОБЪЕКТ
-	for (int i = 0; i < vN.size(); i++) 
+	
+	for (int i = 0; i < vN[h.Get_currentMap()].size(); i++)
 	{
-		for (int j = 0; j < vO.size(); j++)
+		for (int j = 0; j < vO[h.Get_currentMap()].size(); j++)
 		{
 			if(vO[h.Get_currentMap()][j]->Get_passable() == false)																		//Не выполняем проверку если объект вприницпе проходим
 			{
@@ -207,9 +199,10 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 		}
 	}
 	//NPC--NPC
-	for (int i = 0; i < vN.size(); i++)
+
+	for (int i = 0; i < vN[h.Get_currentMap()].size(); i++)
 	{
-		for (int j = 0; j < vN.size(); j++)
+		for (int j = 0; j < vN[h.Get_currentMap()].size(); j++)
 		{
 			if (i != j) 
 			{

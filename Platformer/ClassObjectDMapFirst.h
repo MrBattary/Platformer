@@ -7,8 +7,8 @@ class ObjectMapFirst :public Object
 public:
 	ObjectMapFirst() {
 	
-	crossable =false;
-	animated =false;
+	crossable = false;
+	animated = false;
 	
 	xR = 0;
 	yR = 0;
@@ -30,7 +30,7 @@ public:
 	passableSlide = false;
 	passableCrouch = false;
 
-	imageObject.loadFromFile("Maps/TestMap5.png");
+	imageObject.loadFromFile("Environment/Maps/TestMap5.png");
 	imageObject.createMaskFromColor(Color(255, 255, 255));					//Прозрачность белого
 	textureObject.loadFromImage(imageObject);
 	spriteObject.setTexture(textureObject);

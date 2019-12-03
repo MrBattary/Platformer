@@ -40,6 +40,7 @@ public:
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Начальная установка спрайта на позицию отрисовки
+		layer = yRReal + hRReal;												//Установили слой
 	}
 
 	int Animation(float) override;

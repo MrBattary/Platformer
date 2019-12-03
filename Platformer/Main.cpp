@@ -92,7 +92,6 @@ int main() {
 
 		NPCLogic(time, vNPC, MainHero.Get_currentMap());													//Логика NPC
 
-		//TODO: В функции IntersectionObjectsAndNPCs где-то ошибка, выход за границы массива, необходимо проверить все циклы
 		IntersectionObjectsAndNPCs(MainHero, vMaps, vNPC);													//Пересечение с объектами окружения всех объектов, NPC, итд.
 
 		DrawNPC(MainView, time, vNPC, MainHero.Get_currentMap());											//Подготовка к отрисовке NPC
