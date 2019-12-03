@@ -20,7 +20,7 @@ void SpritesObjectsAndNPCs(RenderWindow& window, Hero h, vector<vector<Object*>>
 	}
 }
 
-//TODO: В функции IntersectionObjectsAndNPCs где-то ошибка, выход за границы массива, необходимо проверить все циклы
+//TODO: В функции IntersectionObjectsAndNPCs неправильное взаимодействие героя и двигаемых NPC
 void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vector<NPC*>> &vN)						//Проверяется пересечение всех объектов в игре
 {
 	//ИГРОК--ОБЪЕКТ

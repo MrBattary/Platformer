@@ -178,6 +178,7 @@
     <ClInclude Include="ClassHeroStaminaBar.h" />
     <ClInclude Include="ClassObjectAnimDGrass.h" />
     <ClInclude Include="ClassObjectAnimDReed.h" />
+    <ClInclude Include="ClassObjectDBox.h" />
     <ClInclude Include="ClassObjectDMapFirst.h" />
     <ClInclude Include="ClassObjectAnimDMapUndFirstTrack.h" />
     <ClInclude Include="ClassObjectDTree.h" />

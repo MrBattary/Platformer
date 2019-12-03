@@ -6,8 +6,11 @@
 2)Загрузку текстуры в спрайт
 3)Вырезание нужного элемента из спрайта !!!НУЖНО ПЕРЕНЕСТИ!!!
 */
-void Object::Draw(View view) {	//Заглушка
-	DetermineLayer();
+void Object::Draw(View view) {	//TODO: Cделать разделение на 3 главных класса, обычный, движимый, анимированный и их производные: движимый анимированный и движимый обычный
+	if (movableO == true) {
+		layer = yRReal + hRReal;
+		spriteObject.setPosition(xR, yR);
+	}
 }
 
 //Установка объекта на слой для корректной последовательности отрисовки
@@ -17,10 +20,4 @@ void Object::DetermineLayer()
 	{
 		layer = yRReal + hRReal;
 	}
-	/*if (crossable == false) {
-		layer = yRReal + hRReal;
-	}
-	else {//Затычка для фона
-		layer = yRReal + hRReal/4;
-	}*/
 }

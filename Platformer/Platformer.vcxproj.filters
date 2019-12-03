@@ -245,6 +245,9 @@
     <ClInclude Include="ClassObjectAnimDMapUndFirstTrack.h">
       <Filter>Файлы заголовков\Object\Determinated</Filter>
     </ClInclude>
+    <ClInclude Include="ClassObjectDBox.h">
+      <Filter>Файлы заголовков\Object\Determinated</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="ClassDiagram.cd" />
