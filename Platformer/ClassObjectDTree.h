@@ -37,7 +37,7 @@ public:
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Установка спрайта на позицию отрисовки
-		layerSub = 20;
+		layerSub = 25;
 		layer = yRReal + hRReal - layerSub;										//Установили слой навсегда
 	}
 };

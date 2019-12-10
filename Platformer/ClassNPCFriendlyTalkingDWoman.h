@@ -18,7 +18,7 @@ public:
 		wN = 50;
 		hN = 62;
 		xNRealInside = 12;
-		yNRealInside = 56;
+		yNRealInside = 52;
 		wNRealInside = 20;
 		hNRealInside = 10;
 		xNReal = xN + xNRealInside;

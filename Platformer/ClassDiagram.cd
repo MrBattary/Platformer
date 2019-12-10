@@ -38,7 +38,7 @@
   <Class Name="Object" Collapsed="true">
     <Position X="20.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>iAEkBAAEQEADayMktICQQEEAARAQAAMoqIIAHAAQGiI=</HashCode>
+      <HashCode>mAEkBAgEQEADayMktICQQEEAARAQAAMoqIIAHAAQGiI=</HashCode>
       <FileName>ClassObject.h</FileName>
     </TypeIdentifier>
   </Class>
@@ -145,6 +145,13 @@
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAA=</HashCode>
       <FileName>ClassObjectDWall.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ObjectBox" Collapsed="true">
+    <Position X="17.25" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ClassObjectDBox.h</FileName>
     </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />

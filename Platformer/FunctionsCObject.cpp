@@ -8,7 +8,7 @@
 */
 void Object::Draw(View view) {	//TODO: Cделать разделение на 3 главных класса, обычный, движимый, анимированный и их производные: движимый анимированный и движимый обычный
 	if (movableO == true) {
-		layer = yRReal + hRReal;
+		DetermineLayer();
 		xR = xRReal - xRRealInside;
 		yR = yRReal - yRRealInside;
 		spriteObject.setPosition(xR, yR);

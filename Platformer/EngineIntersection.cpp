@@ -17,6 +17,7 @@ std::tuple<int, float> Intersection(float xF, float yF, float wF, float hF, floa
 		float dir2 = yF + hF - yS;													//Дальность толчка в направлении 2
 		float dir3 = xS + wS - xF;													//Дальность толчка в направлении 3
 		float dir4 = yS + hS - yF;													//Дальность толчка в направлении 4
+
 		if (dir1 < dir2 && dir1 < dir3 && dir1 < dir4) return { 1, xS - wF };			//Обозначили что пересекли слева и вычислили выталкивание	xF = xF' - (xF' + wF - xS)
 		if (dir2 < dir1 && dir2 < dir3 && dir2 < dir4) return { 2, yS - hF };			//Обозначили что пересекли вверху и вычислили выталкивание	yF = yF' - (yF' + hF - yS)
 		if (dir3 < dir1 && dir3 < dir2 && dir3 < dir4) return { 3, xS + wS };			//Обозначили что пересекли справа и вычислили выталкивание	xF = xF' - (xS + wS - xF')

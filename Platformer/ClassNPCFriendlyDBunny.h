@@ -18,10 +18,10 @@ public:
 		yN = _Y;
 		wN = 35;
 		hN = 35;
-		xNRealInside = 10;
-		yNRealInside = 20;
-		wNRealInside = 17;
-		hNRealInside = 10;
+		xNRealInside = 0;
+		yNRealInside = 10;
+		wNRealInside = 35;
+		hNRealInside = 25;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
 		speedNX = 0;

@@ -53,12 +53,7 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 					h.Set_YHReal(value);
 				}
 			}
-		}
-		//TODO: Разобраться почему не работает правильное вхождение
-		//ОБЪЕКТ--ИГРОК
-		tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
-		if (value != 0)
-		{
+			tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
 			if (vO[h.Get_currentMap()][i]->Get_movableO() == true)	//Если все-таки изменяем положение объекта
 			{
 				//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
@@ -99,7 +94,7 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 			tie(dir, value) = Intersection(vN[h.Get_currentMap()][i]->Get_xNReal(), vN[h.Get_currentMap()][i]->Get_yNReal(), vN[h.Get_currentMap()][i]->Get_wNRealInside(), vN[h.Get_currentMap()][i]->Get_hNRealInside(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
 			if (dir == 1 || dir == 3)
 			{
-				vN[h.Get_currentMap()][i]->Set_yNReal(value);
+				vN[h.Get_currentMap()][i]->Set_xNReal(value);
 			}
 			if (dir == 2 || dir == 4)
 			{
