@@ -123,6 +123,8 @@ public:
 	float Get_HH() { return hH; }												//Получить высоту модели
 	float Get_XHReal() { return xHReal; }										//Получить положение реальной модели по х
 	float Get_YHReal() { return yHReal; }										//Получить положение реальной модели по у
+	float Get_XHRealInside() { return xHRealInside; }							//Получить отступ по х внутри физической модели
+	float Get_YHRealInside() { return yHRealInside; }							//Получить отступ по y внутри физической модели
 	float Get_WHRealInside() { return wHRealInside; }							//Получить ширину физической модели
 	float Get_HHRealInside() { return hHRealInside; }							//Получить высоту физической модели
 	float Get_speedXH() { return speedHX; }										//Получить speedHX

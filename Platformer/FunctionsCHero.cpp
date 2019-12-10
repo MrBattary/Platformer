@@ -16,7 +16,6 @@
 */
 
 
-//TODO: Почему так сильно скачет вид при присяди
 void Hero::Draw(float time)												//Физика на отрисовку персонажа, связывает анимацию и физику
 {
 																		/*
@@ -91,7 +90,7 @@ int Hero::HeroIdleRight(float time)										//Безделие взгляд в�
 
 int Hero::HeroIdleCrouchRight(float time)								//Безделие сидя взгляд вправо
 {
-	SetRealSize(32, 30, 38, 42);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 0, 148, 100, 74);
@@ -110,7 +109,7 @@ int Hero::HeroIdleLeft(float time)										//Безделие взгляд вл
 
 int Hero::HeroIdleCrouchLeft(float time)								//Безделие сидя взгляд влево
 {
-	SetRealSize(32, 30, 38, 42);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 100, 148, -100, 74);
