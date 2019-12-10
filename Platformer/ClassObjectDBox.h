@@ -16,11 +16,11 @@ public:
 		wM = 23;
 		hM = 31;
 		xRRealInside = 0;
-		yRRealInside = 6;
+		yRRealInside = 11;
 		xRReal = xR + xRRealInside;
 		yRReal = yR + yRRealInside;
 		wRReal = 23;
-		hRReal = 25;
+		hRReal = 20;
 		clutch = 1;
 
 		tracking = false;

@@ -67,6 +67,9 @@
     <Filter Include="Исходные файлы\FunctionsNPC\Determinated">
       <UniqueIdentifier>{e6a803af-0428-4dec-a6ed-c83a26bc6e73}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Исходные файлы\FunctionsObject\Determinated">
+      <UniqueIdentifier>{de95d707-e43b-421f-ba47-bb37edefdb2b}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp">
@@ -96,9 +99,6 @@
     <ClCompile Include="FunctionsCObjectAnim.cpp">
       <Filter>Исходные файлы\FunctionsObject</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCObjectAnimDGrass.cpp">
-      <Filter>Исходные файлы\FunctionsObject</Filter>
-    </ClCompile>
     <ClCompile Include="FunctionsOfMaps.cpp">
       <Filter>Исходные файлы\FunctionsMaps</Filter>
     </ClCompile>
@@ -114,18 +114,6 @@
     <ClCompile Include="ViewsAndWindow.cpp">
       <Filter>Исходные файлы\Interface</Filter>
     </ClCompile>
-    <ClCompile Include="FunctionsCObjectAnimDReed.cpp">
-      <Filter>Исходные файлы\FunctionsObject</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionsCObjectDMapFirst.cpp">
-      <Filter>Исходные файлы\FunctionsObject</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionsCObjectDMapUndFirst.cpp">
-      <Filter>Исходные файлы\FunctionsObject</Filter>
-    </ClCompile>
-    <ClCompile Include="FunctionsCObjectDWall.cpp">
-      <Filter>Исходные файлы\FunctionsObject</Filter>
-    </ClCompile>
     <ClCompile Include="FunctionsOfMapsNPC.cpp">
       <Filter>Исходные файлы\FunctionsMaps</Filter>
     </ClCompile>
@@ -140,6 +128,21 @@
     </ClCompile>
     <ClCompile Include="FunctionsCNPCEnemyCommonDHight.cpp">
       <Filter>Исходные файлы\FunctionsNPC\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDWall.cpp">
+      <Filter>Исходные файлы\FunctionsObject\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapUndFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectDMapFirst.cpp">
+      <Filter>Исходные файлы\FunctionsObject\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectAnimDReed.cpp">
+      <Filter>Исходные файлы\FunctionsObject\Determinated</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionsCObjectAnimDGrass.cpp">
+      <Filter>Исходные файлы\FunctionsObject\Determinated</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
