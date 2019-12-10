@@ -8,6 +8,7 @@
 
 using namespace sf;
 
+//TODO: Разрешить все предупреждения
 class Hero
 {
 private:
@@ -25,7 +26,7 @@ private:
 	float hHRealInside;					//Высота реальной модели внутри виртуальной модели
 	float speedHX=0;					//Скорость персонажа по x
 	float speedHY=0;					//Скорость персонажа по y
-	float clutchObj;					//Сцепление персонажа с поверхностью на которой он стоит
+	float clutchObj = 1;				//Сцепление персонажа с поверхностью на которой он стоит
 	int dirH;							//Направление движения	Данная "роза направлений" будет использоваться часто,советую её запомнить.
 
 											//7 4 8
@@ -33,11 +34,10 @@ private:
 											//3←0→1
 											// ↙↓↘
 											//6 2 5
-
-	String File;						//Файл с расширением
 	Image image;						//Изображение
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
+	signed int layerH;					//Слой отрисовки
 
 	int currentMap = 0;					//Текущая карта
 
@@ -75,21 +75,24 @@ private:
 	int comboHitH = 0;					//Текущий удар в комбо
 
 public:
-	Hero(String F, float X, float Y, float W, float H, float XReal, float YReal, float WReal, float HReal,int Health, int Stamina)		//Конструктор 
+	Hero(float X, float Y, int Health, int Stamina)			//Конструктор 
 	{
-		File = F;
-		image.loadFromFile("Sprites/"+File);				//Загружаем в него файл
+		image.loadFromFile("Sprites/HeroSpritesBig.png");	//Загружаем в него файл
 		image.createMaskFromColor(Color(255, 255, 255));	//Прозрачность
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт
 		xH = X;												//Координаты
 		yH = Y;
-		wH = W;
-		hH = H;
-		xHRealInside = XReal;
-		yHRealInside = YReal;
-		wHRealInside = WReal;
-		hHRealInside = HReal;
+		wH = 100;
+		hH = 74;
+		xHRealInside = 46;
+		yHRealInside = 57;
+		wHRealInside = 15;
+		hHRealInside = 15;
+		/*xHRealInside = 30;
+		yHRealInside = 15;
+		wHRealInside = 45;
+		hHRealInside = 59;*/
 		xHReal = xH + xHRealInside;
 		yHReal = yH + yHRealInside;
 		healthH = Health;									//Здоровье текущее
@@ -113,12 +116,15 @@ public:
 	int Get_healthMaxH() { return healthMaxH; }									//Узнать максимальное здоровье персонажа
 	int Get_staminaH() { return staminaH; }										//Узнать значение выносливости персонажа
 	int Get_staminaMaxH() { return staminaMaxH; }								//Узнать максимальную выносливость персонажа
+	signed int Get_layerH() { return layerH; }									//Получение слоя на котором располагается персонаж
 	float Get_XH() { return xH; }												//Получить положение виртуальной модели по х
 	float Get_YH() { return yH; }												//Получить положение виртуальной модели по у
 	float Get_WH() { return wH; }												//Получить ширину модели
 	float Get_HH() { return hH; }												//Получить высоту модели
 	float Get_XHReal() { return xHReal; }										//Получить положение реальной модели по х
 	float Get_YHReal() { return yHReal; }										//Получить положение реальной модели по у
+	float Get_XHRealInside() { return xHRealInside; }							//Получить отступ по х внутри физической модели
+	float Get_YHRealInside() { return yHRealInside; }							//Получить отступ по y внутри физической модели
 	float Get_WHRealInside() { return wHRealInside; }							//Получить ширину физической модели
 	float Get_HHRealInside() { return hHRealInside; }							//Получить высоту физической модели
 	float Get_speedXH() { return speedHX; }										//Получить speedHX
@@ -158,6 +164,7 @@ public:
 	void Set_YH(float value) { yH = value; }									//Установить положение виртуальной модели по у
 	void Set_XHReal(float value) { xHReal = value; }							//Установить положение реальной модели по х
 	void Set_YHReal(float value) { yHReal = value; }							//Установить положение реальной модели по у
+	void Set_layerH(signed int value) { layerH = value; }						//Установка слоя
 	void Set_WHRealInside(float value) { wHRealInside = value; }				//Установить ширину физической модели
 	void Set_HHRealInside(float value) { hHRealInside = value; }				//Установить высоту физической модели
 	void Set_clutchObj(float value) { clutchObj = value; }						//Установить величину сцепления персонажа с поверхностью на которой он стоит

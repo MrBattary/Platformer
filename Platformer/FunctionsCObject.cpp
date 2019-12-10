@@ -1,20 +1,25 @@
 #include "ClassObject.h"
 
 /*
-Отрисовка включает:
+Отрисовка для следящего объекта включает:
 1)Установку точки, с которой рисовать
 2)Загрузку текстуры в спрайт
-3)Вырезание нужного элемента из спрайта
+3)Вырезание нужного элемента из спрайта TODO: нужно перенести
 */
-void Object::Draw(View view, float time) {
-	if (tracking == true) {
-		sf::Vector2f vector=view.getCenter();																			//Если объект "следящий"
-		spriteObject.setPosition(xR+ (vector.x - xR) /trackingCoefficient, yR + (vector.y - yR) / trackingCoefficient);	//Соответственно устанавливаем точку отрисовки основываясь на камере вида
+void Object::Draw(View view) {	//TODO: Cделать разделение на 3 главных класса, обычный, движимый, анимированный и их производные: движимый анимированный и движимый обычный
+	if (movableO == true) {
+		layer = yRReal + hRReal;
+		xR = xRReal - xRRealInside;
+		yR = yRReal - yRRealInside;
+		spriteObject.setPosition(xR, yR);
 	}
-	else
-	{
-		spriteObject.setPosition(xR, yR);																				//Если нет, то все стандартно
-	}
-	spriteObject.setTexture(textureObject);
-	spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 }
+
+//Установка объекта на слой для корректной последовательности отрисовки
+/*void Object::DetermineLayer()
+{
+	if(animated==true)
+	{
+		layer = yRReal + hRReal;
+	}
+}*/

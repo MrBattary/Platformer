@@ -10,16 +10,18 @@ class NPCFriendlyBunny : public NPCFriendly
 {
 public:
 	NPCFriendlyBunny(int _Map, float _X, float _Y, int _Health) {
+		movableN = true;
+
 		//Положение на карте и в пространстве
 		currentMap = _Map;
 		xN = _X;
 		yN = _Y;
 		wN = 35;
 		hN = 35;
-		xNRealInside = 10;
-		yNRealInside = 20;
-		wNRealInside = 17;
-		hNRealInside = 10;
+		xNRealInside = 0;
+		yNRealInside = 10;
+		wNRealInside = 35;
+		hNRealInside = 25;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
 		speedNX = 0;

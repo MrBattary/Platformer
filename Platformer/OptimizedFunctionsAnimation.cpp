@@ -11,7 +11,7 @@ animationSpeed	-скорость анимации
 frames			-количество кадров в анимации
 sprite			-спрайт
 setTextureRect	-вырезает квадратик 1 кадра из всего спрайта по координатам
-x1				-положение верхней точки по Х							х1
+x1				-положение верхней точки по Х(ширина)					х1
 y1				-положение верхней точки по Y						 у1 •――――――•
 x2				-положение нижней точки по Х							|      |
 y2				-положение нижней точки по Y							•――――――• y2
@@ -41,10 +41,24 @@ x11				- нужен для отражения										   x2
 avaible			- возвращает значение, выполняется ли еще эта анимация
 */
 
+//TODO: Сделать эту функию полностью гибкой, в setTextureRect(IntRect(100 * ,... ,74)); убрать 100 и 74, заменив на переменные, разрешить возникшие конфликты
 void UncycleAnimation(float& currentFrameUN, float time, bool& avaible, int& direction, int directionValue, double animationSpeed, Sprite& sprite, int x11, int y1, int x2, int frames) {
 	direction = directionValue;
 	currentFrameUN += animationSpeed * time;
 	sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, y1, x2, 74));
+	if (currentFrameUN > frames)
+	{
+		avaible = false;
+		currentFrameUN = 0;
+	}
+}
+
+//TODO: Убрать эту функцию, использовать только UncycleAnimation
+//ФУнкции Для треша нецикл
+void UncycleAnimationMob(float& currentFrameUN, float time, bool& avaible, double animationSpeed, Sprite& sprite, int x11, int y1, int x2, int x1, int frames) {
+
+	currentFrameUN += animationSpeed * time;
+	sprite.setTextureRect(IntRect(100 * int(currentFrameUN) + x11, y1, x2, x1));
 	if (currentFrameUN > frames)
 	{
 		avaible = false;

@@ -32,19 +32,19 @@ void NPCFriendlyTalkingWoman::Logic(float time)
 
 void NPCFriendlyTalkingWoman::Draw(float time)							//Переопределение, т.к. не двигается и не нужно изменять местоположение итд.
 {
-	return;																//Затычка, чтобы ничего не происходило
+	return;																//Заглушка для movableN=false;
 }
 
 int NPCFriendlyTalkingWoman::WomanIdleRight(float time)					//Бездействие вправо
 {
 	dirN = 0;
-	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 150, 0, 0, 150, 200);
+	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 50, 0, 0, 50, 63);
 	return 0;
 }
 
 int NPCFriendlyTalkingWoman::WomanIdleLeft(float time)					//Бездействие влево
 {
 	dirN = 0;
-	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 150, 150, 0, -150, 200);
+	CycleAnimation(currentFrame, time, 0.01, 16, sprite, 50, 50, 0, -50, 63);
 	return 0;
 }

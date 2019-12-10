@@ -1,7 +1,7 @@
 //Определение всех функций класса "ClassNPCFriendlyDBunny"
 #include "ClassNPCFriendlyDBunny.h"
 #include "OptimizedFunctionsAnimation.h"
-#include "PhysicsEngine.h"
+#include "EnginePhysics.h"
 #include "OptimizedRandom.h"
 
 void NPCFriendlyBunny::Logic(float time)			//Функция логики кролика

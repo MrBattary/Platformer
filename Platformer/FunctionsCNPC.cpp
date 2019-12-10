@@ -9,7 +9,8 @@ void NPC::Draw(float time)																			//Физика на отрисовку NPC, связывае
 	yNReal += dyN * time;												//Положенение реальной модели в пространстве
 	xN = xNReal - xNRealInside;											//Положение виртуальной модели в пространстве
 	yN = yNReal - yNRealInside;
-	sprite.setPosition(xNReal, yNReal);									//Установть точку отрисовки на позиции хN,уN относительно физической модели
+	sprite.setPosition(xN, yN);											//Установть точку отрисовки на позиции хN,уN
+	layerN = trunc(yNReal + hNRealInside);								//Отбросили дробную часть, если нужно округлить: layerH = round(yHReal + hHRealInside);	
 }
 
 void NPC::SetRealSizeNPC(float xRealIns, float yRealIns, float wRealIns, float hRealIns) {			//Установить новые размеры физической модели NPC

@@ -9,15 +9,17 @@ using namespace sf;
 class NPCFriendlyTalkingWoman : public NPCFriendlyTalking {
 public:
 	NPCFriendlyTalkingWoman(int _Map, float _X, float _Y, int _Health) {
+		movableN = false;
+
 		//Положение на карте и в пространстве
 		currentMap = _Map;
 		xN = _X;
 		yN = _Y;
-		wN = 150;
-		hN = 200;
-		xNRealInside = 38;
-		yNRealInside = 180;
-		wNRealInside = 58;
+		wN = 50;
+		hN = 62;
+		xNRealInside = 12;
+		yNRealInside = 52;
+		wNRealInside = 20;
 		hNRealInside = 10;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
@@ -35,7 +37,9 @@ public:
 		texture.loadFromImage(image);						//Текстура
 		sprite.setTexture(texture);							//Спрайт
 		sprite.setTextureRect(IntRect(0, 0, wN, hN));		//Вырезаем NPC
-		sprite.setPosition(xNReal, yNReal);					//Устанавливаем точку отрисовки
+		sprite.setPosition(xN, yN);							//Устанавливаем точку отрисовки
+		//layerN = yN + hN;
+		layerN = trunc(yNReal + hNRealInside)-1;			//Установили слой навсегда -1 из-за double
 	};
 	
 	void Logic(float) override;								//Функция логики для женщины, определяет, какое действие будет производиться

@@ -3,7 +3,7 @@
 #include <SFML/Graphics.hpp>
 
 using namespace sf;
-
+//TODO: Разрешить все предупреждения
 class Bar
 {
 protected:
