@@ -5,7 +5,7 @@
 //Класс коробки
 class ObjectBox : public Object {
 public:
-	ObjectBox(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch) {
+	ObjectBox(float _xOnMap, float _yOnMap) {
 		crossable = true;
 		movableO = true;
 
@@ -21,15 +21,15 @@ public:
 		yRReal = yR + yRRealInside;
 		wRReal = 23;
 		hRReal = 25;
-		clutch = _clutch;
+		clutch = 1;
 
 		tracking = false;
 		trackingCoefficient = 0;
 
-		passable = _passable;
-		passableJump = _passableJump;
-		passableSlide = _passableSlide;
-		passableCrouch = _passableCrouch;
+		passable = false;
+		passableJump = false;
+		passableSlide = false;
+		passableCrouch = false;
 
 		imageObject.loadFromFile("Environment/Objects/box.png");
 		imageObject.createMaskFromColor(Color(255, 255, 255));					//Прозрачность белого

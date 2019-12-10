@@ -135,7 +135,12 @@ vector <vector <Object*>>  vMaps = {
 	{
 		new ObjectTrackMapUndFirst(),
 		new ObjectMapFirst(),
-		new ObjectBox(1300, 500, false, false, false, false, 1),
+		new ObjectWall(890, 470, 500, 20),
+		new ObjectBox(1300, 500),
+		new ObjectBox(1325, 500),
+		new ObjectBox(1350, 500),
+		new ObjectBox(920, 520),
+		new ObjectBox(920, 540),
 		new ObjectTree(1700, 330, false, true, false, false, 1),
 		new ObjectTree(1750, 350, false, false, true, false, 1),
 		new ObjectTree(1800, 340, false, false, false, true, 1),
