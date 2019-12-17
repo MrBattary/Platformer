@@ -3,11 +3,10 @@
 #include <SFML/Graphics.hpp>
 
 using namespace sf;
-//TODO: Разрешить все предупреждения
 class Bar
 {
 protected:
-	int maxValue;						//Максимальное значение бара
+	int maxValue = 0;					//Максимальное значение бара
 	RectangleShape bar;					//Бар отражающий значение ресурса
 	RectangleShape barN;				//Бар отражающий недостаток ресурса
 public:
