@@ -24,8 +24,8 @@ private:
 	float yHRealInside;					//Y реальной модели внутри виртуальной модели
 	float wHRealInside;					//Ширина реальной модели внутри виртуальной модели
 	float hHRealInside;					//Высота реальной модели внутри виртуальной модели
-	float speedHX=0;					//Скорость персонажа по x
-	float speedHY=0;					//Скорость персонажа по y
+	float speedHX = 0;					//Скорость персонажа по x
+	float speedHY = 0;					//Скорость персонажа по y
 	float clutchObj = 1;				//Сцепление персонажа с поверхностью на которой он стоит
 	int dirH;							//Направление движения	Данная "роза направлений" будет использоваться часто,советую её запомнить.
 
@@ -34,9 +34,11 @@ private:
 											//3←0→1
 											// ↙↓↘
 											//6 2 5
+
 	Image image;						//Изображение
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
+	CircleShape surrogateSprite;		//Ложный спрайт
 	signed int layerH;					//Слой отрисовки
 
 	int currentMap = 0;					//Текущая карта
@@ -100,6 +102,9 @@ public:
 		staminaH = Stamina;									//Выносливость текущая
 		staminaMaxH = Stamina;								//Выносливость максимальная
 		sprite.setTextureRect(IntRect(0, 0, wH, hH));		//Вырезаем персонажа
+
+		surrogateSprite.setRadius(50);						//Радиус круга
+		surrogateSprite.setFillColor(Color(255, 0, 0));		//Цвет - красный
 	}
 	//Функции-CHANGE помощники, могут изменять значения
 	void Change_speedHX(float value) { speedHX += value; }
@@ -111,6 +116,7 @@ public:
 
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
+	CircleShape Get_SurrogateSprite() { return surrogateSprite; }				//Получить ложный спрайт
 	int Get_currentMap() { return currentMap; }									//Узнать на какой карте сейчас находимся
 	int Get_healthH() { return healthH; }										//Узнать значение здоровья персонажа
 	int Get_healthMaxH() { return healthMaxH; }									//Узнать максимальное здоровье персонажа

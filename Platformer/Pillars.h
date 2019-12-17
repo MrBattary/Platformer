@@ -11,5 +11,6 @@ using namespace std;
 using namespace sf;
 
 void SpritesObjectsAndNPCs(RenderWindow&, Hero, vector<vector<Object*>>, vector<vector<NPC*>>);	//Все объекты поэтапно рисуются на свои слои
+void SpritesObjects(RenderWindow&, Hero, vector<vector<Object*>>);								//Урезаная версия функции SpritesObjectsAndNPCs
 
 void IntersectionObjectsAndNPCs(Hero&, vector<vector<Object*>>&, vector<vector<NPC*>>&);		//Все объекты проверяются на столкновения.

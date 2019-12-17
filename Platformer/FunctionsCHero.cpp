@@ -32,6 +32,7 @@ void Hero::Draw(float time)												//Физика на отрисовку п
 	xH = xHReal - xHRealInside;											//Положение виртуальной модели в пространстве
 	yH = yHReal - yHRealInside;
 	sprite.setPosition(xH, yH);											//Установть точку отрисовки на позиции хН,уН
+	surrogateSprite.setPosition(xH, yH);							
 	layerH = trunc(yHReal + hHRealInside);								//Отбросили дробную часть, если нужно округлить: layerH = round(yHReal + hHRealInside);	
 }
 

@@ -20,6 +20,27 @@ void SpritesObjectsAndNPCs(RenderWindow& window, Hero h, vector<vector<Object*>>
 	}
 }
 
+void SpritesObjects(RenderWindow& window, Hero h, vector<vector<Object*>> vO)												//Урезаная версия функции SpritesObjectsAndNPCs
+{
+	for (int layer = 0; layer < 10000; layer++)																				
+	{
+		if (h.Get_layerH() == layer)																						//Заменили текстуру героя на круг
+		{
+			window.draw(h.Get_SurrogateSprite());
+		}														
+
+		for (int i = 0; i < vO[h.Get_currentMap()].size(); i++)
+		{
+			if (vO[h.Get_currentMap()][i]->Get_layer() == layer) 
+			{ 
+				if (vO[h.Get_currentMap()][i]->Get_tracking() == false) {													//Отключили отрисовку следящих объектов
+					window.draw(vO[h.Get_currentMap()][i]->Get_Sprite());
+				}
+			}
+		}
+	}
+}
+
 void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vector<NPC*>> &vN)						//Проверяется пересечение всех объектов в игре
 {
 	//ИГРОК--ОБЪЕКТ
