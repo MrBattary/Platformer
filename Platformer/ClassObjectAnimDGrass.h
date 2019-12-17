@@ -1,15 +1,17 @@
 #pragma once
 
 #include "ClassObjectAnim.h"
+#include "OptimizedRandom.h"
 
 //Анимированная трава
 class ObjectAnimGrass : public ObjectAnim {
 public:
-	ObjectAnimGrass(float _xOnMap, float _yOnMap, bool _passable, bool _passableJump, bool _passableSlide, bool _passableCrouch, float _clutch){
+	ObjectAnimGrass(float _xOnMap, float _yOnMap){
 		animated = false;
 		movableO = false;
 
 		frames = 4;
+		currentFrame = RandomBetweenInt(0, 3);
 		crossable = false;
 		animSpeed = 0.0003;
 
@@ -25,15 +27,15 @@ public:
 		yRReal = _yOnMap + yRRealInside;
 		wRReal = 100;
 		hRReal = 15;
-		clutch = _clutch;
+		clutch = 1;
 
 		tracking = false;
 		trackingCoefficient = 0;
 
-		passable = _passable;
-		passableJump = _passableJump;
-		passableSlide = _passableSlide;
-		passableCrouch = _passableCrouch;
+		passable = true;
+		passableJump = false;
+		passableSlide = false;
+		passableCrouch = false;
 
 		imageObject.loadFromFile("Environment/Objects/Grass.png");
 

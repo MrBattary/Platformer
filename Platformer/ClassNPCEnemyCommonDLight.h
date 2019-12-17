@@ -11,14 +11,18 @@ public:
 		yN = _Y;
 		wN = 150;
 		hN = 200;
-		xNRealInside = 38;
-		yNRealInside = 180;
-		wNRealInside = 58;
-		hNRealInside = 10;
+		xNRealInside = 0;
+		yNRealInside = 0;
+		wNRealInside = 150;
+		hNRealInside = 200;
 		xNReal = xN + xNRealInside;
 		yNReal = yN + yNRealInside;
+		speedNX = 0;
+		speedNY = 0;
 		//HP
 		healthN = _Health;
+		logicReaction = 0.005;
+
 		
 		if(healthN >0)
 		lifeDL = true;
@@ -44,6 +48,6 @@ public:
 	//AFK end
 	int MoveRight(float);//Движение вправо
 	int MoveLeft(float);//Движение влево	
-	void Draw(float)override;
+	//void Draw(float)override;
 };
 
