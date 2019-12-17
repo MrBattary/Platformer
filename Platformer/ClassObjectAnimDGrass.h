@@ -19,10 +19,12 @@ public:
 		yM = 20;
 		wM = 100;
 		hM = 30;
-		xRReal = _xOnMap + 0;
-		yRReal = _yOnMap + 17;
+		xRRealInside = 0;
+		yRRealInside = 15;
+		xRReal = _xOnMap + xRRealInside;
+		yRReal = _yOnMap + yRRealInside;
 		wRReal = 100;
-		hRReal = 17;
+		hRReal = 15;
 		clutch = _clutch;
 
 		tracking = false;
@@ -40,7 +42,8 @@ public:
 		spriteObject.setTexture(textureObject);
 		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Начальная установка спрайта на позицию отрисовки
-		layer = yRReal + hRReal;												//Установили слой
+		layerSub = 0;
+		layer = yRReal + hRReal - layerSub;										//Установили слой
 	}
 
 	int Animation(float) override;

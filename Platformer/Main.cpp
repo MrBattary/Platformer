@@ -88,7 +88,8 @@ int main() {
 		staminaBar.updateBar(MainHero.Get_staminaH(), MainHero.Get_staminaMaxH(), 10);						//ИНТЕРФЕЙС Бар выносливости
 		
 		ControlsMainCharacter(MainHero,time,stime);															//Управление главным персонажем
-		ViewXYfromClassHero(MainView, MainHero.Get_XH(), MainHero.Get_YH());								//Поддержание центра вида на персонаже
+
+		ViewXYfromClassHero(MainView, MainHero.Get_XHReal(), MainHero.Get_YHReal());						//Поддержание центра вида на персонаже
 
 		NPCLogic(time, vNPC, MainHero.Get_currentMap());													//Логика NPC
 

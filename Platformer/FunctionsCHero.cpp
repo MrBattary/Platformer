@@ -15,6 +15,7 @@
 Если все ОК, изменяем фактическое положение и спрайт
 */
 
+
 void Hero::Draw(float time)												//Физика на отрисовку персонажа, связывает анимацию и физику
 {
 																		/*
@@ -30,7 +31,7 @@ void Hero::Draw(float time)												//Физика на отрисовку п
 	yHReal += dyH * time;												//Положенение реальной модели в пространстве
 	xH = xHReal - xHRealInside;											//Положение виртуальной модели в пространстве
 	yH = yHReal - yHRealInside;
-	sprite.setPosition(xHReal, yHReal);									//Установть точку отрисовки на позиции хН,уН
+	sprite.setPosition(xH, yH);											//Установть точку отрисовки на позиции хН,уН
 	layerH = trunc(yHReal + hHRealInside);								//Отбросили дробную часть, если нужно округлить: layerH = round(yHReal + hHRealInside);	
 }
 
@@ -79,7 +80,7 @@ void Hero::HeroJumpLargeChoise(float time)								//Выбор направле�
 
 int Hero::HeroIdleRight(float time)										//Безделие взгляд вправо
 {
-	//SetRealSize(32, 14, 34, 58);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 1, 1, 0, 0);
 	if(battleMode==false) CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 0, 74, 100, 74);
@@ -89,7 +90,7 @@ int Hero::HeroIdleRight(float time)										//Безделие взгляд в�
 
 int Hero::HeroIdleCrouchRight(float time)								//Безделие сидя взгляд вправо
 {
-	//SetRealSize(32, 30, 38, 42);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 0, 148, 100, 74);
@@ -98,7 +99,7 @@ int Hero::HeroIdleCrouchRight(float time)								//Безделие сидя в�
 
 int Hero::HeroIdleLeft(float time)										//Безделие взгляд влево
 {
-	//SetRealSize(32, 14, 34, 58);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 100, 74, -100, 74);
@@ -108,7 +109,7 @@ int Hero::HeroIdleLeft(float time)										//Безделие взгляд вл
 
 int Hero::HeroIdleCrouchLeft(float time)								//Безделие сидя взгляд влево
 {
-	//SetRealSize(32, 30, 38, 42);
+	SetRealSize(40, 59, 22, 15);
 	dirH = 0;
 	Physics(speedHX, speedHY, time, clutchObj, 0, 0, 2, 2, 0, 0);
 	CycleAnimation(currentFrame, time, 0.004, 4, sprite, 100, 100, 148, -100, 74);
@@ -121,6 +122,7 @@ int Hero::HeroIdleCrouchLeft(float time)								//Безделие сидя вз
 
 int Hero::HeroMoveTop(float time, bool fast,bool slow, bool crouch)		//Бег вверх
 {
+	SetRealSize(38, 54, 18, 18);
 	dirH = 4; 
 	if (fast == true) {
 		Physics(speedHX, speedHY, time, clutchObj, 0, -0.2, 1, 1, 0, 0);
@@ -141,6 +143,7 @@ int Hero::HeroMoveTop(float time, bool fast,bool slow, bool crouch)		//Бег в
 
 int Hero::HeroMoveDown(float time, bool fast, bool slow, bool crouch)	//Бег вниз
 {
+	SetRealSize(38, 54, 18, 18);
 	dirH = 2;
 	if (fast == true) {
 		Physics(speedHX, speedHY, time, clutchObj, 0, 0.2, 1, 1, 0, 0);
@@ -162,6 +165,7 @@ int Hero::HeroMoveDown(float time, bool fast, bool slow, bool crouch)	//Бег �
 
 int Hero::HeroMoveRight(float time)										//Бег вправо
 {
+	SetRealSize(40, 55, 28, 19);
 	dirH = 1;
 	Physics(speedHX, speedHY, time, clutchObj, 0.1, 0, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 0, 0, 100, 74);
@@ -195,6 +199,7 @@ int Hero::HeroMoveRightCrouch(float time)								//Присед вправо
 }
 int Hero::HeroMoveRightUp(float time)									//Бег вправо/вверх
 {
+	SetRealSize(40, 55, 28, 19);
 	dirH = 8;
 	Physics(speedHX, speedHY, time, clutchObj, 0.1, -0.1, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 0, 0, 100, 74);
@@ -227,6 +232,7 @@ int Hero::HeroMoveRightCrouchUp(float time)								//Присед вправо/�
 }
 int Hero::HeroMoveRightDown(float time)									//Бег вправо/вниз
 {
+	SetRealSize(40, 55, 28, 19);
 	dirH = 5;
 	Physics(speedHX, speedHY, time, clutchObj, 0.1, 0.1, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 0, 0, 100, 74);
@@ -260,6 +266,7 @@ int Hero::HeroMoveRightCrouchDown(float time)							//Присед вправо/
 
 int Hero::HeroMoveLeft(float time)										//Бег влево
 {
+	SetRealSize(32, 55, 28, 19);
 	dirH = 3;
 	Physics(speedHX, speedHY, time, clutchObj, -0.1, 0, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 100, 0, -100, 74);
@@ -293,6 +300,7 @@ int Hero::HeroMoveLeftCrouch(float time)								// Присед влево
 
 int Hero::HeroMoveLeftUp(float time)									//Бег влево/вверх
 {
+	SetRealSize(32, 55, 28, 19);
 	dirH = 7;
 	Physics(speedHX, speedHY, time, clutchObj, -0.1, -0.1, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 100, 0, -100, 74);
@@ -326,6 +334,7 @@ int Hero::HeroMoveLeftCrouchUp(float time)								//Присед влево/вв
 
 int Hero::HeroMoveLeftDown(float time)									//Бег влево/вниз
 {
+	SetRealSize(32, 55, 28, 19);
 	dirH = 6;
 	Physics(speedHX, speedHY, time, clutchObj, -0.1, 0.1, 1, 1, 0, 0);
 	if (battleMode == false) CycleAnimation(currentFrame, time, 0.0055, 6, sprite, 100, 100, 0, -100, 74);
@@ -569,10 +578,10 @@ int Hero::HeavyBlowLeft(float time)										//Тяжелый удар влев�
 
 //TODO: В каждую функцию, где персонаж как-то изменяется в размерах необходимо добавить SetRealSize для уменьшения хитбокса
 void Hero::SetRealSize(float xRealIns, float yRealIns, float wReal, float hReal) {			//Установить новые размеры физической модели персонажа
-	xHRealInside = xRealIns;
-	yHRealInside = yRealIns;
-	wHRealInside = wReal;
-	hHRealInside = hReal;
+	if(xHRealInside != xRealIns) xHRealInside = xRealIns;
+	if(yHRealInside != yRealIns) yHRealInside = yRealIns;
+	if(wHRealInside != wReal) wHRealInside = wReal;
+	if(hHRealInside != hReal) hHRealInside = hReal;
 }
 /*
 Функция получения урона персонажем.

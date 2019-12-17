@@ -11,9 +11,10 @@ void NPCEnemyCommonDLight::Logic(float time) {
 	else														//≈сли врем€ вышло
 	{
 		currentAction = RandomBetweenInt(1, 4);					//ќпредел€етс€, какое действие будет выполн€тьс€
-		currentActionTime = RandomBetweenDouble(4, 6);			//ќпредел€етс€ врем€, в течении которого действие будет выполн€тьс€.
+		currentActionTime = RandomBetweenDouble(1, 2);			//ќпредел€етс€ врем€, в течении которого действие будет выполн€тьс€.
 		currentActionTime = currentActionTime / logicReaction;	//ј деление на logicReaction необходимо, чтобы потом не пришлось каждый раз currentActionTime -= time * logicReaction;
 	}
+	
 	if (ch1 == 0) {
 		if (lifeDL)
 		{

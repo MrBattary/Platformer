@@ -30,10 +30,6 @@ public:
 		passableCrouch = false;
 
 		imageObject.loadFromFile("");
-		imageObject.createMaskFromColor(Color(0, 0, 0));					//Прозрачность белого
-		textureObject.loadFromImage(imageObject);
-		spriteObject.setTexture(textureObject);
-		spriteObject.setTextureRect(IntRect(xM, yM, wM, hM));
 		spriteObject.setPosition(xR, yR);										//Установка спрайта на позицию отрисовки
 		layer = yRReal + hRReal;												//Установили слой навсегда
 	}

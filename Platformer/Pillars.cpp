@@ -20,7 +20,6 @@ void SpritesObjectsAndNPCs(RenderWindow& window, Hero h, vector<vector<Object*>>
 	}
 }
 
-//TODO: В функции IntersectionObjectsAndNPCs где-то ошибка, выход за границы массива, необходимо проверить все циклы
 void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vector<NPC*>> &vN)						//Проверяется пересечение всех объектов в игре
 {
 	//ИГРОК--ОБЪЕКТ
@@ -28,18 +27,18 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 	{
 		int dir = 0;
 		double value = 0;
+		bool changeAviable = true;																								//Выполняем изменение
 		//Проверка взаимодействия игрока и объекта
 		tie(dir, value) = Intersection(h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside(), vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal());
 		if (value != 0)
 		{
 			h.Set_clutchObj(vO[h.Get_currentMap()][i]->Get_clutch());																//Установили показатель сцепления
 
-			bool changeAviable = true;																								//Выполняем изменение
 			if (vO[h.Get_currentMap()][i]->Get_passable() == true) changeAviable = false;											//Не выполняем изменение если объект вприницпе проходим
-			if (h.Get_jumpAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;			//Не выполняем изменение если объект проходим прыжком
+			if (h.Get_jumpAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;		//Не выполняем изменение если объект проходим прыжком
 			if (h.Get_jumpLargeAviable() == true && vO[h.Get_currentMap()][i]->Get_passableJump() == true) changeAviable = false;	//Не выполняем изменение если объект проходим мощным прыжком
 			if (h.Get_slideAviable() == true && vO[h.Get_currentMap()][i]->Get_passableSlide() == true) changeAviable = false;		//Не выполняем изменение если объект проходим скольжением
-			if (h.Get_crouchAviable() == true && vO[h.Get_currentMap()][i]->Get_passableCrouch() == true) changeAviable = false;		//Не выполняем изменение если объект проходим вприсяди
+			if (h.Get_crouchAviable() == true && vO[h.Get_currentMap()][i]->Get_passableCrouch() == true) changeAviable = false;	//Не выполняем изменение если объект проходим вприсяди
 			if (vO[h.Get_currentMap()][i]->Get_movableO() == true) changeAviable = false;											//Не выполняем изменение если объект можно сдвинуть
 
 			if (changeAviable == true)														//Если все-таки изменяем положение игрока
@@ -53,10 +52,9 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 					h.Set_YHReal(value);
 				}
 			}
-			//ОБЪЕКТ--ИГРОК
-			if (changeAviable == false && vO[h.Get_currentMap()][i]->Get_movableO() == true)	//Если все-таки изменяем положение объекта
+			tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
+			if (vO[h.Get_currentMap()][i]->Get_movableO() == true)	//Если все-таки изменяем положение объекта
 			{
-				tie(dir, value) = Intersection(vO[h.Get_currentMap()][i]->Get_xRReal(), vO[h.Get_currentMap()][i]->Get_yRReal(), vO[h.Get_currentMap()][i]->Get_wRReal(), vO[h.Get_currentMap()][i]->Get_hRReal(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
 				//Подвинули спрайт NOTE: ЕСЛИ movableO=true ВЕРНУТЬ В DRAW spriteObject.setPosition
 				if (dir == 1 || dir == 3)
 				{
@@ -95,7 +93,7 @@ void IntersectionObjectsAndNPCs(Hero &h, vector<vector<Object*>> &vO, vector<vec
 			tie(dir, value) = Intersection(vN[h.Get_currentMap()][i]->Get_xNReal(), vN[h.Get_currentMap()][i]->Get_yNReal(), vN[h.Get_currentMap()][i]->Get_wNRealInside(), vN[h.Get_currentMap()][i]->Get_hNRealInside(), h.Get_XHReal(), h.Get_YHReal(), h.Get_WHRealInside(), h.Get_HHRealInside());
 			if (dir == 1 || dir == 3)
 			{
-				vN[h.Get_currentMap()][i]->Set_yNReal(value);
+				vN[h.Get_currentMap()][i]->Set_xNReal(value);
 			}
 			if (dir == 2 || dir == 4)
 			{

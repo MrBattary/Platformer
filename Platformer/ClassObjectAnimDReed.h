@@ -16,13 +16,13 @@ public:
 		xR = _xOnMap;
 		yR = _yOnMap;
 		xM = 0;
-		yM = 20;
-		wM = 100;
-		hM = 30;
-		xRReal = _xOnMap + 0;
-		yRReal = _yOnMap + 17;
-		wRReal = 100;
-		hRReal = 17;
+		yM = 50;
+		wM = 20;
+		hM = 50;
+		xRReal = 5;
+		yRReal = 45;
+		wRReal = 10;
+		hRReal = 5;
 		clutch = _clutch;
 
 		tracking = false;
