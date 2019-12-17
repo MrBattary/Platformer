@@ -4,12 +4,11 @@
 #include "ClassObject.h"
 
 //Класс анимированных объектов 
-//TODO: Разрешить все предупреждения
 class ObjectAnim : public Object
 {
 protected:
-	float animSpeed;					//Скорость анимации >0
-	int frames;							//Кол-во кадров в анимации объекта
+	float animSpeed = 0.f;				//Скорость анимации >0
+	int frames = 0;						//Кол-во кадров в анимации объекта
 	float currentFrame = 0;				//Текущий кадр
 
 public:

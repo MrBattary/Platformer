@@ -3,14 +3,14 @@
 
 //TODO: Разрешить все предупреждения и сделать наследование от NPCEnemy
 
-class NPCEnemyCommon :public NPC
+class NPCEnemyCommon :public NPCEnemy
 {
 protected:
 	
 	int currentAction = 0;				//Номер текущего действия в логике ЛОГИКА
-	float currentActionTime = 0;		//Время выполнения текущего действие ЛОГИКА
+	float currentActionTime = 0.f;		//Время выполнения текущего действие ЛОГИКА
 
-	float logicReaction;				//Скорость реакции ЛОГИКА
+	float logicReaction = 0.f;			//Скорость реакции ЛОГИКА
 public:
 	NPCEnemyCommon() {};
 	bool Left = false;					//Двмижняк влеко

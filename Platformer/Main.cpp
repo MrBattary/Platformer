@@ -53,20 +53,25 @@ int main() {
 	RenderWindow window(VideoMode(1280, 720), "Test");									//Рендер окна
 	//window.setFramerateLimit(60);														//Ограничение FPS
 	//window.setVerticalSyncEnabled(true);												//Ограничение FPS=60
+	window.setMouseCursorVisible(false);												//Скрыть курсор
 
 	View MainView;																		//Рендер камеры вида
+	View MinimapView;																	//Вид миникарты
+
 	Hero MainHero(1100, 500, 200, 100);													//Создаем героя
 	HeroHealthBar healthBar;															//Создаем бар здоровья
 	HeroStaminaBar staminaBar;															//Создаем бар выносливости
-	MainView.reset(FloatRect(0,0,1280,720));											//Установка камеры вида на герое
+
+	MainView.reset(FloatRect(0,0,1280,720));											                                    //Установка камеры вида на герое
+    MainView.setViewport(sf::FloatRect(0.f, 0.f, 1.f, 1.f));                                                                //Настройка основной камеры и
+	Minimap(MinimapView, vMaps[MainHero.Get_currentMap()][1]->Get_wM(), vMaps[MainHero.Get_currentMap()][1]->Get_hM());		//Миникарты
 
 	Clock clock;													//Создаем переменную времени, т.е. привязка ко времени(а не загруженности/мощности процессора).	
 	
 	float time;
 	float stime = 0;																		
-	
 
-	//SetLayers(v, v[MainHero.Get_currentMap()].size(), MainHero.Get_currentMap());							//Распределение объектов по слоям
+    bool tact = false;
 	while (window.isOpen())											//Выполняем пока окно открыто
 	{
 		time = clock.getElapsedTime().asMicroseconds();				//Получаем прошедшее время в микросекундах
@@ -91,24 +96,28 @@ int main() {
 
 		ViewXYfromClassHero(MainView, MainHero.Get_XHReal(), MainHero.Get_YHReal());						//Поддержание центра вида на персонаже
 
+
 		NPCLogic(time, vNPC, MainHero.Get_currentMap());													//Логика NPC
 
 		IntersectionObjectsAndNPCs(MainHero, vMaps, vNPC);													//Пересечение с объектами окружения всех объектов, NPC, итд.
 
+        //*********************************** ОТРИСОВКА НА ГЛАВНУЮ КАМЕРУ ***********************************
+        window.setView(MainView);
 		DrawNPC(MainView, time, vNPC, MainHero.Get_currentMap());											//Подготовка к отрисовке NPC
 		DrawEnvironment(MainView, time, vMaps, MainHero.Get_currentMap());									//Подготовка к отрисовке объектов
 		MainHero.Draw(time);																				//Подготовка к отрисовке персонажа
 		
-		window.setView(MainView);
 		window.clear();																						//Очистка окна от предыдущего спрайта
 		
 		SpritesObjectsAndNPCs(window, MainHero, vMaps, vNPC);												//Отрисовка на карту
 
 		healthBar.drawHealthBar(window);																	//ИНТЕРФЕЙС Бар здоровья
 		staminaBar.drawStaminaBar(window);																	//ИНТЕРФЕЙС Бар выносливости
+        //********************************** ОТРИСОВКА НА ПОБОЧНУЮ КАМЕРУ **********************************
+        window.setView(MinimapView);
+        SpritesObjects(window, MainHero, vMaps);												            //Отрисовка на карту
+        
 		window.display();																					//Отображение
-
-
 	}
 
 	//Очистка памяти из под vNPC
@@ -127,7 +136,3 @@ int main() {
 
 	return 0;
 }
-
-
-
-

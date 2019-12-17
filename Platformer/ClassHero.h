@@ -8,36 +8,37 @@
 
 using namespace sf;
 
-//TODO: Разрешить все предупреждения
 class Hero
 {
 private:
-	float xH;							//Положение виртуальной модели по х
-	float yH;							//Положение виртуальной модели по y
-	float wH;							//Ширина модели
-	float hH;							//Высота модели
-	float dxH;							//Ускорение по х
-	float dyH;							//Ускорение по у
-	float xHReal;						//Х реальной модели внутри виртуальной модели относительной всей оси
-	float yHReal;						//Y реальной модели внутри виртуальной модели относительной всей оси
-	float xHRealInside;					//Х реальной модели внутри виртуальной модели
-	float yHRealInside;					//Y реальной модели внутри виртуальной модели
-	float wHRealInside;					//Ширина реальной модели внутри виртуальной модели
-	float hHRealInside;					//Высота реальной модели внутри виртуальной модели
-	float speedHX=0;					//Скорость персонажа по x
-	float speedHY=0;					//Скорость персонажа по y
-	float clutchObj = 1;				//Сцепление персонажа с поверхностью на которой он стоит
-	int dirH;							//Направление движения	Данная "роза направлений" будет использоваться часто,советую её запомнить.
+	float xH = 0.f;						//Положение виртуальной модели по х
+	float yH = 0.f;						//Положение виртуальной модели по y
+	float wH = 0.f;						//Ширина модели
+	float hH = 0.f;						//Высота модели
+	float dxH = 0.f;					//Ускорение по х
+	float dyH = 0.f;					//Ускорение по у
+	float xHReal = 0.f;					//Х реальной модели внутри виртуальной модели относительной всей оси
+	float yHReal = 0.f;					//Y реальной модели внутри виртуальной модели относительной всей оси
+	float xHRealInside = 0.f;			//Х реальной модели внутри виртуальной модели
+	float yHRealInside = 0.f;			//Y реальной модели внутри виртуальной модели
+	float wHRealInside = 0.f;			//Ширина реальной модели внутри виртуальной модели
+	float hHRealInside = 0.f;			//Высота реальной модели внутри виртуальной модели
+	float speedHX = 0.f;				//Скорость персонажа по x
+	float speedHY = 0.f;				//Скорость персонажа по y
+	float clutchObj = 1.f;				//Сцепление персонажа с поверхностью на которой он стоит
+	int dirH = 0;						//Направление движения	Данная "роза направлений" будет использоваться часто,советую её запомнить.
 
 											//7 4 8
 											// ↖↑↗
 											//3←0→1
 											// ↙↓↘
 											//6 2 5
+
 	Image image;						//Изображение
 	Texture texture;					//Текстура
 	Sprite sprite;						//Спрайт
-	signed int layerH;					//Слой отрисовки
+	CircleShape surrogateSprite;		//Ложный спрайт
+	signed int layerH = 1;				//Слой отрисовки
 
 	int currentMap = 0;					//Текущая карта
 
@@ -67,10 +68,10 @@ private:
 	float cooldownAnimationSlide = 0;	//Кулдаун на анимацию скольжения
 	float comboTimer = 0;				//Время до следующего удара в комбо
 
-	int staminaH;						//Выносливость героя
-	int staminaMaxH;					//Максимальная выносливость героя
-	int healthH;						//Здоровье героя
-	int healthMaxH;						//Максимальное здоровье героя
+	int staminaH = 0;					//Выносливость героя
+	int staminaMaxH = 0;				//Максимальная выносливость героя
+	int healthH = 1;					//Здоровье героя
+	int healthMaxH = 1;					//Максимальное здоровье героя
 	int comboH = 0;						//Текущее комбо
 	int comboHitH = 0;					//Текущий удар в комбо
 
@@ -100,6 +101,9 @@ public:
 		staminaH = Stamina;									//Выносливость текущая
 		staminaMaxH = Stamina;								//Выносливость максимальная
 		sprite.setTextureRect(IntRect(0, 0, wH, hH));		//Вырезаем персонажа
+
+		surrogateSprite.setRadius(50);						//Радиус круга
+		surrogateSprite.setFillColor(Color(255, 0, 0));		//Цвет - красный
 	}
 	//Функции-CHANGE помощники, могут изменять значения
 	void Change_speedHX(float value) { speedHX += value; }
@@ -111,6 +115,7 @@ public:
 
 	//Функции-GET помощники
 	Sprite Get_Sprite() { return sprite; }										//Получить Спрайт
+	CircleShape Get_SurrogateSprite() { return surrogateSprite; }				//Получить ложный спрайт
 	int Get_currentMap() { return currentMap; }									//Узнать на какой карте сейчас находимся
 	int Get_healthH() { return healthH; }										//Узнать значение здоровья персонажа
 	int Get_healthMaxH() { return healthMaxH; }									//Узнать максимальное здоровье персонажа
